@@ -1,0 +1,35 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.show {
+    position: relative;
+    /* This allows us to position the underline below the text */
+    color: inherit;
+    /* Inherit the text color from the parent element */
+}
+
+.show:hover {
+    color: #ffffff;
+    transition: 500ms ease-in-out;
+    /* Change color to black on hover (adjust as needed) */
+}
+
+.show:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    /* Initially set width to 0 for left-to-right animation */
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    /* Set underline color (adjust as needed) */
+    transition: width 0.3s ease-in-out;
+    /* Smooth width change over 0.3 seconds */
+}
+
+.show:hover:after {
+    width: 100%;
+    /* Show the underline on hover */
+}
