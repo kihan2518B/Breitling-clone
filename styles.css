@@ -1,5 +1,5 @@
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    font-family: 'Times New Roman', Times, serif
 }
 
 .show {
@@ -10,7 +10,7 @@ body {
 }
 
 .show:hover {
-    color: #ffffff;
+    color: #000000;
     transition: 500ms ease-in-out;
     /* Change color to black on hover (adjust as needed) */
 }
@@ -23,7 +23,7 @@ body {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #ffffff;
+    background-color: #000000;
     /* Set underline color (adjust as needed) */
     transition: width 0.3s ease-in-out;
     /* Smooth width change over 0.3 seconds */
@@ -32,4 +32,12 @@ body {
 .show:hover:after {
     width: 100%;
     /* Show the underline on hover */
+}
+
+video {
+    opacity: 1.5;
+}
+
+#nav-options:hover> :not(:hover) {
+    opacity: 0.4;
 }
