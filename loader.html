@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
+    <title>Loader</title>
+  </head>
+  <body>
+    <section
+      class="loader fade-element font-normal font-sens max-[701px]:text-[4vw] max-[376px]:text-[4.5vw] text-[3vw] text-black h-[100vh] w-[100vw] bg-yellow-500 flex justify-center items-center"
+    >
+      <div class="flex flex-col">
+        <div
+          class="h-[8vw] max-[768px]:h-[11vw] flex justify-center items-center"
+        >
+          <img
+            src="https://www.breitling.com/assets/images/corporate/asset-version-686e4b342e/breitling_logo_lg.svg"
+            class="h-[7vw] max-[900px]:h-[9vw] max-[376px]:h-[12vw]"
+          />
+        </div>
+        <div
+          class="flex justify-center items-center w-fit bg--400 gap-3 max-[1025px]:gap-2 max-[600px]:gap-1"
+        >
+          <div class="h-full place-self-start">
+            Watches For Professionals Are
+          </div>
+          <div class="flex place-self-end w-[15vw] bg--700">
+            <div>Loading</div>
+            <div id="dots"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script>
+    const element = document.querySelector(".fade-element");
+    function fadeOut(element) {
+      element.style.opacity = 1; /* Set initial opacity to 1 */
+      let opacity = 1;
+      element.style.visibility = "visible";
+      const intervalId = setInterval(() => {
+        opacity -= 0.1; /* Decrease opacity by 10% each interval */
+        element.style.opacity = opacity;
+        if (opacity <= 0) {
+          clearInterval(intervalId); /* Stop when opacity reaches 0 */
+          element.style.visibility = "hidden";
+        }
+      }, 50);
+    }
+    setTimeout(() => fadeOut(element), 5000);
+
+    const text = new Typed("#dots", {
+      strings: ["..."],
+      typeSpeed: 400, // Adjust typing speed (milliseconds)
+      backSpeed: 80, // Adjust backspace speed (milliseconds)
+      loop: true, // Loop the animation
+      cursorChar: "",
+    });
+  </script>
+</html>
