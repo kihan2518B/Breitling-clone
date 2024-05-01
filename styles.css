@@ -1,6 +1,4 @@
-body {
-    font-family: 'Times New Roman', Times, serif
-}
+@import url("https://files.edx.org/fonts/edx-fonts/open-sans/open-sans.css");
 
 .show {
     position: relative;
@@ -40,4 +38,7 @@ video {
 
 #nav-options:hover> :not(:hover) {
     opacity: 0.4;
+}
+h2{
+    align-items: center;
 }
