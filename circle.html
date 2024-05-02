@@ -31,55 +31,56 @@
 </head>
 
 <body>
-    <!-- <style>
-        .border-image:nth-child(1) {
-            transform: translate(165%, -83%) rotate(30deg);
-        }
 
-        .border-image:nth-child(2) {
-            transform: translate(-50%, -50%) rotate(60deg);
-        }
-
-        /* Add more nth-child rules to position additional images */
-    </style> -->
-    <div class="h-[100vh] w-full flex justify-center items-center">
+    <div class="h-[100vh] w-full flex justify-start items-center">
         <!-- <div id="container" class=" h-96 w-96 flex shrink rounded-full border-black border-2 relative"> -->
-        <div id="border-container" class=" absolute inset-0 flex-col justify-center items-center">
-            <div class="border-image">
-                <img class=" relative h-[30rem] object-contain" src="./assets/watch-1.webp" alt="Image 1">
+        <div
+            class="relative flex shrink -left-[15rem] h-[25rem] w-[25rem] rounded-full border-2 border-gray-200 flex justify-center items-center">
+            <div
+                class="clock-image-1 flex shrink right-0 -translate-x-[20%] -translate-y-[105%] h-[10rem] w-[10rem] absolute flex justify-center items-center">
+                <img class="clock-image cursor-pointer flex shrink hover:scale-110 transform ease-in-out duration-300 object-contain h-fit w-fit relative"
+                    src="https://www.breitling.com/media/image/4/cfg_site_hd/asset-version-5f20dd91fd/u17329f41g1u1-navitimer-automatic-41-soldier.webp"
+                    alt="Image 1" onclick="addClass(this)">
             </div>
-            <div class="border-image">
-                <img class=" relative h-[30rem] object-contain" src="./assets/watch-1.webp" alt="Image 1">
+            <div
+                class="clock-image-2 flex shrink right-0 translate-x-[35%] -translate-y-[45%] h-[10rem] w-[10rem] absolute flex justify-center items-center">
+                <img class="clock-image cursor-pointer flex shrink hover:scale-110 transform ease-in-out duration-300 object-contain h-fit w-fit relative"
+                    src="https://www.breitling.com/media/image/4/cfg_site_hd/asset-version-235e440ac3/a32310211g1p1-navitimer-automatic-gmt-41-soldier.webp"
+                    alt="Image 1" onclick="addClass(this)">
             </div>
-            <div class="border-image">
-                <img class=" relative h-[30rem] object-contain" src="./assets/watch-1.webp" alt="Image 1">
+            <div
+                class="clock-image-3 flex shrink right-0 translate-x-[35%] translate-y-[55%] h-[10rem] w-[10rem] absolute flex justify-center items-center">
+                <img class="clock-image cursor-pointer flex shrink hover:scale-110 transform ease-in-out duration-300 object-contain h-fit w-fit relative"
+                    src="https://www.breitling.com/media/image/3/cfg_site_hd/asset-version-0b2b311054/a17327361l1a1-navitimer-automatic-36-soldier.webp"
+                    alt="Image 1" onclick="addClass(this)">
             </div>
-            <div class="border-image">
-                <img class=" relative h-[30rem] object-contain" src="./assets/watch-1.webp" alt="Image 1">
+            <div
+                class="clock-image-4 flex shrink right-0 -translate-x-[20%] translate-y-[105%] h-[10rem] w-[10rem] absolute flex justify-center items-center">
+                <img class="clock-image cursor-pointer flex shrink hover:scale-110 transform ease-in-out duration-300 object-contain h-fit w-fit relative"
+                    src="https://www.breitling.com/media/image/4/cfg_site_hd/asset-version-a8cbbb653f/u173771a1a1s1-superocean-automatic-36-soldier.webp"
+                    alt="Image 1" onclick="addClass(this)">
             </div>
-
         </div>
-        <!-- </div> -->
     </div>
-    <script>
-        const container = document.getElementById('border-container');
-        const images = document.querySelectorAll('.border-image');
-        console.log(images.length)
-        window.addEventListener('scroll', () => {
-            const scrollPosition = window.scrollY;
-            console.log(scrollPosition)
-            // images.forEach((image, index) => {
-            //     const rotation = scrollPosition * (index + 72) * 0.1; // Adjust the factor to control the rotation speed
-            //     image.style.transform = `translate(-50%, -50%) rotate(-${rotation}deg)`;
-            // });
-            let rotation = 0 + scrollPosition;
-            for (let i = 0; i <= images.length; i++) {
-                images[i].style.transform = `rotate(-${rotation}deg)`;
-                rotation += 72
-            }
-        });
+    <style>
+        .active {
+            scale: 125%;
+        }
+    </style>
 
+    <script>
+        const images = document.querySelectorAll(".clock-image");
+        function addClass(clickedImage) {
+            images.forEach((image) => {
+                image.classList.remove("active") //first remove active from all images then add it at the end for clicked image
+                image.classList.add("z-10")
+            })
+            clickedImage.classList.add("active")
+            clickedImage.classList.add("-z-50")
+            console.log("class added")
+        }
     </script>
+
 </body>
 
 </html>
