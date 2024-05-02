@@ -9,16 +9,16 @@ body {
     /* Inherit the text color from the parent element */
 }
 
-#nav-options {
+/* #nav-options {
     background-color: rgba(255, 255, 255, 0.214)
-}
+} */
 
-.show:hover {
+/* .show:hover {
     color: rgb(250 204 21);
     background-color: rgba(0, 0, 0);
     transition: all 500ms ease-in-out;
-    /* Change color to black on hover (adjust as needed) */
-}
+    Change color to black on hover (adjust as needed)
+} */
 
 .show:after {
     content: "";

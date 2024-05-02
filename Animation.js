@@ -54,14 +54,13 @@ gsap.fromTo("#logo-3",
 
 gsap.fromTo(".nav-link",
     {
-        opacity: 0,
-        // duration: 2,
-        // delay: 2
+        scale: 0, // start from scale of 0 (fully hidden)
     },
     {
-        opacity: 10,
-        // duration: 2,
-        delay: 2
+        scale: 1, // end at scale of 1 (normal size)
+        duration: 1, // animation duration (in seconds)
+        // delay: 0.5, // delay before the animation starts (in seconds)
+        ease: "power2.out" // easing function for smoother transition
     })
 
 // gsap.fromTo("#Text",
@@ -75,3 +74,24 @@ gsap.fromTo(".nav-link",
 //         duration: 3,
 //         delay: 3
 //     })
+
+
+const buttons = document.querySelectorAll('.nav-link');
+console.log("buttons", buttons.length)
+buttons.forEach(button => {
+    button.addEventListener('mouseover', () => {
+        console.log("in")
+        buttons.forEach(otherButton => {
+            if (otherButton !== button) {
+                otherButton.classList.add('opacity-40');
+            }
+        });
+    });
+
+    button.addEventListener('mouseout', () => {
+        console.log("out")
+        buttons.forEach(otherButton => {
+            otherButton.classList.remove('opacity-40');
+        });
+    });
+});
