@@ -1,5 +1,5 @@
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    font-family: 'Times New Roman', Times, serif
 }
 
 .show {
@@ -32,4 +32,30 @@ body {
 .show:hover:after {
     width: 100%;
     /* Show the underline on hover */
+}
+
+video {
+    opacity: 1.5;
+}
+
+#nav-options:hover> :not(:hover) {
+    opacity: 0.4;
+}
+
+#watch_1 {
+    clip-path: polygon(
+        100% 0, /* Top-right corner */
+        100% 20%, /* Bottom-right corner */
+        0 calc(100% - 0), /* Bottom-left corner with slant */
+        40px 0  /* Top-left corner with slant */
+      );
+      overflow: hidden; /* Important for container clip-path */
+}
+
+#watch_2 {
+    clip-path: polygon(
+        100% 20%, /* Top-right corner */
+        100% 20%, /* Bottom-right corner */
+      );
+      overflow: hidden; /* Important for container clip-path */
 }

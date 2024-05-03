@@ -1,0 +1,41 @@
+  
+  /*  */
+  
+  .fade-stage-1 {
+    animation: fadeOutStage1 4s ease-in-out;
+  }
+  
+  .fade-stage-2 {
+    animation: fadeOutStage2 2s ease-in-out;
+    animation-delay: 2s;  /* Start fading after stage 1 */
+  }
+  
+  .fade-stage-3 {
+    animation: fadeOutStage3 2s ease-in-out;
+    animation-delay: 4s;  /* Start fading after stage 2 */
+  }
+
+  .fade-stage-4 {
+    animation: fadeOutStage4 2s ease-in-out;
+    animation-delay: 6s;  /* Start fading after stage 2 */
+  }
+  
+  @keyframes fadeOutStage1 {
+    from { opacity: 1; }
+    to { opacity: 0.75; }  /* Fade to 75% opacity in 4 seconds */
+  }
+  
+  @keyframes fadeOutStage2 {
+    from { opacity: 0.75; }
+    to { opacity: 0.50; }  /* Fade from 75% to 25% opacity in 2 seconds */
+  }
+
+  @keyframes fadeOutStage3 {
+    from { opacity: 0.50; }
+    to { opacity: 0.25; }  /* Fade from 75% to 25% opacity in 2 seconds */
+  }
+  
+  @keyframes fadeOutStage4 {
+    from { opacity: 0.25; }
+    to { opacity: 0; }    /* Fade from 25% to 0% opacity in 2 seconds */
+  }
