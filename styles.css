@@ -1,5 +1,7 @@
 @import url("https://files.edx.org/fonts/edx-fonts/open-sans/open-sans.css");
 
+
+
 .show {
     position: relative;
     /* This allows us to position the underline below the text */
@@ -8,7 +10,7 @@
 }
 
 .show:hover {
-    color: #000000;
+    color: yellow;
     transition: 500ms ease-in-out;
     /* Change color to black on hover (adjust as needed) */
 }
@@ -21,7 +23,7 @@
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #000000;
+    background-color: yellow;
     /* Set underline color (adjust as needed) */
     transition: width 0.3s ease-in-out;
     /* Smooth width change over 0.3 seconds */
