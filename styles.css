@@ -1,6 +1,6 @@
-body {
-    font-family: 'Times New Roman', Times, serif
-}
+@import url("https://files.edx.org/fonts/edx-fonts/open-sans/open-sans.css");
+
+
 
 .show {
     position: relative;
@@ -19,6 +19,11 @@ body {
     transition: all 500ms ease-in-out;
     Change color to black on hover (adjust as needed)
 } */
+.show:hover {
+    color: yellow;
+    transition: 500ms ease-in-out;
+    /* Change color to black on hover (adjust as needed) */
+}
 
 .show:after {
     content: "";
@@ -45,4 +50,7 @@ video {
 
 #nav-options:hover> :not(:hover) {
     opacity: 0.4;
+}
+h2{
+    align-items: center;
 }
