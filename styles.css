@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 body {
     font-family: 'Times New Roman', Times, serif
 }
+=======
+@import url("https://files.edx.org/fonts/edx-fonts/open-sans/open-sans.css");
+
+
+>>>>>>> origin/swetang
 
 .show {
     position: relative;
@@ -10,7 +16,7 @@ body {
 }
 
 .show:hover {
-    color: #ffffff;
+    color: yellow;
     transition: 500ms ease-in-out;
     /* Change color to black on hover (adjust as needed) */
 }
@@ -23,7 +29,7 @@ body {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #ffffff;
+    background-color: yellow;
     /* Set underline color (adjust as needed) */
     transition: width 0.3s ease-in-out;
     /* Smooth width change over 0.3 seconds */
@@ -41,6 +47,7 @@ video {
 #nav-options:hover> :not(:hover) {
     opacity: 0.4;
 }
+<<<<<<< HEAD
 
 #watch_1 {
     clip-path: polygon(
@@ -58,4 +65,8 @@ video {
         100% 20%, /* Bottom-right corner */
       );
       overflow: hidden; /* Important for container clip-path */
+=======
+h2{
+    align-items: center;
+>>>>>>> origin/swetang
 }
