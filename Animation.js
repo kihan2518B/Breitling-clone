@@ -92,7 +92,7 @@ gsap.fromTo(
 
 document.addEventListener("DOMContentLoaded", function () {
   const icon = document.querySelector("#toggle-icon-start");
-  const section = document.querySelector("#bar-section");
+  const section = document.querySelector("#chicken_bar-section");
   const icons = document.querySelectorAll(".displayable-icons");
 
   icon.addEventListener("click", function () {
@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   const icon = document.querySelector("#toggle-icon-end");
-  const section = document.querySelector("#bar-section");
+  const section = document.querySelector("#chicken_bar-section");
   const icons = document.querySelectorAll(".displayable-icons");
 
   icon.addEventListener("click", function () {

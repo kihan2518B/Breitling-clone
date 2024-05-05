@@ -1,72 +1,67 @@
-<<<<<<< HEAD
 body {
-    font-family: 'Times New Roman', Times, serif
+  font-family: "Times New Roman", Times, serif;
 }
-=======
+
 @import url("https://files.edx.org/fonts/edx-fonts/open-sans/open-sans.css");
 
-
->>>>>>> origin/swetang
-
 .show {
-    position: relative;
-    /* This allows us to position the underline below the text */
-    color: inherit;
-    /* Inherit the text color from the parent element */
+  position: relative;
+  /* This allows us to position the underline below the text */
+  color: inherit;
+  /* Inherit the text color from the parent element */
 }
 
 .show:hover {
-    color: yellow;
-    transition: 500ms ease-in-out;
-    /* Change color to black on hover (adjust as needed) */
+  color: yellow;
+  transition: 500ms ease-in-out;
+  /* Change color to black on hover (adjust as needed) */
 }
 
 .show:after {
-    content: "";
-    position: absolute;
-    width: 0;
-    /* Initially set width to 0 for left-to-right animation */
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: yellow;
-    /* Set underline color (adjust as needed) */
-    transition: width 0.3s ease-in-out;
-    /* Smooth width change over 0.3 seconds */
+  content: "";
+  position: absolute;
+  width: 0;
+  /* Initially set width to 0 for left-to-right animation */
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: yellow;
+  /* Set underline color (adjust as needed) */
+  transition: width 0.3s ease-in-out;
+  /* Smooth width change over 0.3 seconds */
 }
 
 .show:hover:after {
-    width: 100%;
-    /* Show the underline on hover */
+  width: 100%;
+  /* Show the underline on hover */
 }
 
 video {
-    opacity: 1.5;
+  opacity: 1.5;
 }
 
-#nav-options:hover> :not(:hover) {
-    opacity: 0.4;
+#nav-options:hover > :not(:hover) {
+  opacity: 0.4;
 }
-<<<<<<< HEAD
 
 #watch_1 {
-    clip-path: polygon(
-        100% 0, /* Top-right corner */
-        100% 20%, /* Bottom-right corner */
-        0 calc(100% - 0), /* Bottom-left corner with slant */
-        40px 0  /* Top-left corner with slant */
-      );
-      overflow: hidden; /* Important for container clip-path */
+  clip-path: polygon(
+    100% 0,
+    /* Top-right corner */ 100% 20%,
+    /* Bottom-right corner */ 0 calc(100% - 0),
+    /* Bottom-left corner with slant */ 40px 0 /* Top-left corner with slant */
+  );
+  overflow: hidden; /* Important for container clip-path */
 }
 
 #watch_2 {
-    clip-path: polygon(
-        100% 20%, /* Top-right corner */
-        100% 20%, /* Bottom-right corner */
-      );
-      overflow: hidden; /* Important for container clip-path */
-=======
-h2{
+  clip-path: polygon(
+    100% 20%,
+    /* Top-right corner */ 100% 20%,
+    /* Bottom-right corner */
+  );
+  overflow: hidden; /* Important for container clip-path */
+  h2 {
     align-items: center;
->>>>>>> origin/swetang
+  }
 }
