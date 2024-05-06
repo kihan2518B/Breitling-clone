@@ -2,159 +2,240 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Breitling</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"  >
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                clifford: '#da373d',
-              }
-            }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breitling</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"  >
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
           }
         }
-      </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="./styles.css">
+      }
+    }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+    integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
-    <div id="main">
-        <section id="hero" class="w-full h-screen relative flex justify-center items-center">
-            <video class="h-full w-full object-cover z-0" loop autoplay muted>
-                <source src="./videos/Hero-video-2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <header class="h-16 w-full bg-transparent fixed top-0 left-0 z-10">
-                <nav id="Navbar" class="px-10 h-full flex items-center">
-                    <div id="nav-image" class="flex gap-3 w-[35rem]">
-                        <div id="logo-1" class="color-white">
-                            <img class="" src="./assets/Artwork_8Logo-White-1.png" alt="">
-                        </div>
-                        <div id="logo-2" class="">
-                            <img class="" src="./assets/Rectangle 25368logo-White-2.png" alt="">
-                        </div>
-                        <div id="logo-3" class="">
-                            <img class="" src="./assets/Path 5876logo-White-3.png" alt="">
-                        </div>
-                    </div>
-                    <div class="w-full text-black ml-10 max-[1000px]:hidden align-center flex  text-lg font-light text-white ">
-                        <div id="nav-options" class="flex w-fit gap-5">
-                            <div class="w-[5rem]">
-                                <h6
-                                    class="nav-link font-semibold text-base show transition ease-in-out delay-150 bg-transparent hover:-translate-y-1 hover:scale-110 rounded duration-300 cursor-pointer">
-                                    WATCHES</h6>
-                            </div>
-                            <div class="w-1/7">
-                                <h6
-                                    class="nav-link font-semibold text-base show transition ease-in-out delay-150 bg-transparent hover:-translate-y-1 hover:scale-110  rounded duration-300 cursor-pointer">
-                                    STRAPS</h6>
-                            </div>
-                            <div class="w-1/7">
-                                <h6
-                                    class="nav-link font-semibold text-base show transition ease-in-out delay-150 bg-transparent hover:-translate-y-1 hover:scale-110  rounded duration-300 cursor-pointer ">
-                                    STORES</h6>
-                            </div>
-                            <div class="w-1/7">
-                                <h6
-                                    class="nav-link font-semibold text-base show transition ease-in-out delay-150 bg-transparent hover:-translate-y-1 hover:scale-110  rounded duration-300 cursor-pointer ">
-                                    SERVICE</h6>
-                            </div>
-                            <div class="w-1/7">
-                                <h6
-                                    class="nav-link font-semibold text-base show transition ease-in-out delay-150 bg-transparent hover:-translate-y-1 hover:scale-110  rounded duration-300 cursor-pointer ">
-                                    NFT</h6>
-                            </div>
-                            <div class="w-1/7">
-                                <h6
-                                    class="nav-link font-semibold text-base show transition ease-in-out delay-150 bg-transparent hover:-translate-y-1 hover:scale-110  rounded duration-300 cursor-pointer ">
-                                    SUSTAINABILITY</h6>
-                            </div>
-                            <div class="w-1/7">
-                                <h6
-                                    class="nav-link font-semibold text-base show transition ease-in-out delay-150 bg-transparent hover:-translate-y-1 hover:scale-110  rounded duration-300 cursor-pointer ">
-                                    ABOUT</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="nav-icons" class="w-full flex justify-end text-white">
-                        <div class="w-fit flex items-center gap-5">
-                            <div class="icon w-1/5">
-                                <i class="fa-solid hover:text-white transition ease-in-out  duration-200 fa-magnifying-glass"></i>
-                            </div>
-                            <div class="icon w-1/5">
-                                <i class="fa-solid hover:text-white transition ease-in-out  duration-200 fa-phone"></i>
-                            </div>
-                            <div class="icon w-1/5">
-                                <i class="fa-solid hover:text-white transition ease-in-out  duration-200 fa-heart"></i>
-                            </div>
-                            <div class="icon w-1/5">
-                                <i class="fa-solid hover:text-white transition ease-in-out  duration-200 fa-user"></i>
-                            </div>
-                            <div class="icon w-1/5">
-                                <i class="fa-solid hover:text-white transition ease-in-out  duration-200 fa-bag-shopping"></i>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-            </header>
-        </section>
-
-        <section id="top-saller" class="w-full mt-[10em]">
-            <div class="prd flex justify-center items-center gap-10">
-                <div class="img1">
-                    <div class="img">
-                        <img src="./assets/watch-1.webp" alt="watch-1" class="w-[25em] h-55">
-                    </div>
-                    <div class="text mt-8 flex items-center justify-center">
-                        <h2 class="p">NORTH AMERICAN LIMITED EDITION<br>
-                           <span class="text-yellow-500">SUPEROCEAN AUTOMATIC 36</span></h2>
-                    </div>
-                    <div class="btn mt-8 flex items-center justify-center">
-                        <button class="bg-yellow-500 rounded-full px-4 py-4">Buy Now</button>
-                    </div>
-                </div>
-
-                <div class="img2">
-                    <div class="img">
-                        <img src="./assets/watch-1.webp" alt="watch-2" class="w-[25em] h-55">
-                    </div>
-                    <div class="text mt-6 flex items-center justify-center">
-                        <h2 class="p"><span class="text-yellow-500">SELF-WINDING COSMONAUTE B12</span> <br>
-                            THE FIRST SWISS WRISTWATCH IN SPACE IS BACK,<br> LIMITED TO 250 PIECES</h2>
-                    </div>
-                    <div class="btn mt-4 flex items-center justify-center">
-                        <button class="bg-yellow-500 rounded-full px-4 py-4">Buy Now</button>
-                    </div>
-                </div>
-
-                <div class="img3">
-                    <div class="img">
-                        <img src="./assets/watch-1.webp" alt="watch-3" class="w-[25em] h-55">
-                    </div>
-                    <div class="text mt-8 flex items-center justify-center">
-                        <h2 class="p">BREITLING X<br>
-                        <span class="text-yellow-500">VICTORIA BECKHAM</span></h2>
-                    </div>
-                    <div class="btn mt-8 flex items-center justify-center">
-                        <button class="bg-yellow-500 rounded-full px-4 py-4">Buy Now</button>
-                    </div>
-                </div>
+  <div id="main">
+    <section id="hero" class="w-full h-auto shrink relative flex justify-center items-center">
+      <video class="h-auto flex shrink w-full object-contain z-0" loop autoplay muted>
+        <source src="./videos/Hero-video-2.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <header class="h-16 w-full bg-transparent fixed top-0 left-0 z-10">
+        <nav id="Navbar" class="px-10 h-full flex items-center">
+          <div id="nav-image" class="flex gap-3 w-[35rem] max-[1000px]:w-[10rem]">
+            <div id="logo-1" class="color-white">
+              <img class="" src="./assets/Artwork_8Logo-White-1.png" alt="" />
             </div>
-        </section>
+            <div id="logo-2" class="">
+              <img class="" src="./assets/Rectangle 25368logo-White-2.png" alt="" />
+            </div>
+            <div id="logo-3" class="">
+              <img class="" src="./assets/Path 5876logo-White-3.png" alt="" />
+            </div>
+          </div>
+          <div class="w-full text-black ml-10 max-[1000px]:hidden align-center flex text-lg font-light text-white">
+            <div id="nav-options" class="flex w-fit gap-5">
+              <div class="w-[5rem]">
+                <h6
+                  class="nav-link font-semibold text-base show transition ease-in-out delay-150 bg-transparent hover:-translate-y-1 hover:scale-110 rounded duration-300 cursor-pointer">
+                  WATCHES
+                </h6>
+              </div>
+              <div class="w-1/7">
+                <h6
+                  class="nav-link font-semibold text-base show transition ease-in-out delay-150 bg-transparent hover:-translate-y-1 hover:scale-110 rounded duration-300 cursor-pointer">
+                  STRAPS
+                </h6>
+              </div>
+              <div class="w-1/7">
+                <h6
+                  class="nav-link font-semibold text-base show transition ease-in-out delay-150 bg-transparent hover:-translate-y-1 hover:scale-110 rounded duration-300 cursor-pointer">
+                  STORES
+                </h6>
+              </div>
+              <div class="w-1/7">
+                <h6
+                  class="nav-link font-semibold text-base show transition ease-in-out delay-150 bg-transparent hover:-translate-y-1 hover:scale-110 rounded duration-300 cursor-pointer">
+                  SERVICE
+                </h6>
+              </div>
+              <div class="w-1/7">
+                <h6
+                  class="nav-link font-semibold text-base show transition ease-in-out delay-150 bg-transparent hover:-translate-y-1 hover:scale-110 rounded duration-300 cursor-pointer">
+                  NFT
+                </h6>
+              </div>
+              <div class="w-1/7">
+                <h6
+                  class="nav-link font-semibold text-base show transition ease-in-out delay-150 bg-transparent hover:-translate-y-1 hover:scale-110 rounded duration-300 cursor-pointer">
+                  SUSTAINABILITY
+                </h6>
+              </div>
+              <div class="w-1/7">
+                <h6
+                  class="nav-link font-semibold text-base show transition ease-in-out delay-150 bg-transparent hover:-translate-y-1 hover:scale-110 rounded duration-300 cursor-pointer">
+                  ABOUT
+                </h6>
+              </div>
+            </div>
+          </div>
+          <div id="nav-icons" class="w-full flex justify-end text-white">
+            <div class="w-fit flex items-center gap-5">
+              <div class="icon w-1/5 displayable-icons">
+                <i class="fa-solid hover:text-white transition ease-in-out duration-200 fa-magnifying-glass"></i>
+              </div>
+              <div class="icon w-1/5 max-[1000px]:hidden">
+                <i class="fa-solid hover:text-white transition ease-in-out duration-200 fa-phone"></i>
+              </div>
+              <div class="icon w-1/5 max-[1000px]:hidden">
+                <i class="fa-solid hover:text-white transition ease-in-out duration-200 fa-heart"></i>
+              </div>
+              <div class="icon w-1/5 displayable-icons">
+                <i class="fa-solid hover:text-white transition ease-in-out duration-200 fa-user"></i>
+              </div>
+              <div class="icon w-1/5 max-[1000px]:hidden">
+                <i class="fa-solid hover:text-white transition ease-in-out duration-200 fa-bag-shopping"></i>
+              </div>
+              <div class="icon w-1/5 min-[1001px]:hidden displayable-icons" id="toggle-icon-start">
+                <i class="fa-solid hover:text-white transition ease-in-out duration-200 fa-bars"></i>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="flex justify-end">
+          <section id="bar-section"
+            class="absolute top-2 right-2 h-64 w-44 max-[350px]:w-40 max-[320px]:w-36 bg-white bg-opacity-95 rounded-lg text-yellow-500 flex flex-col justify-evenly translate-x-52 ease-in-out duration-500">
+            <div class="flex w-full justify-evenly">
+              <div class="icon w-1/5 flex justify-center items-center">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+              <div class="icon w-1/5 flex justify-center items-center">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div class="icon w-1/5 flex justify-center items-center" id="toggle-icon-end">
+                <i class="fa-solid fa-xmark text-2xl"></i>
+              </div>
+            </div>
+            <div
+              class="w-full flex justify-center hover:text-white rounded-md hover:bg-yellow-500 transition ease-in-out duration-500">
+              <h6 class="nav-link font-semibold text-base cursor-pointer">
+                WATCHES
+              </h6>
+            </div>
+            <div
+              class="w-full flex justify-center hover:text-white rounded-md hover:bg-yellow-500 transition ease-in-out duration-500">
+              <h6 class="nav-link font-semibold text-base cursor-pointer">
+                STRAPS
+              </h6>
+            </div>
+            <div
+              class="w-full flex justify-center hover:text-white rounded-md hover:bg-yellow-500 transition ease-in-out duration-500">
+              <h6 class="nav-link font-semibold text-base cursor-pointer">
+                STORES
+              </h6>
+            </div>
+            <div
+              class="w-full flex justify-center hover:text-white rounded-md hover:bg-yellow-500 transition ease-in-out duration-500">
+              <h6 class="nav-link font-semibold text-base cursor-pointer">
+                SERVICE
+              </h6>
+            </div>
+            <div
+              class="w-full flex justify-center hover:text-white rounded-md hover:bg-yellow-500 transition ease-in-out duration-500">
+              <h6 class="nav-link font-semibold text-base cursor-pointer">
+                NFT
+              </h6>
+            </div>
+            <div
+              class="w-full flex justify-center hover:text-white rounded-md hover:bg-yellow-500 transition ease-in-out duration-500">
+              <h6 class="nav-link font-semibold text-base cursor-pointer">
+                SUSTAINABILITY
+              </h6>
+            </div>
+            <div
+              class="w-full flex justify-center hover:text-white rounded-md hover:bg-yellow-500 transition ease-in-out duration-500">
+              <h6 class="nav-link font-semibold text-base cursor-pointer">
+                ABOUT
+              </h6>
+            </div>
+            <div class="flex w-full justify-evenly">
+              <div class="icon w-1/5 flex justify-center items-center">
+                <i class="fa-solid hover:text-white transition ease-in-out duration-200 fa-phone"></i>
+              </div>
+              <div class="icon w-1/5 flex justify-center items-center">
+                <i class="fa-solid hover:text-white transition ease-in-out duration-200 fa-heart"></i>
+              </div>
+              <div class="icon w-1/5 flex justify-center items-center">
+                <i class="fa-solid hover:text-white transition ease-in-out duration-200 fa-bag-shopping"></i>
+              </div>
+            </div>
+          </section>
+        </div>
+      </header>
+    </section>
+
+    
+    <section id="top-saller" class="w-full mt-[10em]">
+      <div class="prd flex justify-center items-center gap-10">
+        <div class="img1">
+          <div class="img">
+            <img src="./assets/watch-1.webp" alt="watch-1" class="w-[25em] h-55">
+          </div>
+          <div class="text mt-8 flex items-center justify-center">
+            <h2 class="p">NORTH AMERICAN LIMITED EDITION<br>
+              <span class="text-yellow-500">SUPEROCEAN AUTOMATIC 36</span>
+            </h2>
+          </div>
+          <div class="btn mt-8 flex items-center justify-center">
+            <button class="bg-yellow-500 rounded-full px-4 py-4">Buy Now</button>
+          </div>
+        </div>
+
+        <div class="img2">
+          <div class="img">
+            <img src="./assets/watch-1.webp" alt="watch-2" class="w-[25em] h-55">
+          </div>
+          <div class="text mt-6 flex items-center justify-center">
+            <h2 class="p"><span class="text-yellow-500">SELF-WINDING COSMONAUTE B12</span> <br>
+              THE FIRST SWISS WRISTWATCH IN SPACE IS BACK,<br> LIMITED TO 250 PIECES</h2>
+          </div>
+          <div class="btn mt-4 flex items-center justify-center">
+            <button class="bg-yellow-500 rounded-full px-4 py-4">Buy Now</button>
+          </div>
+        </div>
+
+        <div class="img3">
+          <div class="img">
+            <img src="./assets/watch-1.webp" alt="watch-3" class="w-[25em] h-55">
+          </div>
+          <div class="text mt-8 flex items-center justify-center">
+            <h2 class="p">BREITLING X<br>
+              <span class="text-yellow-500">VICTORIA BECKHAM</span>
+            </h2>
+          </div>
+          <div class="btn mt-8 flex items-center justify-center">
+            <button class="bg-yellow-500 rounded-full px-4 py-4">Buy Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
 
 </body>
-
 </html>
