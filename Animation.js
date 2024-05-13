@@ -90,6 +90,7 @@ gsap.fromTo(
   }
 );
 
+
 document.addEventListener("DOMContentLoaded", function () {
   const icon = document.querySelector("#toggle-icon-start");
   const section = document.querySelector("#chicken_bar-section");
@@ -115,3 +116,44 @@ document.addEventListener("DOMContentLoaded", function () {
     icons.forEach((icon) => icon.classList.remove("hidden"));
   });
 });
+
+// Initialize GSAP and ScrollTrigger
+gsap.registerPlugin(ScrollTrigger);
+
+
+// Animation for each div
+document.querySelectorAll("#scrollTrigger_animation").forEach((container) => {
+    const img = container.querySelector("img");
+    const textContainer = container.querySelector(".flex.flex-col");
+    // console.log(img)
+  
+    // Animation timeline
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: container,
+        start: "top 60%",
+        end: "bottom 15%",
+        markers: true,
+        toggleActions: "play reverse play reverse",
+      },
+    });
+  
+    // Set initial state
+    tl.set(img, { visibility: "visible", opacity: 0 });
+    tl.set(textContainer, { visibility: "visible", opacity: 0, width: 0 });
+  
+    // Animation
+    if (container.classList.contains("invisible")) {
+      // For div where image is on the left side
+      tl.to(img, {
+        clipPath: "polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%)",
+        opacity: 1,
+        duration: 2,
+        ease: "power2.inOut",
+      }).to(
+        textContainer,
+        { opacity: 1, width: "90%", duration: 0.5, ease: "power2.inOut" },
+        "-=0.5"
+      );
+    }
+  });

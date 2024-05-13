@@ -21,13 +21,13 @@
           }
         }
       </script>
+      <script src="./Animation.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
         integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
         integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./Animation.js"></script>
     <!-- <link rel="stylesheet" href="./styles.css"> -->
 </head>
 
@@ -285,6 +285,130 @@
                 </div>
             </div>
         </section>
+        <div class="h-full w-full flex flex-col">
+          <div id="scrollTrigger_animation" class="invisible mx-auto h-[40vh] w-[85%] sm:h-[45vh] flex">
+            <div
+              class="h-[40vh] w-[55vw] sm:h-[45vh] sm:w-[70vw] md:w-[75vw] flex flex-col justify-center items-start"
+            >
+              <div
+                class="sm:text-xl text-lg max-[520px]:text-base max-[450px]:text-sm max-[400px]:text-xs max-[350px]:flex-col font-bold flex items-center justify-center h-fit"
+              >
+                <p class="text-black mr-1">THE NEW</p>
+                <p class="text-yellow-500">NAVITIMER 41</p>
+              </div>
+              <div class="h-fit w-[90%] flex flex-col items-start">
+                <p class="text-black">
+                  watch the journey of our newest member of the nevitimer squad:
+                </p>
+                <p class="text-yellow-500 font-bold">Erling Haaland.</p>
+              </div>
+            </div>
+            <div class="flex justify-end object-contain">
+              <img
+                src="https://www.breitling.com/media/image/4/single_entry_double_image_435/asset-version-e35907865d/erling-double-image-1-v3.webp"
+                alt=""
+                class="h-[40vh] w-[55vw] sm:h-[45vh] sm:w-[34.8vw] md:w-[28.8vw]"
+              />
+            </div>
+          </div>
+          <div
+          id="scrollTrigger_animation"
+            class="invisible mx-auto h-[40vh] w-[85%] sm:h-[45vh] flex justify-around"
+          >
+            <div class="flex justify-end object-contain">
+              <img
+                src="https://www.breitling.com/media/image/4/single_entry_double_image_435/asset-version-e35907865d/erling-double-image-1-v3.webp"
+                alt=""
+                class="h-[40vh] w-[55vw] sm:h-[45vh] sm:w-[34.8vw] md:w-[28.8vw]"
+              />
+            </div>
+            <div
+              class="h-[40vh] w-[55vw] sm:h-[45vh] sm:w-[70vw] md:w-[75vw] flex flex-col justify-center items-end"
+            >
+              <div
+                class="sm:text-xl text-lg max-[520px]:text-base max-[450px]:text-sm max-[400px]:text-xs max-[350px]:flex-col font-bold flex items-center justify-center h-fit"
+              >
+                <p class="text-black mr-1">THE NEW</p>
+                <p class="text-yellow-500">NAVITIMER 41</p>
+              </div>
+              <div class="h-fit w-[90%] flex flex-col items-end">
+                <p class="text-black">
+                  watch the journey of our newest member of the nevitimer squad:
+                </p>
+                <p class="text-yellow-500 font-bold">Erling Haaland.</p>
+              </div>
+            </div>
+          </div>
+          <div id="scrollTrigger_animation" class="invisible mx-auto h-[40vh] w-[85%] sm:h-[45vh] flex">
+            <div
+              class="h-[40vh] w-[55vw] sm:h-[45vh] sm:w-[70vw] md:w-[75vw] flex flex-col justify-center items-start"
+            >
+              <div
+                class="sm:text-xl text-lg max-[520px]:text-base max-[450px]:text-sm max-[400px]:text-xs max-[350px]:flex-col font-bold flex items-center justify-center h-fit"
+              >
+                <p class="text-black mr-1">THE NEW</p>
+                <p class="text-yellow-500">NAVITIMER 41</p>
+              </div>
+              <div class="h-fit w-[90%] flex flex-col items-start">
+                <p class="text-black">
+                  watch the journey of our newest member of the nevitimer squad:
+                </p>
+                <p class="text-yellow-500 font-bold">Erling Haaland.</p>
+              </div>
+            </div>
+            <div class="flex justify-end object-contain">
+              <img
+                src="https://www.breitling.com/media/image/4/single_entry_double_image_435/asset-version-e35907865d/erling-double-image-1-v3.webp"
+                alt=""
+                class="h-[40vh] w-[55vw] sm:h-[45vh] sm:w-[34.8vw] md:w-[28.8vw]"
+              />
+            </div>
+          </div>
+        <script>
+            // Initialize GSAP and ScrollTrigger
+  gsap.registerPlugin(ScrollTrigger);
+
+// Animation for each div
+document.querySelectorAll(".mx-auto").forEach((container) => {
+  const img = container.querySelector("img");
+  const textContainer = container.querySelector(".flex.flex-col");
+  // console.log(img)
+
+  // Animation timeline
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: container,
+      start: "top 60%",
+      end: "bottom 15%",
+      // markers: true,
+      toggleActions: "play reverse play reverse",
+    },
+  });
+
+  // Set initial state
+  tl.set(img, { visibility: "visible", opacity: 0 });
+  tl.set(textContainer, { visibility: "visible", opacity: 0, width: 0 });
+
+  // Animation
+  if (container.classList.contains("invisible")) {
+    // For div where image is on the left side
+    tl.to(img, {
+      clipPath: "polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%)",
+      opacity: 1,
+      duration: 2,
+      ease: "power2.inOut",
+    }).to(
+      textContainer,
+      { opacity: 1, width: "90%", duration: 0.5, ease: "power2.inOut" },
+      "-=0.5"
+    );
+  }
+});
+        </script>
+        </div>
+        
+
+
 
 </body>
 
