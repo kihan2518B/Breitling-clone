@@ -197,51 +197,83 @@
             </header>
         </section>
 
-        <section id="top-saller" class="w-full mt-[10em]">
-            <div class="prd flex justify-center items-center gap-10">
-                <div class="img1">
+        <section id="top-saller" class="w-full mt-10">
+            <div class="prd flex flex-col md:flex-row justify-center items-center gap-10 p-5">
+                <div
+                    class="at-item img1 bg-white p-6 rounded-lg border border-gray-300 shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out transform hover:-translate-y-2">
                     <div class="img">
-                        <img src="./assets/watch-1.webp" alt="watch-1" class="w-[25em] h-55">
+                        <img src="./assets/watch-1.webp" alt="watch-1" class="w-full h-auto rounded-md">
                     </div>
-                    <div class="text mt-8 flex items-center justify-center">
-                        <h2 class="p">NORTH AMERICAN LIMITED EDITION<br>
+                    <div class="text mt-6 text-center">
+                        <h2 class="text-2xl font-bold text-gray-800">NORTH AMERICAN LIMITED EDITION<br>
                             <span class="text-yellow-500">SUPEROCEAN AUTOMATIC 36</span>
                         </h2>
                     </div>
-                    <div class="btn mt-8 flex items-center justify-center">
-                        <button class="bg-yellow-500 rounded-full px-4 py-4">Buy Now</button>
+                    <div class="btn mt-6 text-center">
+                        <button
+                            class="bg-yellow-500 text-white rounded-full px-8 py-4 font-semibold shadow-md hover:bg-yellow-600 hover:shadow-lg transition-all duration-300 ease-in-out">Buy
+                            Now</button>
                     </div>
                 </div>
 
-                <div class="img2">
+                <div
+                    class="at-item img2 bg-white p-6 rounded-lg border border-gray-300 shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out transform hover:-translate-y-2">
                     <div class="img">
-                        <img src="./assets/watch-1.webp" alt="watch-2" class="w-[25em] h-55">
+                        <img src="./assets/watch-1.webp" alt="watch-2" class="w-full h-auto rounded-md">
                     </div>
-                    <div class="text mt-6 flex items-center justify-center">
-                        <h2 class="p"><span class="text-yellow-500">SELF-WINDING COSMONAUTE B12</span> <br>
-                            THE FIRST SWISS WRISTWATCH IN SPACE IS BACK,<br> LIMITED TO 250 PIECES</h2>
+                    <div class="text mt-6 text-center">
+                        <h2 class="text-2xl font-bold text-gray-800"><span class="text-yellow-500">SELF-WINDING
+                                COSMONAUTE B12</span><br>
+                            THE FIRST SWISS WRISTWATCH IN SPACE IS BACK,<br> LIMITED TO 250 PIECES
+                        </h2>
                     </div>
-                    <div class="btn mt-4 flex items-center justify-center">
-                        <button class="bg-yellow-500 rounded-full px-4 py-4">Buy Now</button>
+                    <div class="btn mt-6 text-center">
+                        <button
+                            class="bg-yellow-500 text-white rounded-full px-8 py-4 font-semibold shadow-md hover:bg-yellow-600 hover:shadow-lg transition-all duration-300 ease-in-out">Buy
+                            Now</button>
                     </div>
                 </div>
 
-                <div class="img3">
+                <div
+                    class="at-item img3 bg-white p-6 rounded-lg border border-gray-300 shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out transform hover:-translate-y-2">
                     <div class="img">
-                        <img src="./assets/watch-1.webp" alt="watch-3" class="w-[25em] h-55">
+                        <img src="./assets/watch-1.webp" alt="watch-3" class="w-full h-auto rounded-md">
                     </div>
-                    <div class="text mt-8 flex items-center justify-center">
-                        <h2 class="p">BREITLING X<br>
+                    <div class="text mt-6 text-center">
+                        <h2 class="text-2xl font-bold text-gray-800">BREITLING X<br>
                             <span class="text-yellow-500">VICTORIA BECKHAM</span>
                         </h2>
                     </div>
-                    <div class="btn mt-8 flex items-center justify-center">
-                        <button class="bg-yellow-500 rounded-full px-4 py-4">Buy Now</button>
+                    <div class="btn mt-6 text-center">
+                        <button
+                            class="bg-yellow-500 text-white rounded-full px-8 py-4 font-semibold shadow-md hover:bg-yellow-600 hover:shadow-lg transition-all duration-300 ease-in-out">Buy
+                            Now</button>
                     </div>
                 </div>
             </div>
         </section>
-        <div class="h-full w-full flex flex-col">
+
+
+        <style>
+            .at-item:hover img {
+                animation: rotate-scale-down-hor 1s linear 0s 1 normal none;
+            }
+
+            @keyframes rotate-scale-down-hor {
+
+                0% {
+                    transform: rotateY(80deg);
+                    opacity: 0;
+                }
+
+                100% {
+                    transform: rotateY(0);
+                    opacity: 1;
+                }
+            }
+        </style>
+
+        <div class=" h-full w-full flex flex-col">
             <div id="scrollTrigger_animation" class="invisible mx-auto h-[40vh] w-[85%] sm:h-[45vh] flex">
                 <div
                     class="h-[40vh] w-[55vw] sm:h-[45vh] sm:w-[70vw] md:w-[75vw] flex flex-col justify-center items-start">
@@ -264,9 +296,9 @@
             </div>
             <div id="scrollTrigger_animation"
                 class="invisible mx-auto h-[40vh] w-[85%] sm:h-[45vh] flex justify-around">
-                <div class="flex justify-end object-contain">
+                <div class="flex justify-end ">
                     <img src="./assets/chronomat-di-2.webp" alt=""
-                        class="h-[40vh] w-[55vw] sm:h-[45vh] sm:w-[34.8vw] md:w-[28.8vw]" />
+                        class="object-contain h-[40vh] w-[55vw] sm:h-[45vh] sm:w-[34.8vw] md:w-[28.8vw]" />
                 </div>
                 <div
                     class="h-[40vh] w-[55vw] sm:h-[45vh] sm:w-[70vw] md:w-[75vw] flex flex-col justify-center items-end">
@@ -303,130 +335,277 @@
                         class="h-[40vh] w-[55vw] sm:h-[45vh] sm:w-[34.8vw] md:w-[28.8vw]" />
                 </div>
             </div>
-            <script>
-                // Initialize GSAP and ScrollTrigger
-                gsap.registerPlugin(ScrollTrigger);
-
-                // Animation for each div
-                document.querySelectorAll(".mx-auto").forEach((container) => {
-                    const img = container.querySelector("img");
-                    const textContainer = container.querySelector(".flex.flex-col");
-                    // console.log(img)
-
-                    // Animation timeline
-                    const tl = gsap.timeline({
-                        scrollTrigger: {
-                            trigger: container,
-                            start: "top 60%",
-                            end: "bottom 15%",
-                            // markers: true,
-                            toggleActions: "play reverse play reverse",
-                        },
-                    });
-
-                    // Set initial state
-                    tl.set(img, { visibility: "visible", opacity: 0 });
-                    tl.set(textContainer, { visibility: "visible", opacity: 0, width: 0 });
-
-                    // Animation
-                    if (container.classList.contains("invisible")) {
-                        // For div where image is on the left side
-                        tl.to(img, {
-                            clipPath: "polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%)",
-                            opacity: 1,
-                            duration: 2,
-                            ease: "power2.inOut",
-                        }).to(
-                            textContainer,
-                            { opacity: 1, width: "90%", duration: 0.5, ease: "power2.inOut" },
-                            "-=0.5"
-                        );
-                    }
-                });
-            </script>
         </div>
+        <script>
+            // Initialize GSAP and ScrollTrigger
+            gsap.registerPlugin(ScrollTrigger);
 
-        <section class="flex w-full mt-10">
-            <div class="h-[100vh] w-1/2 flex justify-start items-center">
-                <!-- <div id="container" class=" h-96 w-96 flex shrink rounded-full border-black border-2 relative"> -->
-                <div
-                    class="relative flex shrink -left-[15rem] h-[25rem] w-[25rem] rounded-full border-2 border-gray-200 flex justify-center items-center">
-                    <div
-                        class="clock-image-1 flex shrink right-0 -translate-x-[20%] -translate-y-[105%] h-[10rem] w-[10rem] absolute flex justify-center items-center">
-                        <img class="clock-image cursor-pointer flex shrink hover:scale-110 transform ease-in-out duration-300 object-contain h-fit w-fit relative"
-                            src="https://www.breitling.com/media/image/4/cfg_site_hd/asset-version-5f20dd91fd/u17329f41g1u1-navitimer-automatic-41-soldier.webp"
-                            alt="Image 1" onclick="addClass(this)" />
-                    </div>
-                    <div
-                        class="clock-image-2 flex shrink right-0 translate-x-[35%] -translate-y-[45%] h-[10rem] w-[10rem] absolute flex justify-center items-center">
-                        <img class="clock-image cursor-pointer flex shrink hover:scale-110 transform ease-in-out duration-300 object-contain h-fit w-fit relative"
-                            src="https://www.breitling.com/media/image/4/cfg_site_hd/asset-version-235e440ac3/a32310211g1p1-navitimer-automatic-gmt-41-soldier.webp"
-                            alt="Image 1" onclick="addClass(this)" />
-                    </div>
-                    <div
-                        class="clock-image-3 flex shrink right-0 translate-x-[35%] translate-y-[55%] h-[10rem] w-[10rem] absolute flex justify-center items-center">
-                        <img class="clock-image cursor-pointer flex shrink hover:scale-110 transform ease-in-out duration-300 object-contain h-fit w-fit relative"
-                            src="https://www.breitling.com/media/image/4/cfg_site_hd/asset-version-235e440ac3/a32310211g1p1-navitimer-automatic-gmt-41-soldier.webp"
-                            alt="Image 1" onclick="addClass(this)" />
-                    </div>
-                    <div
-                        class="clock-image-4 flex shrink right-0 -translate-x-[20%] translate-y-[105%] h-[10rem] w-[10rem] absolute flex justify-center items-center">
-                        <img class="clock-image cursor-pointer flex shrink hover:scale-110 transform ease-in-out duration-300 object-contain h-fit w-fit relative"
-                            src="https://www.breitling.com/media/image/4/cfg_site_hd/asset-version-a8cbbb653f/u173771a1a1s1-superocean-automatic-36-soldier.webp"
-                            alt="Image 1" onclick="addClass(this)" />
-                    </div>
-                </div>
-            </div>
-            <div class="h-[100vh] w-1/2 flex flex-col mr-3">
-                <div class="h-[7vw] w-full flex" id="first-section">
-                    <div class="h-full w-[55vw] flex justify-center items-center text-2xl font-bold">
-                        <p>NAVITIMER AUTOMATIC 41</p>
-                    </div>
-                    <div id="nav-image" class="flex justify-center items-center gap-3 w-[18.9vw] max-[1000px]:w-[15vw]">
-                        <div id="logo-1" class="">
-                            <img class="" src="./assets/Artwork_8Logo-Yellow-1.png" alt="" />
-                        </div>
-                        <div id="logo-2" class="">
-                            <img class="" src="./assets/Rectangle 25367logo-Yellow-2.png" alt="" />
-                        </div>
-                        <div id="logo-3" class="">
-                            <img class="" src="./assets/Path 5876logo-Yellow-3.png" alt="" />
-                        </div>
-                    </div>
-                </div>
-                <div class="second-section h-[32vw] flex flex-col items-center">
-                    <p class="h-[4vw] text-xl w-full flex justify-center items-center">
-                        Description
-                    </p>
-                    <p class="h-[28vw] text-2xl w-full text-justify flex items-center">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. A inventore
-                        tempore amet reiciendis magnam similique, mollitia adipisci cum animi
-                        itaque, dolorem esse, blanditiis maiores ratione non debitis nemo.
-                        Nobis, vel! Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                        Ipsum similique perferendis eos amet dolorum inventore optio.
-                        Molestias, quia numquam! Animi sapiente repudiandae provident totam
-                        hic excepturi asperiores earum sint cupiditate.
-                    </p>
-                </div>
-                <div class="h-[6.2vw] flex items-center" id="third-section">
-                    <div class="w-[50%] flex justify-center items-center">
-                        <button class="h-[4vw] w-[12vw] bg-yellow-400 text-xl rounded-xl border-2 border-black">
-                            2,00,589
-                        </button>
-                    </div>
-                    <div class="w-[50%] flex justify-center items-center">
-                        <button class="h-[4vw] w-[15vw] bg-yellow-400 text-xl rounded-lg border-2 border-black">
-                            Add To Cart
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <style>
-                .active {
-                    scale: 125%;
+            // Animation for each div
+            document.querySelectorAll(".mx-auto").forEach((container) => {
+                const img = container.querySelector("img");
+                const textContainer = container.querySelector(".flex.flex-col");
+                // console.log(img)
+
+                // Animation timeline
+                const tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: container,
+                        start: "top 85%",
+                        end: "bottom 10%",
+                        // markers: true,
+                        // scrub: 0.5,
+                        toggleActions: "play reverse play reverse",
+                    },
+                });
+
+                // Set initial state
+                tl.set(img, { visibility: "visible", opacity: 0 });
+                tl.set(textContainer, { visibility: "visible", opacity: 0, width: 0 });
+
+                // Animation
+                if (container.classList.contains("invisible")) {
+                    // For div where image is on the left side
+                    tl.to(img, {
+                        clipPath: "polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%)",
+                        opacity: 1,
+                        duration: 1,
+                        ease: "power2.inOut",
+                    }).to(
+                        textContainer,
+                        { opacity: 1, width: "90%", duration: 0.5, ease: "power2.inOut" },
+                        "-=0.5"
+                    );
                 }
-            </style>
+            });
+        </script>
+
+        <section class="w-full flex flex-col mt-10">
+            <div class="text-yellow-400 w-full flex justify-between pl-5 items-center text-6xl">
+                <h1>
+                    Trending Now
+                </h1>
+            </div>
+            <div class="trending-track h-full w-[97%] mx-auto gap-3 mt-5 justify-center items-center">
+                <article class="card bg-sky-200/100 hover:bg-gradient-to-b from-sky-800 via-sky-800/50 to-sky-800">
+                    <img class="card__background" src="./assets/TrendingWatch_1.webp"
+                        alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                        width="1920" height="2193" />
+                    <div
+                        class="card__content | flow bg-gradient-to-b rounded-t-md from-black/0 via-black/0 via-black/20 via-black/50 to-black">
+                        <div class="card__content--container | flow text-yellow-400">
+                            <h2 class="card__title text-white">Colombia</h2>
+                            <p class="card__description">
+                                Chronomat Automatic GMT 40 Giannis Antetokounmpo
+                            </p>
+                        </div>
+                        <button class="card__button bg-yellow-400">Add to Bag</button>
+                    </div>
+                </article>
+
+                <article class="card bg-gray-200 hover:bg-gradient-to-b from-black/85 via-black/50 to-black/85">
+                    <img class="card__background " src="./assets/TrendingWatch_2.webp"
+                        alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                        width="1920" height="2193" />
+                    <div
+                        class="card__content | flow bg-gradient-to-b rounded-t-md from-black/0 via-black/0 via-black/20 via-black/50 to-black">
+                        <div class="card__content--container | flow text-yellow-400">
+                            <h2 class="card__title text-white">Colombia</h2>
+                            <p class="card__description">
+                                Chronomat Automatic GMT 40 Giannis Antetokounmpo
+                            </p>
+                        </div>
+                        <button class="card__button bg-yellow-400">Add to Bag</button>
+                    </div>
+                </article>
+
+                <article
+                    class="card hover:bg-gradient-to-b from-green-800 via-green-800/50 to-green-800 bg-green-600/40">
+                    <img class="card__background " src="./assets/TrendingWatch_3.webp"
+                        alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                        width="1920" height="2193" />
+                    <div
+                        class="card__content | flow  bg-gradient-to-b rounded-t-md from-black/0 via-black/0 via-black/20 via-black/50 to-black">
+                        <div class="card__content--container | flow text-yellow-400">
+                            <h2 class="card__title text-white">Colombia</h2>
+                            <p class="card__description">
+                                Chronomat Automatic GMT 40 Giannis Antetokounmpo
+                            </p>
+                        </div>
+                        <button class="card__button bg-yellow-400">Add to Bag</button>
+                    </div>
+                </article>
+
+                <article class="card hover:bg-gradient-to-b from-stone-500 via-stone-500/50 to-stone-500 bg-stone-400">
+                    <img class="card__background" src="./assets/TrendingWatch_4.webp"
+                        alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+                        width="1920" height="2193" />
+                    <div
+                        class="card__content | flow bg-gradient-to-b rounded-t-md from-black/0 via-black/0 via-black/20 via-black/50 to-black">
+                        <div class="card__content--container | flow text-white ">
+                            <h2 class="card__title ">INR 883 500</h2>
+                            <p class="card__description">
+                                Chronomat Automatic GMT 40 Giannis Antetokounmpo
+                            </p>
+                        </div>
+                        <button class="card__button bg-yellow-400">Add to Bag</button>
+                    </div>
+                </article>
+            </div>
+
         </section>
+
+        <style>
+            .trending-track {
+                display: flex;
+                overflow-x: scroll;
+            }
+
+            .trending-track article {
+                flex: 0 0 auto;
+            }
+
+            h1 {
+                font-variant: small-caps;
+            }
+
+            .flow>*+* {
+                margin-top: var(--flow-space, 1em);
+            }
+
+            .card {
+                display: grid;
+                place-items: center;
+                width: 300px;
+                max-width: 21.875rem;
+                height: 380px;
+                overflow: hidden;
+                box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+            }
+
+            .card>* {
+                grid-column: 1 / 2;
+                grid-row: 1 / 2;
+            }
+
+            .card__background {
+                object-fit: cover;
+                max-width: 100%;
+                height: 100%;
+                transition: background-color 1s ease-in-out;
+            }
+
+            .card__content {
+                --flow-space: 0.9375rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-self: flex-end;
+                height: 55%;
+                padding: 12% 1.25rem 1.875rem;
+
+            }
+
+            .card__content--container {
+                --flow-space: 1.25rem;
+            }
+
+            .card__title {
+                position: relative;
+                width: fit-content;
+                width: -moz-fit-content;
+                /* Prefijo necesario para Firefox  */
+            }
+
+            .card__title::after {
+                content: "";
+                position: absolute;
+                height: 0.3125rem;
+                width: calc(100% + 1.25rem);
+                bottom: calc((1.25rem - 0.5rem) * -1);
+                left: -1.25rem;
+                background-color: yellow;
+            }
+
+            .card__button {
+                padding: 0.75em 1.6em;
+                width: fit-content;
+                font-variant: small-caps;
+                font-weight: bold;
+                border-radius: 0.45em;
+                border: none;
+                font-size: 1.125rem;
+                color: var(--black);
+            }
+
+            .card__button:focus {
+                outline: 2px solid black;
+                outline-offset: -5px;
+            }
+
+            @media (any-hover: hover) and (any-pointer: fine) {
+                .card__content {
+                    transform: translateY(92%);
+                    transition: transform 500ms ease-out;
+                    transition-delay: 500ms;
+                }
+
+                .card__title::after {
+                    opacity: 0;
+                    transform: scaleX(0);
+                    transition: opacity 1000ms ease-in, transform 500ms ease-out;
+                    transition-delay: 500ms;
+                    transform-origin: right;
+                }
+
+                .card__background {
+                    transition: all 500ms ease-in-out;
+                }
+
+                .card__content--container> :not(.card__title),
+                .card__button {
+                    opacity: 0;
+                    transition: transform 500ms ease-out, opacity 500ms ease-out;
+                }
+
+                .card:hover,
+                .card:focus-within {
+                    transition: transform 500ms ease-in-out;
+                }
+
+                .card:hover .card__content,
+                .card:focus-within .card__content {
+                    transform: translateY(0%);
+                    transition: transform 500ms ease-in;
+                }
+
+                .card:focus-within .card__content {
+                    transition-duration: 0ms;
+                }
+
+                .card:hover .card__background,
+                .card:focus-within .card__background {
+                    transform: scale(2) translateX(20%);
+                }
+
+                .card:hover .card__content--container> :not(.card__title),
+                .card:hover .card__button,
+                .card:focus-within .card__content--container> :not(.card__title),
+                .card:focus-within .card__button {
+                    opacity: 1;
+                    transition: opacity 500ms ease-in-out, background-color 220ms ease-in-out;
+                    transition-delay: 400ms;
+                }
+
+                .card:hover .card__title::after,
+                .card:focus-within .card__title::after {
+                    opacity: 1;
+                    transform: scaleX(1);
+                    transform-origin: left;
+                    transition: opacity 300ms ease-in, transform 300ms ease-in;
+                    transition-delay: 300ms;
+                }
+            }
+        </style>
 
         <script>
             const images = document.querySelectorAll(".clock-image");
@@ -626,6 +805,692 @@
                     </div>
                 </div>
             </section>
+        </div>
+
+        <!-- 8th section -->
+
+        <div class="br-11-20 mx-auto max-w-[1400px] text-black text-base font-normal leading-6">
+            <section class="single-entry single-entry-full-width pt-0 px-4 pb-7 min-[992px]:px-8">
+                <div class="entry__wrapper w-full">
+                    <div class="entry__content">
+                        <div class="content__wrapper text-center">
+                            <h2
+                                class="content__title content__title--bigger font-heading font-bold text-2xl leading-tight uppercase min-[992px]:text-4xl">
+                                <span class="text-yellow-400">Find
+                                    your </span> nearest Breitling Boutique
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- 9th Section -->
+        <style>
+            /* Custom styles for properties not directly supported by Tailwind */
+            .slider-css {
+                -ms-overflow-style: none;
+                /* Hide scrollbar for IE */
+                scrollbar-width: none;
+                /* Hide scrollbar for Firefox */
+            }
+
+            .slider-css::-webkit-scrollbar {
+                display: none;
+                /* Hide scrollbar for WebKit browsers */
+            }
+        </style>
+        <div class="br-11-20 mx-auto max-w-[1400px] text-black text-base font-normal leading-6">
+            <div class="limited-width m-auto max-w-[1400px]">
+                <section class="block px-4 md:px-[30px] relative ml-[-8px] mr-[-8px] " id="block-store-desktop">
+                    <div
+                        class="slider-css flex relative mr-[-15px] overflow-x-scroll overflow-y-hidden scroll-smooth snap-x snap-mandatory md:ml-[10px] md:mr-[10px] md:px-[10px]">
+                        <div id="block-store-desktop-2016069"
+                            class="store__wrapper snap-start md:max-w-[33.333333%] md:min-w-[33.333333%] min-w-[76.923077%] pointer px-2 cursor-pointer">
+                            <div class="store-content flex bg-yellow-400 h-full">
+                                <div
+                                    class="store__informations self-center flex h-full flex-col justify-between w-full p-5">
+                                    <div class="">
+                                        <h2 class="store__title text-xl text-center font-semibold ">
+                                            <a href="/us-en/stores/breitling-boutiques/us/breitling-boutique-miami-design-district/"
+                                                class="hover-black">
+                                                BREITLING BOUTIQUE MIAMI DESIGN DISTRICT
+                                            </a>
+                                        </h2>
+                                        <div class="text-center">
+                                            <div
+                                                class="store__subtitle relative h-fit min[992px]:text-base min-[992px]:font-normal min-[992px]:mt-0">
+                                                <svg class="min-[992px]:hidden blockicon icon-map mr-10"
+                                                    aria-label="location">
+                                                    <use
+                                                        xlink:href="/build/images/asset-version-c657f0bced/icons.svg#icon-map">
+                                                    </use>
+                                                </svg>
+                                                <div class="w-full">
+                                                    Suite 108 NORTHEAST 41ST STREET 112, MIAMI, FL 33137
+                                                </div>
+
+                                            </div>
+                                            <div
+                                                class="store__subtitle mt-2.5 min[992px]:text-base min-[992px]:font-normal min-[992px]:mt-0">
+                                                <svg class="min-[992px]:hidden icon icon-phone mr-10"
+                                                    aria-label="Phone">
+                                                    <use
+                                                        xlink:href="/build/images/asset-version-c657f0bced/icons.svg#icon-phone">
+                                                    </use>
+                                                </svg>
+                                                <div class="phone w-full">
+                                                    <span class="hidden-mobile-tablet hidden min-[992px]:block">
+                                                        Phone
+                                                        <a href="tel:+1 305-918-1884">
+                                                            +1 305-918-1884
+                                                        </a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="opening-hours mt-[15px] text-center">
+                                            <div
+                                                class="store__label font-bold min-[992px]:text-base mt-10 min-[992px]:mt-0 font-heading mt-15 hidden-mobile-tablet hidden min-[992px]:block">
+                                                Opening hours
+                                            </div>
+                                            <div class="store__content text-center">
+                                                <div class="content__table flex justify-center items-center">
+
+                                                    <table class="text-left">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    Wednesday:
+                                                                </td>
+                                                                <td class="tet-right">
+                                                                    11:00-19:00
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Thursday:
+                                                                </td>
+                                                                <td class="tet-right">
+                                                                    11:00-19:00
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Friday:
+                                                                </td>
+                                                                <td class="tet-right">
+                                                                    11:00-19:00
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Saturday:
+                                                                </td>
+                                                                <td class="tet-right">
+                                                                    11:00-19:00
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Sunday:
+                                                                </td>
+                                                                <td class="tet-right">
+                                                                    12:00-18:00
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Monday:
+                                                                </td>
+                                                                <td class="tet-right">
+                                                                    11:00-19:00
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Tuesday:
+                                                                </td>
+                                                                <td class="tet-right">
+                                                                    11:00-19:00
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex flex-col gap-5">
+                                        <div class="store__links flex mt-4 justify-center items-center">
+                                            <a class="link text-gray-900 font-bold text-xs md:text-sm mx-2 underline transition ease-out duration-300 hover:text-gray-700"
+                                                href="mailto:Miami.Design@Breitling.com">
+                                                E-mail
+                                                <i class="fa-solid fa-chevron-right ml-[5px]"></i>
+                                            </a>
+                                            <a class="link text-gray-900 font-bold text-xs md:text-sm mx-2 underline transition ease-out duration-300 hover:text-gray-700 flex items-center"
+                                                href="/us-en/stores/breitling-boutiques/us/breitling-boutique-miami-design-district/#retailers-map">
+                                                Get directions
+                                                <i class="fa-solid fa-chevron-right ml-[5px]"></i>
+                                            </a>
+                                        </div>
+                                        <a href="/us-en/stores/appointment/us/fl/miami/2016069/breitling-boutique-miami-design-district/ "
+                                            class="store__button btn text-black bg-white text-center hover:text-yellow-400 font-bold uppercase py-4 px-10 min-[992px]:px-10 transition duration-300 ease-in-out min-[992px]:w-auto"
+                                            data-gtm-event="{&quot;event&quot;:&quot;intention_book_appt&quot;}">
+                                            Book an appointment
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div id="block-store-desktop-2016069"
+                            class="store__wrapper snap-start md:max-w-[33.333333%] md:min-w-[33.333333%] min-w-[76.923077%] pointer px-2 cursor-pointer">
+                            <div class="store-content flex bg-yellow-400 h-full">
+                                <div
+                                    class="store__informations self-center flex h-full flex-col justify-between w-full p-5">
+                                    <div class="">
+                                        <h2 class="store__title text-xl text-center font-semibold ">
+                                            <a href="/us-en/stores/breitling-boutiques/us/breitling-boutique-miami-design-district/"
+                                                class="hover-black">
+                                                BREITLING BOUTIQUE MIAMI DESIGN DISTRICT
+                                            </a>
+                                        </h2>
+                                        <div class="text-center">
+                                            <div
+                                                class="store__subtitle relative h-fit min[992px]:text-base min-[992px]:font-normal min-[992px]:mt-0">
+                                                <svg class="min-[992px]:hidden blockicon icon-map mr-10"
+                                                    aria-label="location">
+                                                    <use
+                                                        xlink:href="/build/images/asset-version-c657f0bced/icons.svg#icon-map">
+                                                    </use>
+                                                </svg>
+                                                <div class="w-full">
+                                                    Suite 108 NORTHEAST 41ST STREET 112, MIAMI, FL 33137
+                                                </div>
+
+                                            </div>
+                                            <div
+                                                class="store__subtitle mt-2.5 min[992px]:text-base min-[992px]:font-normal min-[992px]:mt-0">
+                                                <svg class="min-[992px]:hidden icon icon-phone mr-10"
+                                                    aria-label="Phone">
+                                                    <use
+                                                        xlink:href="/build/images/asset-version-c657f0bced/icons.svg#icon-phone">
+                                                    </use>
+                                                </svg>
+                                                <div class="phone w-full">
+                                                    <span class="hidden-mobile-tablet hidden min-[992px]:block">
+                                                        Phone
+                                                        <a href="tel:+1 305-918-1884">
+                                                            +1 305-918-1884
+                                                        </a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="opening-hours mt-[15px] text-center">
+                                            <div
+                                                class="store__label font-bold min-[992px]:text-base mt-10 min-[992px]:mt-0 font-heading mt-15 hidden-mobile-tablet hidden min-[992px]:block">
+                                                Opening hours
+                                            </div>
+                                            <div class="store__content text-center">
+                                                <div class="content__table flex justify-center items-center">
+
+                                                    <table class="text-left">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    Wednesday:
+                                                                </td>
+                                                                <td class="tet-right">
+                                                                    11:00-19:00
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Thursday:
+                                                                </td>
+                                                                <td class="tet-right">
+                                                                    11:00-19:00
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Friday:
+                                                                </td>
+                                                                <td class="tet-right">
+                                                                    11:00-19:00
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Saturday:
+                                                                </td>
+                                                                <td class="tet-right">
+                                                                    11:00-19:00
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Sunday:
+                                                                </td>
+                                                                <td class="tet-right">
+                                                                    12:00-18:00
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Monday:
+                                                                </td>
+                                                                <td class="tet-right">
+                                                                    11:00-19:00
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Tuesday:
+                                                                </td>
+                                                                <td class="tet-right">
+                                                                    11:00-19:00
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex flex-col gap-5">
+                                        <div class="store__links flex mt-4 justify-center items-center">
+                                            <a class="link text-gray-900 font-bold text-xs md:text-sm mx-2 underline transition ease-out duration-300 hover:text-gray-700"
+                                                href="mailto:Miami.Design@Breitling.com">
+                                                E-mail
+                                                <i class="fa-solid fa-chevron-right ml-[5px]"></i>
+                                            </a>
+                                            <a class="link text-gray-900 font-bold text-xs md:text-sm mx-2 underline transition ease-out duration-300 hover:text-gray-700 flex items-center"
+                                                href="/us-en/stores/breitling-boutiques/us/breitling-boutique-miami-design-district/#retailers-map">
+                                                Get directions
+                                                <i class="fa-solid fa-chevron-right ml-[5px]"></i>
+                                            </a>
+                                        </div>
+                                        <a href="/us-en/stores/appointment/us/fl/miami/2016069/breitling-boutique-miami-design-district/ "
+                                            class="store__button btn text-black bg-white text-center hover:text-yellow-400 font-bold uppercase py-4 px-10 min-[992px]:px-10 transition duration-300 ease-in-out min-[992px]:w-auto"
+                                            data-gtm-event="{&quot;event&quot;:&quot;intention_book_appt&quot;}">
+                                            Book an appointment
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div id="block-store-desktop-2016069"
+                            class="store__wrapper snap-start md:max-w-[33.333333%] md:min-w-[33.333333%] min-w-[76.923077%] pointer px-2 cursor-pointer">
+                            <div class="store-content flex bg-yellow-400 h-full">
+                                <div
+                                    class="store__informations self-center flex h-full flex-col justify-between w-full p-5">
+                                    <div class="">
+                                        <h2 class="store__title text-xl text-center font-semibold ">
+                                            <a href="/us-en/stores/breitling-boutiques/us/breitling-boutique-miami-design-district/"
+                                                class="hover-black">
+                                                BREITLING BOUTIQUE MIAMI DESIGN DISTRICT
+                                            </a>
+                                        </h2>
+                                        <div class="text-center">
+                                            <div
+                                                class="store__subtitle relative h-fit min[992px]:text-base min-[992px]:font-normal min-[992px]:mt-0">
+                                                <svg class="min-[992px]:hidden blockicon icon-map mr-10"
+                                                    aria-label="location">
+                                                    <use
+                                                        xlink:href="/build/images/asset-version-c657f0bced/icons.svg#icon-map">
+                                                    </use>
+                                                </svg>
+                                                <div class="w-full">
+                                                    Suite 108 NORTHEAST 41ST STREET 112, MIAMI, FL 33137
+                                                </div>
+
+                                            </div>
+                                            <div
+                                                class="store__subtitle mt-2.5 min[992px]:text-base min-[992px]:font-normal min-[992px]:mt-0">
+                                                <svg class="min-[992px]:hidden icon icon-phone mr-10"
+                                                    aria-label="Phone">
+                                                    <use
+                                                        xlink:href="/build/images/asset-version-c657f0bced/icons.svg#icon-phone">
+                                                    </use>
+                                                </svg>
+                                                <div class="phone w-full">
+                                                    <span class="hidden-mobile-tablet hidden min-[992px]:block">
+                                                        Phone
+                                                        <a href="tel:+1 305-918-1884">
+                                                            +1 305-918-1884
+                                                        </a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="opening-hours mt-[15px] text-center">
+                                            <div
+                                                class="store__label font-bold min-[992px]:text-base mt-10 min-[992px]:mt-0 font-heading mt-15 hidden-mobile-tablet hidden min-[992px]:block">
+                                                Opening hours
+                                            </div>
+                                            <div class="store__content text-center">
+                                                <div class="content__table flex justify-center items-center">
+
+                                                    <table class="text-left">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    Wednesday:
+                                                                </td>
+                                                                <td class="tet-right">
+                                                                    11:00-19:00
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Thursday:
+                                                                </td>
+                                                                <td class="tet-right">
+                                                                    11:00-19:00
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Friday:
+                                                                </td>
+                                                                <td class="tet-right">
+                                                                    11:00-19:00
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Saturday:
+                                                                </td>
+                                                                <td class="tet-right">
+                                                                    11:00-19:00
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Sunday:
+                                                                </td>
+                                                                <td class="tet-right">
+                                                                    12:00-18:00
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Monday:
+                                                                </td>
+                                                                <td class="tet-right">
+                                                                    11:00-19:00
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Tuesday:
+                                                                </td>
+                                                                <td class="tet-right">
+                                                                    11:00-19:00
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex flex-col gap-5">
+                                        <div class="store__links flex mt-4 justify-center items-center">
+                                            <a class="link text-gray-900 font-bold text-xs md:text-sm mx-2 underline transition ease-out duration-300 hover:text-gray-700"
+                                                href="mailto:Miami.Design@Breitling.com">
+                                                E-mail
+                                                <i class="fa-solid fa-chevron-right ml-[5px]"></i>
+                                            </a>
+                                            <a class="link text-gray-900 font-bold text-xs md:text-sm mx-2 underline transition ease-out duration-300 hover:text-gray-700 flex items-center"
+                                                href="/us-en/stores/breitling-boutiques/us/breitling-boutique-miami-design-district/#retailers-map">
+                                                Get directions
+                                                <i class="fa-solid fa-chevron-right ml-[5px]"></i>
+                                            </a>
+                                        </div>
+                                        <a href="/us-en/stores/appointment/us/fl/miami/2016069/breitling-boutique-miami-design-district/ "
+                                            class="store__button btn text-black bg-white text-center hover:text-yellow-400 font-bold uppercase py-4 px-10 min-[992px]:px-10 transition duration-300 ease-in-out min-[992px]:w-auto"
+                                            data-gtm-event="{&quot;event&quot;:&quot;intention_book_appt&quot;}">
+                                            Book an appointment
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+
+        <div class="br-11-20 mx-auto max-w-[1400px] text-black text-base font-normal leading-6">
+            <footer class="footer text-sm bg-transparent relative z-1">
+                <div class="top-wrapper bg-black text-white min-[992px]:pt-[60px]">
+                    <div class="container px-[30px] w-full max-w-[1400px]">
+                        <div class="footer-contact-center min-[992px]:pb-3.5 uppercase">
+                            <div class="font-heading text-center ">
+                                <div class="inline mx-2.5 pl-2 ">
+                                    <a class="phone" href="tel:+1 203-456-2458">
+                                        <i class="fa-solid fa-phone"></i> +1 203-456-2458 </a>
+                                </div>
+                                <div class="inline mx-[10px] pl-[7px] "><a href="/us-en/store/services/contact/"
+                                        itemprop="url"> MON-FRI
+                                        09:00-18:00, SAT-SUN: CLOSED </a> </li>
+                                </div>
+                                <div class="inline mx-[10px] pl-[7px] "><a href="mailto:info.us@breitling.com">
+                                        info.us@breitling.com </a>
+                                </div>
+                            </div>
+                            <div class="wrapper-header flex flex-wrap items-center min-[992px]:flex-nowrap">
+                                <nav
+                                    class="font-heading nav min-[992px]:ml-10 overflow-hidden basis-full min-[992px]:basis-auto">
+                                    <ul class="border-t border-gray-800 flex flex-wrap justify-center mt-6 pt-5 min-[992px]:border-t-0 min-[992px]:justify-start min-[992px]:m-0 min-[992px]:p-0"
+                                        itemscope="" itemtype="https://schema.org/SiteNavigationElement">
+                                        <li
+                                            class="name pl-2 mb-7 relative text-center min-[992px]:text-left min-[992px]:mb-0">
+                                            <a href="/us-en/watches/" itemprop="url">
+                                                watches
+                                            </a>
+                                        </li>
+                                        <li
+                                            class="name pl-2 mb-7 relative text-center min-[992px]:text-left min-[992px]:mb-0">
+                                            <a href="/us-en/straps/" itemprop="url">
+                                                Straps </a>
+                                        </li>
+                                        <li
+                                            class="name pl-2 mb-7 relative text-center min-[992px]:text-left min-[992px]:mb-0">
+                                            <a href="/us-en/service/" itemprop="url">
+                                                Service
+                                            </a>
+                                        </li>
+                                        <li
+                                            class="name pl-2 mb-7 relative text-center min-[992px]:text-left min-[992px]:mb-0">
+                                            <a href="/us-en/stores/us/" itemprop="url">
+                                                Stores
+                                            </a>
+                                        </li>
+                                        <li
+                                            class="name pl-2 mb-7 relative text-center min-[992px]:text-left min-[992px]:mb-0">
+                                            <a href="/us-en/about/" itemprop="url">
+                                                About </a>
+                                        </li>
+                                        <li
+                                            class="name pl-2 mb-7 relative text-center min-[992px]:text-left min-[992px]:mb-0">
+                                            <a href="/us-en/my-account/" itemprop="url">
+                                                My
+                                                account
+                                            </a>
+                                        </li>
+                                        <li
+                                            class="name pl-2 mb-7 relative text-center min-[992px]:text-left min-[992px]:mb-0">
+                                            <a href="/us-en/service/faq/" itemprop="url"> FAQS
+                                            </a>
+                                        </li>
+                                        <li
+                                            class="name pl-2 mb-7 relative text-center min-[992px]:text-left min-[992px]:mb-0">
+                                            <a class="newsletter-popup-link" data-dyn-disable="1"
+                                                data-newsletter-popup-options="{&quot;formUrl&quot;:&quot;\/us-en\/newsletter\/subscribe\/popup\/&quot;,&quot;openingSource&quot;:&quot;footer&quot;}"
+                                                data-popin-id="newsletter" data-popin-title="Newsletter"
+                                                href="/us-en/newsletter/subscribe/" itemprop="url"> Newsletter </a>
+                                        </li>
+                                        <li
+                                            class="name pl-2 mb-7 relative text-center min-[992px]:text-left min-[992px]:mb-0">
+                                            <a class="chronolog-popup-link gtm-event-track-click-active"
+                                                data-chronolog-popup-options="{&quot;formUrl&quot;:&quot;\/us-en\/chronolog\/order-ajax\/&quot;}"
+                                                data-dyn-disable=""
+                                                data-gtm-event="{&quot;event&quot;:&quot;chronologDownload&quot;}"
+                                                data-popin-id="download_catalog" data-popin-title="Download the catalog"
+                                                href="#" itemprop="url"> Download the catalog </a>
+                                        </li>
+                                        <li
+                                            class="name pl-2 mb-7 relative text-center min-[992px]:text-left min-[992px]:mb-0">
+                                            <a href="/us-en/store/order-status/" itemprop="url">
+                                                Check
+                                                your
+                                                order </a>
+                                        </li>
+                                    </ul>
+                                </nav> <a
+                                    class="button-st justify-center block cursor-pointer border-2 border-white font-open-sans text-[14px] font-bold ml-auto py-3 px-2.5 text-center uppercase whitespace-nowrap transition-none"
+                                    href="/choose-country-region/">
+                                    <i class="fa-solid fa-globe"></i>
+                                    UNITED STATES - ENGLISH </a>
+                            </div>
+                            <div class="socials mt-7 flex items-center justify-center">
+                                <ul class="flex justify-between items-center w-80">
+                                    <li class="name pl-2 ">
+                                        <a aria-label="instagram" class="gtm-event-track-click-active"
+                                            data-gtm-event="{&quot;event&quot;:&quot;socialFollow&quot;,&quot;socialNetwork&quot;:&quot;instagram&quot;,&quot;siteLocation&quot;:&quot;footer&quot;}"
+                                            href="https://instagram.com/breitling" itemprop="sameAs" rel="noopener"
+                                            target="_blank" title="Instagram Breitling page">
+                                            <i class="fa-brands fa-2xl h-10 fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li class="name pl-2 "><a aria-label="facebook" class="gtm-event-track-click-active"
+                                            data-gtm-event="{&quot;event&quot;:&quot;socialFollow&quot;,&quot;socialNetwork&quot;:&quot;facebook&quot;,&quot;siteLocation&quot;:&quot;footer&quot;}"
+                                            href="https://www.facebook.com/Breitling" itemprop="sameAs" rel="noopener"
+                                            target="_blank" title="Facebook Breitling page">
+                                            <i class="fa-brands fa-2xl h-10 fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li class="name pl-2 "><a aria-label="youtube" class="gtm-event-track-click-active"
+                                            data-gtm-event="{&quot;event&quot;:&quot;socialFollow&quot;,&quot;socialNetwork&quot;:&quot;youtube&quot;,&quot;siteLocation&quot;:&quot;footer&quot;}"
+                                            href="https://www.youtube.com/breitling" itemprop="sameAs" rel="noopener"
+                                            target="_blank" title="Youtube Breitling page">
+                                            <i class="fa-brands fa-2xl h-10 fa-youtube"></i>
+                                        </a> </li>
+                                    <li class="name pl-2 "><a aria-label="tiktok" class="gtm-event-track-click-active"
+                                            data-gtm-event="{&quot;event&quot;:&quot;socialFollow&quot;,&quot;socialNetwork&quot;:&quot;tiktok&quot;,&quot;siteLocation&quot;:&quot;footer&quot;}"
+                                            href="https://www.tiktok.com/@breitling" itemprop="sameAs" rel="noopener"
+                                            target="_blank" title="TikTok Breitling page">
+                                            <i class="fa-brands fa-2xl h-10 fa-tiktok"></i>
+                                        </a>
+                                    </li>
+                                    <li class="name pl-2 "><a aria-label="twitter" class="gtm-event-track-click-active"
+                                            data-gtm-event="{&quot;event&quot;:&quot;socialFollow&quot;,&quot;socialNetwork&quot;:&quot;twitter&quot;,&quot;siteLocation&quot;:&quot;footer&quot;}"
+                                            href="https://twitter.com/breitling" itemprop="sameAs" rel="noopener"
+                                            target="_blank" title="Twitter Breitling page">
+                                            <i class="fa-brands fa-2xl h-10 fa-tiktok"></i>
+                                        </a>
+                                    </li>
+                                    <li class="name pl-2 "><a aria-label="pinterest"
+                                            class="gtm-event-track-click-active"
+                                            data-gtm-event="{&quot;event&quot;:&quot;socialFollow&quot;,&quot;socialNetwork&quot;:&quot;pinterest&quot;,&quot;siteLocation&quot;:&quot;footer&quot;}"
+                                            href="https://www.pinterest.com/breitling/" itemprop="sameAs" rel="noopener"
+                                            target="_blank" title="Pinterest Breitling page">
+                                            <i class="fa-brands fa-2xl h-10 fa-pinterest"></i>
+                                        </a>
+                                    </li>
+                                    <li class="name pl-2 "><a aria-label="strava" class="gtm-event-track-click-active"
+                                            data-gtm-event="{&quot;event&quot;:&quot;socialFollow&quot;,&quot;socialNetwork&quot;:&quot;strava&quot;,&quot;siteLocation&quot;:&quot;footer&quot;}"
+                                            href="https://www.strava.com/clubs/breitling1884" itemprop="sameAs"
+                                            rel="noopener" target="_blank" title="Strava Breitling page">
+                                            <i class="fa-brands fa-2xl fa-strava h-10 "></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="menuas flex mt-6 justify-center">
+                                <ul class="flex justify-center items-center flex-wrap">
+                                    <li class="my-1.5 mx-2.5 min-[992px]:mx-2 "><a
+                                            class="text-white opacity-85 no-underline" href="/us-en/terms-of-use/">Terms
+                                            of
+                                            use</a> </li>
+                                    <li class="my-1.5 mx-2.5 min-[992px]:mx-2 "><a
+                                            class="text-white opacity-85 no-underline" href="/us-en/press-lounge/"
+                                            rel="noopener">Press
+                                            lounge</a> </li>
+                                    <li class="my-1.5 mx-2.5 min-[992px]:mx-2 "><a
+                                            class="text-white opacity-85 no-underline" href="/us-en/career/">Career</a>
+                                    </li>
+                                    <li class="my-1.5 mx-2.5 min-[992px]:mx-2 ">
+                                        <a href="/media/document/2/asset-version-19853d0e34/breitling-human-rights-commitment.pdf"
+                                            target="_blank">Human Rights statement</a>
+                                    </li>
+                                    <li class="my-1.5 mx-2.5 min-[992px]:mx-2 "><a
+                                            class="text-white opacity-85 no-underline"
+                                            href="/us-en/privacy-policy/">Privacy
+                                            policy</a> </li>
+                                    <li class="my-1.5 mx-2.5 min-[992px]:mx-2 "><a
+                                            href="/us-en/terms-and-conditions/">Terms &amp;
+                                            conditions</a> </li>
+                                    <li class="my-1.5 mx-2.5 min-[992px]:mx-2 "><a
+                                            class="text-white opacity-85 no-underline"
+                                            href="/us-en/store/services/contact/">Contact</a> </li>
+                                    <li class="my-1.5 mx-2.5 min-[992px]:mx-2 "><a
+                                            class="text-white opacity-85 no-underline"
+                                            href="/us-en/impressum/">Impressum</a>
+                                    </li>
+                                    <li class="my-1.5 mx-2.5 min-[992px]:mx-2 "><a
+                                            class="text-white opacity-85 no-underline"
+                                            href="/us-en/sitemap/">Sitemap</a>
+                                    </li>
+                                    <li class="my-1.5 mx-2.5 min-[992px]:mx-2 "><a
+                                            class="text-white opacity-85 no-underline"
+                                            href="/us-en/accessibility/">Accessibility</a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-wrapper pt-3 pb-5 px-0 bg-white text-black min-[992px]:py-6">
+                        <div class="container w-auto px-5">
+                            <div class="logo flex justify-center gap-5">
+                                <div id="logo-1" class="color-white">
+                                    <img class="" src="./assets/Artwork_8Logo-Yellow-1.png" alt="" />
+                                </div>
+                                <div id="logo-2" class="">
+                                    <img class="" src="./assets/Rectangle 25367logo-Yellow-2.png" alt="" />
+                                </div>
+                                <div id="logo-3" class="">
+                                    <img class="" src="./assets/Path 5876logo-Yellow-3.png" alt="" />
+                                </div>
+                            </div>
+                            <div class="accessibilty flex justify-center mt-3"><a class="BreitlingWidgetTrigger"
+                                    href="#" rel="nofollow noreferrer noopener"> Accessibility features </a> </div>
+                            <div class="copyright flex justify-center opacity-40 mt-1"> © 2024 Breitling, All rights
+                                reserved. </div>
+                        </div>
+                    </div>
+                    <a aria-label="Top" class="scroll-to-top text-center bg-gray-100 pt-2.5 pb-3 px-4 block text-black"
+                        data-linktype="anchor" data-scrollspeed="800" href="#main">
+                        <i class="fa-solid fa-angle-up fa-2xl"></i>
+                    </a>
+            </footer>
         </div>
 </body>
 
