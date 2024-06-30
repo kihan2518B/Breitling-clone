@@ -1,4 +1,4 @@
-gsap.registerPlugin()
+// gsap.registerPlugin()
 
 // gsap.fromTo(".fade-element",
 //     {
@@ -94,4 +94,31 @@ buttons.forEach(button => {
             otherButton.classList.remove('opacity-40');
         });
     });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    console.log("Loaded")
+    const options = {
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            } else {
+                entry.target.classList.remove('show');
+            }
+        });
+    }, options);
+
+    const fourthsection = document.querySelectorAll('section');
+    fourthsection.forEach((section) => {
+        observer.observe(section);
+    });
+
+    // const section = document.querySelectorAll('section');
+    // section.forEach((section) => {
+    //     observer.observe(section);
+    // });
 });

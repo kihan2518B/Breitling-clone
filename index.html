@@ -22,7 +22,6 @@
         }
     </script>
 
-    <script src="./Animation.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
         integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
@@ -380,7 +379,7 @@
             document.querySelectorAll(".second-section-container").forEach((container) => {
                 const img = container.querySelector("img");
                 const textContainer = container.querySelector(".flex.flex-col");
-                console.log(container)
+                // console.log(container)
 
                 // Animation timeline
                 const tl = gsap.timeline({
@@ -740,19 +739,19 @@
                     </a>
 
                     <div class="flex items-center p-2 text-center w-[30%]">
-                        <div class="overflow-hidden relative w-full">
+                        <div class="fourth_section img overflow-hidden relative w-full">
                             <img src="https://www.breitling.com/media/image/4/single_entry_double_image_435/asset-version-0c66bacd46/chronomat-di-1.webp"
                                 alt="">
                         </div>
                     </div>
                     <div class=" flex items-center p-2 text-center w-[30%]">
-                        <div class="overflow-hidden relative w-full">
+                        <div class="fourth_section img overflow-hidden relative w-full">
                             <img src="https://www.breitling.com/media/image/4/single_entry_double_image_435/asset-version-b731f6f618/chronomat-di-2.webp"
                                 alt="">
                         </div>
                     </div>
                     <div class="single-entry-double-image__content flex items-center p-2 text-center w-[30%] z-2">
-                        <div class=" w-full text-center">
+                        <div class="fourth_section text w-full text-center">
                             <h2 class=" text-black text-4xl font-bold uppercase ">
                                 <a class="pointer hover:text-black"
                                     href="/zz-zz/campaigns/chronomat-giannis-antetokounmpo/">
@@ -773,6 +772,25 @@
             </section>
         </div>
 
+        <style>
+            section .img {
+                transform: translateX(-20px);
+                transition: all 0.75s ease-in-out;
+            }
+
+            section .text {
+                transform: translateX(20px);
+                transition: all 0.75s ease-in-out;
+            }
+
+            section.show .img,
+            section.show .text {
+                transform: translateX(0);
+                transition: all 0.5s ease-in-out;
+                transition-delay: 0.5s;
+            }
+        </style>
+
         <!-- 5th section -->
         <div class="mx-auto max-w-7xl text-black text-base font-normal leading-6">
             <section class=" lg:pt-6 lg:px-8 lg:pb-0">
@@ -785,86 +803,351 @@
                         </h2>
                     </div>
                 </div>
-                <div class="flex wrap m-auto max-w-5xl lg:mx-auto lg:-m-2">
-                    <div class="flex-grow w-1/2 hover:text-yellow-400 lg:w-1/4 lg:p-2 p-1.25">
-                        <a class="text-center lg:p-30 lg:px-20 p-15 bg-[#fafafa] block"
-                            href="/us-en/store/services/free-shipping/">
-                            <div class="block">
-                                <img alt="Free Shipping Returns" class="block m-auto" height="47" loading="lazy"
-                                    src="./assets/icon-free-shipping-return.svg" type="image/svg+xml" width="47">
+                <div class="exclusive-card_container">
+                    <div class="exclusive-card">
+                        <div class="wrapper">
+                            <div class="cover-image">
+                                <img src="./assets/icon-free-shipping-return.svg" />
                             </div>
-                            <div class="w-full">
-                                Free Shipping &amp; Returns </div>
-                        </a>
+                        </div>
+                        <p class="title">FREE SHIPPING & RETURNS</p>
+                        <img src="./assets/box1.webp" class="character" />
                     </div>
-                    <div class="flex-grow w-1/2 hover:text-yellow-400 lg:w-1/4 lg:p-2 p-1.25">
-                        <a class="text-center lg:p-30 lg:px-20 p-15 bg-[#fafafa] block"
-                            href="/us-en/store/services/gift-wrapping/">
-                            <div class="block">
-                                <img alt="Gifting Service" class="block m-auto" height="47" loading="lazy"
-                                    src="./assets/icon-gifting-service.svg" type="image/svg+xml" width="47">
+
+                    <div class="exclusive-card">
+                        <div class="wrapper">
+                            <div class="cover-image">
+                                <img src="./assets/icon-gifting-service.svg" />
                             </div>
-                            <div class="w-full">
-                                Give a gift </div>
-                        </a>
+                        </div>
+                        <p class="title">GIVE A GIFT</p>
+                        <img src="./assets/box-2.webp" class="character" />
                     </div>
-                    <div class="flex-grow w-1/2 hover:text-yellow-400 lg:w-1/4 lg:p-2 p-1.25">
-                        <a class="lg:p-30 lg:px-20 p-15 bg-[#fafafa] text-center"
-                            href="/store/services/exclusive-benefits/">
-                            <div class="block">
-                                <img alt="Exclusive Benefits" class="block m-auto" height="47" loading="lazy"
-                                    src="./assets/icon-exclusive-benefit.svg" type="image/svg+xml" width="44">
+
+                    <div class="exclusive-card">
+                        <div class="wrapper">
+                            <div class="cover-image">
+                                <img src="./assets/box-3.png" />
                             </div>
-                            <div class="w-full">
-                                Exclusive Benefits </div>
-                        </a>
+                        </div>
+                        <p class="title">EXCLUSIVE BENEFITS</p>
+                        <img src="./assets/box-311.png" class="character" />
                     </div>
                 </div>
+                <style>
+                    :root {
+                        --card-height: 250px;
+                        --card-width: calc(var(--card-height) / 1.1);
+                    }
+
+                    .exclusive-card_container {
+                        /* width: 100vw; */
+                        height: max-content;
+                        margin-top: 40px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 50px;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .exclusive-card {
+                        width: var(--card-width);
+                        height: var(--card-height);
+                        position: relative;
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-end;
+                        /* padding: 0 36px; */
+                        perspective: 2500px;
+                        /* margin: 0 50px; */
+                    }
+
+                    .cover-image img {
+                        width: 75%;
+                        height: 75%;
+                        opacity: 1;
+                        transition-delay: 0.1s;
+                    }
+
+                    .cover-image {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        /* align-items:first baseline; */
+                        background: rgba(207, 203, 203, 0.5);
+                    }
+
+                    .wrapper {
+                        transition: all 0.5s;
+                        position: absolute;
+                        width: 100%;
+                        z-index: -1;
+                        height: 250px;
+                    }
+
+                    .card:hover .wrapper {
+                        transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+                        box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+                        -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+                        -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+                    }
+
+                    .wrapper::before,
+                    .wrapper::after {
+                        content: "";
+                        opacity: 0;
+                        width: 100%;
+                        height: 135px;
+                        transition: all 0.5s;
+                        position: absolute;
+                        left: 0;
+                    }
+
+                    .wrapper::before {
+                        top: 0;
+                        height: 100%;
+                        background-image: linear-gradient(to top,
+                                transparent 46%,
+                                rgba(240, 210, 13, 0.826) 68%,
+                                rgba(240, 210, 13, 0.968) 97%);
+                    }
+
+                    .wrapper::after {
+                        bottom: 0;
+                        opacity: 1;
+                        background-image: linear-gradient(to bottom,
+                                transparent 46%,
+                                rgba(240, 210, 13, 0.826) 68%,
+                                rgba(240, 210, 13, 0.968) 97%);
+                    }
+
+                    .exclusive-card:hover .cover-image img {
+                        opacity: 0;
+
+                    }
+
+                    .exclusive-card:hover .wrapper::before,
+                    .wrapper::after {
+                        opacity: 1;
+                    }
+
+                    .exclusive-card:hover .wrapper::after {
+                        height: 120px;
+                    }
+
+                    .title {
+                        /* width: 100%; */
+                        height: 50px;
+                        /* border: 1px solid seagreen; */
+                        transition: transform 0.5s;
+                        font-size: large;
+                        font-weight: 600;
+                        display: flex;
+                        align-items: center;
+                        text-align: center;
+                    }
+
+                    .exclusive-card:hover .title {
+                        transform: translate3d(0%, -20px, 100px);
+                    }
+
+                    .character {
+                        width: 90%;
+                        opacity: 0;
+                        transition: all 0.5s;
+                        position: absolute;
+                        z-index: -1;
+                    }
+
+                    .exclusive-card:hover .character {
+                        opacity: 1;
+                        transform: translate3d(0%, -30%, 300px);
+                    }
+                </style>
             </section>
         </div>
 
+
         <!-- 6th section -->
-        <div class="mx-auto max-w-7xl text-black text-base font-normal leading-6">
+        <div class="section-single-cta-container ">
             <section class="section-single-cta">
-                <div class="section-single-cta__wrapper mb-4 lg:mb-8 relative">
-                    <a class="block-big-link  block h-full left-0 absolute top-0 w-full z-10 text-black no-underline transition-all duration-200 ease-in-out"
-                        href="/us-en/blockchain/" title="YOU DON’T HAVE YOUR BREITLING NFT YET?"></a>
-                    <div class="section-single-cta__image relative w-full h-80 flex items-center justify-center">
-                        <img class="absolute inset-0 h-full w-full object-cover object-center"
-                            src="./assets/blockchain3.webp" alt="">
+                <div class="section-single-cta__wrapper">
+                    <a class="block-big-link" href="/us-en/blockchain/"></a>
+                    <div class="section-single-cta__image ">
+                        <img class="" src="./assets/blockchain3.webp" alt="">
                     </div>
-                    <div
-                        class="section-single-cta__content  absolute inset-0 p-12 pt-[50px] pb-[30px] px-[22px] text-center text-white pointer-events-none z-20">
-                        <div
-                            class="content__wrapper start-md  box-border flex flex-col items-center h-full text-center md:text-left md:justify-start lg:justify-start lg:text-left">
-                            <h2
-                                class="content__title font-heading h-fit text-white font-bold uppercase leading-tight text-3xl">
-                                <a href="/us-en/blockchain/"> YOU DON’T HAVE YOUR
-                                    <span class="text-yellow-400">BREITLING NFT</span> YET? </a>
+                    <div class="section-single-cta__content">
+                        <div class="content__wrapper">
+                            <h2 class="content__title">
+                                <!-- <a href="/us-en/blockchain/"> YOU DON’T HAVE YOUR
+                                    <span class="text-yellow-400">BREITLING NFT</span> YET? </a> -->
+                                <span>YOU</span>
+                                <span>DON’T</span>
+                                <span>HAVE</span>
+                                <span>YOUR</span>
+                                <span style="color: #ffc62d;">BREITLING</span>
+                                <span style="color: #ffc62d;">NFT</span>
+                                <span>YET?</span>
+
                             </h2>
                             <!-- <div class="content__text h-6 text-white flex-grow text-center lg:flex-grow-inherit lg:max-w-[750px]"> -->
-                            <div class=" h-fit mt-2">
-                                Secure your ownership and access unique services.<br>Scan the QR
-                                code on your warranty card to get started
+                            <div class="content__text">
+                                <span>Made</span>
+                                <span>Secure</span>
+                                <span>your</span>
+                                <span>ownership</span>
+                                <span>and</span>
+                                <span>access</span>
+                                <span>unique</span>
+                                <span>services.</span>
+                                <span>Scan</span>
+                                <span>the</span>
+                                <span>QR</span>
+                                <span>code</span>
+                                <span>on</span>
+                                <span>your</span>
+                                <span>warranty</span>
+                                <span>card</span>
+                                <span>to</span>
+                                <span>get</span>
+                                <span>started</span>
                             </div>
-                            <div class="w-full h-fit mt-2 flex items-center justify-center"><a
+                            <!-- <div class="w-full h-fit mt-2 flex items-center justify-center"><a
                                     class=" bg-[#ffc62d] border-none rounded-none text-black cursor-pointer font-sans font-bold h-auto max-w-none py-4 px-12 text-center  duration-300 ease-in-out w-full lg:w-auto no-underline transition-all duration-200 ease-in-out"
-                                    href="/us-en/blockchain/"> Discover </a> </div>
+                                    href="/us-en/blockchain/"> Discover </a> </div> -->
+                            <a class="backToHomeButton1 cssbuttons-io-button ">
+                                <div class="icon">
+                                    <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 0h24v24H0z" fill="none"></path>
+                                        <path
+                                            d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                            fill="currentColor"></path>
+                                    </svg>
+                                </div>
+                                Discover
+                            </a>
                         </div>
                     </div>
                 </div>
             </section>
         </div>
 
+        <style>
+            .section-single-cta-container {
+                margin: 0 auto;
+                margin-top: 1.25rem;
+                max-width: 80rem;
+                color: black;
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.5;
+            }
+
+            .section-single-cta__wrapper {
+                margin-bottom: 1rem;
+                position: relative;
+
+            }
+
+            .block-big-link {
+                display: block;
+                height: 100%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                z-index: 10;
+                color: black;
+                text-decoration: none;
+                transition: all 0.2s ease-in-out;
+            }
+
+            .section-single-cta__content {
+                position: absolute;
+                inset: 0;
+                padding: 12px;
+                padding-top: 50px;
+                padding-bottom: 30px;
+                padding-left: 22px;
+                padding-right: 22px;
+                text-align: center;
+                color: white;
+                pointer-events: none;
+                z-index: 20;
+            }
+
+            .content__wrapper {
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 100%;
+                text-align: center;
+            }
+
+            .content__title {
+                height: fit-content;
+                color: white;
+                font-weight: bold;
+                text-transform: uppercase;
+                line-height: 1.25;
+                font-size: 1.875rem;
+            }
+
+
+            @media (min-width: 768px) {
+                .content__wrapper {
+                    text-align: left;
+                    justify-content: flex-start;
+                }
+            }
+
+            @media (min-width: 1024px) {
+                .section-single-cta__wrapper {
+                    margin-bottom: 2rem;
+                }
+
+                .content__wrapper {
+                    justify-content: flex-start;
+                    text-align: left;
+                }
+            }
+
+            .section-single-cta__image {
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 320px;
+                position: relative;
+            }
+
+            .section-single-cta__image>img {
+                position: absolute;
+                inset: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+                transform: scale(1);
+                transition: all 0.75s ease-in-out;
+            }
+
+            .section-single-cta:hover .section-single-cta__image>img {
+                transform: scale(1.1);
+                transition: all 0.75s ease-in-out;
+            }
+        </style>
+
         <!-- 7th section -->
 
-        <div class="mx-auto max-w-[1400px] text-black text-base font-normal leading-6">
+        <div class="section-cta-container">
             <section class="section-cta p-0 lg:px-8 lg:pb-8 lg:pt-0">
                 <div class="cols-wrapper flex flex-wrap -m-4 lg:-m-2">
-                    <div class="col p-4 w-full min-[992px]:p-2 min-[992px]:w-1/2">
+                    <div class="col p-4 w-full min-[610px]:p-2 min-[610px]:w-1/2 ">
                         <div class="col__wrapper relative">
-                            <a aria-label="Straps" class="col__link block h-full left-0 absolute top-0 w-full z-1 "
-                                href="/us-en/straps/all/" title="Straps"></a>
                             <div class="col__background relative">
                                 <img src="./assets/home-straps.webp" alt="">
                             </div>
@@ -874,23 +1157,54 @@
                                     class="front__content text-white flex flex-col h-full text-center p-[50px_22px_30px] min-[992px]:block min-[992px]:pt-12 min-[992px]:px-[22px] min-[992px]:pb-0">
                                     <h2
                                         class="content__title font-heading  text-white text-2xl font-bold text-center uppercase min-[992px]:text-4xl">
-                                        <a href="/us-en/straps/all/"> Straps </a>
+                                        <!-- <a href="/us-en/straps/all/"> Straps </a> -->
+                                        <span>S</span><span>t</span><span>r</span><span>a</span><span>p</span><span>s</span>
                                     </h2>
-                                    <div class="content__text m-auto max-w-sm">Made from leather, rubber , or ECONYL™
-                                        fabric, the
-                                        Breitling straps will nicely complement your Breitling watch and give it a fresh
-                                        new look.</div>
-                                    <a class="btn content__btn inline-block pointer-events-auto mt-auto lg:my-4 lg:w-auto block bg-yellow-400 border-none rounded-none text-black cursor-pointer font-open-sans font-bold h-auto max-w-none outline-none py-4 px-12 text-center uppercase transition-all duration-300 ease-in-out w-full no-underline transition-colors duration-200 ease-in-out"
-                                        href="/us-en/straps/all/">Buy
-                                        now</a>
+                                    <div class="content__text m-auto max-w-sm">
+                                        <span>Made</span>
+                                        <span>from</span>
+                                        <span>leather,</span>
+                                        <span>rubber,</span>
+                                        <span>or</span>
+                                        <span>ECONYL™</span>
+                                        <span>fabric,</span>
+                                        <span>the</span>
+                                        <span>Breitling</span>
+                                        <span>straps</span>
+                                        <span>will</span>
+                                        <span>nicely</span>
+                                        <span>complement</span>
+                                        <span>your</span>
+                                        <span>Breitling</span>
+                                        <span>watch</span>
+                                        <span>and</span>
+                                        <span>give</span>
+                                        <span>it</span>
+                                        <span>a</span>
+                                        <span>fresh</span>
+                                        <span>new</span>
+                                        <span>look.</span>
+                                    </div>
+
+                                    <a
+                                        class="backToHomeButton1 cssbuttons-io-button btn inline-block pointer-events-auto mt-auto lg:my-4 lg:w-auto block border-none flex justify-center rounded-none text-black cursor-pointer font-open-sans font-bold h-auto max-w-none outline-none py-4 px-12 text-center uppercase transition-all duration-300 ease-in-out w-full no-underline transition-colors duration-200 ease-in-out">
+                                        <div class="icon">
+                                            <svg height="24" width="24" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0 0h24v24H0z" fill="none"></path>
+                                                <path
+                                                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                                    fill="currentColor"></path>
+                                            </svg>
+                                        </div>
+                                        Buy Now
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col p-4 w-full min-[992px]:p-2 min-[992px]:w-1/2">
+                    <div class="col p-4 w-full min-[610px]:p-2 min-[610px]:w-1/2">
                         <div class="col__wrapper relative">
-                            <a aria-label="Services" class="col__link block h-full left-0 absolute top-0 w-full z-1"
-                                href="/us-en/service/" title="Services"></a>
                             <div class="col__background relative">
                                 <img src="./assets/_mg_9785.webp" alt="">
                             </div>
@@ -900,15 +1214,38 @@
                                     class="front__content text-white flex flex-col h-full text-center p-[50px_22px_30px] min-[992px]:block min-[992px]:pt-12 min-[992px]:px-[22px] min-[992px]:pb-0">
                                     <h2
                                         class="content__title font-heading  text-white text-2xl font-bold text-center uppercase min-[992px]:text-4xl">
-                                        <a href="/us-en/service/"> Services </a>
+                                        <!-- <a href="/us-en/service/"> Services </a> -->
+                                        <span>S</span><span>e</span><span>r</span><span>v</span><span>i</span><span>c</span><span>e</span><span>s</span>
                                     </h2>
-                                    <div class="content__text m-auto max-w-sm">Explore our comprenhensive set of
-                                        services
-                                        and
-                                        assistance
-                                        designed for you and your Breitling.</div> <a
-                                        class="btn content__btn inline-block pointer-events-auto mt-auto lg:my-4 lg:w-auto block bg-yellow-400 border-none rounded-none text-black cursor-pointer font-open-sans font-bold h-auto max-w-none outline-none py-4 px-12 text-center uppercase transition-all duration-300 ease-in-out w-full no-underline transition-colors duration-200 ease-in-out"
-                                        href="/us-en/service/">Discover now</a>
+                                    <div class="content__text m-auto max-w-sm"><span>Explore</span>
+                                        <span>our</span>
+                                        <span>comprenhensive</span>
+                                        <span>set</span>
+                                        <span>of</span>
+                                        <span>services</span>
+                                        <span>and</span>
+                                        <span>assistance</span>
+                                        <span>designed</span>
+                                        <span>for</span>
+                                        <span>you</span>
+                                        <span>and</span>
+                                        <span>your</span>
+                                        <span>Breitling.</span>
+                                    </div>
+                                    <a id='backToHomeButton2'
+                                        class="cssbuttons-io-button btn inline-block pointer-events-auto mt-auto lg:my-4 lg:w-auto block border-none flex justify-center rounded-none text-black cursor-pointer font-open-sans font-bold h-auto max-w-none outline-none text-center uppercase transition-all duration-300 ease-in-out w-full no-underline transition-colors duration-200 ease-in-out">
+                                        <div class="icon">
+                                            <svg height="24" width="24" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0 0h24v24H0z" fill="none"></path>
+                                                <path
+                                                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                                    fill="currentColor"></path>
+                                            </svg>
+                                        </div>
+                                        Discover Now
+                                    </a>
+
                                 </div>
                             </div>
                         </div>
@@ -916,7 +1253,226 @@
                 </div>
             </section>
         </div>
+        <style>
+            .backToHomeButton1 {
+                display: inline-block;
+                pointer-events: auto;
+                width: 100%;
+                height: auto;
+                max-width: none;
+                border: none;
+                border-radius: 0;
+                color: black;
+                cursor: pointer;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: bold;
+                text-align: center;
+                text-transform: uppercase;
+                text-decoration: none;
+                outline: none;
+                transition: all 0.3s ease-in-out, color 0.2s ease-in-out;
+            }
 
+            #backToHomeButton2 {
+                width: 210px;
+            }
+
+            .col__background {
+                overflow: hidden;
+            }
+
+            .col__background::after {
+                content: "";
+                background-color: #0000003d;
+                position: absolute;
+                top: 0;
+                display: block;
+                height: 100%;
+                width: 100%;
+            }
+
+            .col__background>img {
+                transform: scale(1);
+                transition: all 0.75s ease-in-out;
+            }
+
+            .col:hover .col__background>img {
+                transform: scale(1.1);
+                transition: all 0.75s ease-in-out;
+            }
+
+            .cssbuttons-io-button {
+                width: 170px;
+                background: #ffc62d;
+                color: black;
+                font-family: inherit;
+                padding: 0.35em;
+                margin-inline: auto;
+                padding-left: 1.2em;
+                font-size: medium;
+                font-weight: 700;
+                border-radius: 0.5em;
+                border: none;
+                letter-spacing: 0.05em;
+                display: flex;
+                align-items: center;
+                box-shadow: inset 0 0 1.6em -0.6em #ffc62d;
+                overflow: hidden;
+                position: relative;
+                min-height: 2.8em;
+                padding-right: 3.3em;
+                cursor: pointer;
+            }
+
+            .cssbuttons-io-button .icon {
+                background: white;
+                margin-left: 1em;
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 2.2em;
+                width: 2.2em;
+                border-radius: 0.3em;
+                box-shadow: 0.1em 0.1em 0.6em 0.2em #ffc62d;
+                right: 0.3em;
+                transition: all 0.3s;
+            }
+
+            .cssbuttons-io-button:hover .icon {
+                width: calc(100% - 0.6em);
+            }
+
+            .cssbuttons-io-button .icon svg {
+                width: 1.1em;
+                transition: transform 0.3s;
+                color: black;
+            }
+
+            .cssbuttons-io-button:hover .icon svg {
+                transform: translateX(0.1em);
+            }
+
+            .cssbuttons-io-button:active .icon {
+                transform: scale(0.95);
+            }
+
+
+            .content__btn {
+                opacity: 0;
+                transform: scale(0.8);
+                transition: opacity 2.5s ease, transform 2.5s ease;
+            }
+
+            .content__btn.show {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            /* Animation keyframes for typing effect */
+            @keyframes typingEffect1 {
+                0% {
+                    opacity: 0;
+                    transform: translateX(150px);
+                    /* Move letters from right to left */
+                }
+
+                100% {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+
+            /* Apply animation to each span inside .content__title */
+            .content__title span {
+                display: inline-block;
+                opacity: 0;
+                animation: typingEffect1 4s forwards;
+                /* Adjust timing as needed */
+            }
+
+            /* Delay each span animation progressively */
+            .content__title span:nth-child(1) {
+                animation-delay: calc(1s * var(--i));
+                /* Adjust delay increment */
+            }
+
+            .section-single-cta.show .content__title span,
+            .section-cta.show .content__title span {
+                animation: typingEffect1 4s forwards;
+            }
+
+            @keyframes typingEffect2 {
+                0% {
+                    opacity: 0;
+                    transform: translateX(-50px);
+                    /* Move letters from right to left */
+                }
+
+                100% {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+
+            .content__text span {
+                display: inline-block;
+                opacity: 0;
+                /* Adjust timing as needed */
+            }
+
+            .section-single-cta.show .content__text span,
+            .section-cta.show .content__text span {
+                animation: typingEffect2 4s forwards;
+            }
+
+            .content__text span:nth-child(1) {
+                animation-delay: calc(1s * var(--i));
+                /* Adjust delay increment */
+            }
+        </style>
+        <script>
+
+            //     document.addEventListener('DOMContentLoaded', () => {
+            //   console.log("Loaded");
+            //   const options = {
+            //     threshold: 0.1
+            //   };
+
+            //   const observer = new IntersectionObserver((entries) => {
+            //     entries.forEach((entry) => {
+            //       if (entry.isIntersecting) {
+            //         animateText(entry.target);
+            //       } else {
+            //         entry.target.classList.remove('show');
+            //       }
+            //     });
+            //   }, options);
+
+            //   const title = document.querySelectorAll(".content__title");
+            //   const para = document.querySelectorAll(".content__text");
+
+            //   observer.observe(title);
+            //   observer.observe(para);
+
+            function animateText(element) {
+                const text = element.textContent.trim();
+                const letters = text.split('');
+
+                // Replace text content with span-wrapped letters
+                element.innerHTML = '';
+                letters.forEach((letter, index) => {
+                    const span = document.createElement('span');
+                    span.textContent = letter;
+                    span.style.setProperty('--i', index + 1); // Set --i starting from 1
+                    element.appendChild(span);
+                });
+
+                // Add 'show' class to start animation
+                element.classList.add('show');
+            }
+
+        </script>
         <!-- 8th section -->
 
         <div class="br-11-20 mx-auto max-w-[1400px] text-black text-base font-normal leading-6">
@@ -1602,6 +2158,7 @@
                     </a>
             </footer>
         </div>
+        <script src="./Animation.js"></script>
 </body>
 
 </html>
