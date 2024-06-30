@@ -12,16 +12,18 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                clifford: '#da373d',
-              }
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
             }
-          }
         }
-      </script>
-      <script src="./Animation.js"></script>
+    </script>
+
+    <script src="./Animation.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
         integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -33,215 +35,167 @@
 
 <body>
     <div id="main">
-        <section
-        id="hero"
-        class="w-full h-auto shrink relative flex justify-center items-center"
-      >
-        <video
-          class="h-auto flex shrink w-full object-contain z-0"
-          loop
-          autoplay
-          muted
-        >
-          <source src="./videos/Hero-video-2.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <header class="h-16 w-full bg-transparent fixed top-0 left-0 z-10">
-          <nav id="Navbar" class="px-10 h-full flex items-center">
-            <div
-              id="nav-image"
-              class="flex gap-3 w-[35rem] max-[1000px]:w-[10rem]"
-            >
-              <div id="logo-1" class="color-white">
-                <img class="" src="./assets/Artwork_8Logo-White-1.png" alt="" />
-              </div>
-              <div id="logo-2" class="">
-                <img
-                  class=""
-                  src="./assets/Rectangle 25368logo-White-2.png"
-                  alt=""
-                />
-              </div>
-              <div id="logo-3" class="">
-                <img class="" src="./assets/Path 5876logo-White-3.png" alt="" />
-              </div>
-            </div>
-            <div
-              class="w-full text-black ml-10 max-[1000px]:hidden align-center flex text-lg font-light text-white"
-            >
-              <div id="nav-options" class="flex w-fit gap-5">
-                <div class="w-[5rem]">
-                  <h6
-                    class="nav-link font-semibold text-base show transition ease-in-out delay-150 bg-transparent hover:-translate-y-1 hover:scale-110 rounded duration-300 cursor-pointer"
-                  >
-                    WATCHES
-                  </h6>
+        <section id="hero" class="w-full h-auto shrink relative flex justify-center items-center">
+            <video class="h-auto flex shrink w-full object-contain z-0" loop autoplay muted>
+                <source src="./videos/Hero-video-2.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+            <header class="h-16 w-full bg-transparent fixed top-0 left-0 z-10">
+                <nav id="Navbar" class="px-10 h-full flex items-center">
+                    <div id="nav-image" class="flex gap-3 w-[35rem] max-[1000px]:w-[10rem]">
+                        <div id="logo-1" class="color-white">
+                            <img class="" src="./assets/Artwork_8Logo-White-1.png" alt="" />
+                        </div>
+                        <div id="logo-2" class="">
+                            <img class="" src="./assets/Rectangle 25368logo-White-2.png" alt="" />
+                        </div>
+                        <div id="logo-3" class="">
+                            <img class="" src="./assets/Path 5876logo-White-3.png" alt="" />
+                        </div>
+                    </div>
+                    <div
+                        class="w-full text-black ml-10 max-[1000px]:hidden align-center flex text-lg font-light text-white">
+                        <div id="nav-options" class="flex w-fit gap-5">
+                            <div class="w-[5rem]">
+                                <h6
+                                    class="nav-link font-semibold text-base show transition ease-in-out delay-150 bg-transparent hover:-translate-y-1 hover:scale-110 rounded duration-300 cursor-pointer">
+                                    WATCHES
+                                </h6>
+                            </div>
+                            <div class="w-1/7">
+                                <h6
+                                    class="nav-link font-semibold text-base show transition ease-in-out delay-150 bg-transparent hover:-translate-y-1 hover:scale-110 rounded duration-300 cursor-pointer">
+                                    STRAPS
+                                </h6>
+                            </div>
+                            <div class="w-1/7">
+                                <h6
+                                    class="nav-link font-semibold text-base show transition ease-in-out delay-150 bg-transparent hover:-translate-y-1 hover:scale-110 rounded duration-300 cursor-pointer">
+                                    STORES
+                                </h6>
+                            </div>
+                            <div class="w-1/7">
+                                <h6
+                                    class="nav-link font-semibold text-base show transition ease-in-out delay-150 bg-transparent hover:-translate-y-1 hover:scale-110 rounded duration-300 cursor-pointer">
+                                    SERVICE
+                                </h6>
+                            </div>
+                            <div class="w-1/7">
+                                <h6
+                                    class="nav-link font-semibold text-base show transition ease-in-out delay-150 bg-transparent hover:-translate-y-1 hover:scale-110 rounded duration-300 cursor-pointer">
+                                    NFT
+                                </h6>
+                            </div>
+                            <div class="w-1/7">
+                                <h6
+                                    class="nav-link font-semibold text-base show transition ease-in-out delay-150 bg-transparent hover:-translate-y-1 hover:scale-110 rounded duration-300 cursor-pointer">
+                                    SUSTAINABILITY
+                                </h6>
+                            </div>
+                            <div class="w-1/7">
+                                <h6
+                                    class="nav-link font-semibold text-base show transition ease-in-out delay-150 bg-transparent hover:-translate-y-1 hover:scale-110 rounded duration-300 cursor-pointer">
+                                    ABOUT
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="nav-icons" class="w-full flex justify-end text-white">
+                        <div class="w-fit flex items-center gap-5">
+                            <div class="icon w-1/5 displayable-icons">
+                                <i
+                                    class="fa-solid hover:text-white transition ease-in-out duration-200 fa-magnifying-glass"></i>
+                            </div>
+                            <div class="icon w-1/5 max-[1000px]:hidden">
+                                <i class="fa-solid hover:text-white transition ease-in-out duration-200 fa-phone"></i>
+                            </div>
+                            <div class="icon w-1/5 max-[1000px]:hidden">
+                                <i class="fa-solid hover:text-white transition ease-in-out duration-200 fa-heart"></i>
+                            </div>
+                            <div class="icon w-1/5 displayable-icons">
+                                <i class="fa-solid hover:text-white transition ease-in-out duration-200 fa-user"></i>
+                            </div>
+                            <div class="icon w-1/5 max-[1000px]:hidden">
+                                <i
+                                    class="fa-solid hover:text-white transition ease-in-out duration-200 fa-bag-shopping"></i>
+                            </div>
+                            <div class="icon w-1/5 min-[1001px]:hidden displayable-icons" id="toggle-icon-start">
+                                <i class="fa-solid hover:text-white transition ease-in-out duration-200 fa-bars"></i>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="flex justify-end min-[1001px]:hidden">
+                    <section id="chicken_bar-section"
+                        class="absolute top-2 right-2 h-64 w-44 max-[350px]:w-40 max-[320px]:w-36 bg-white bg-opacity-95 rounded-lg text-yellow-500 flex flex-col justify-evenly translate-x-52 ease-in-out duration-500">
+                        <div class="flex w-full justify-evenly">
+                            <div class="icon w-1/5 flex justify-center items-center">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                            <div class="icon w-1/5 flex justify-center items-center">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="icon w-1/5 flex justify-center items-center" id="toggle-icon-end">
+                                <i class="fa-solid fa-xmark text-2xl"></i>
+                            </div>
+                        </div>
+                        <div
+                            class="w-full flex justify-center hover:text-white rounded-md hover:bg-yellow-500 transition ease-in-out duration-500">
+                            <h6 class="nav-link font-semibold text-base cursor-pointer">
+                                WATCHES
+                            </h6>
+                        </div>
+                        <div
+                            class="w-full flex justify-center hover:text-white rounded-md hover:bg-yellow-500 transition ease-in-out duration-500">
+                            <h6 class="nav-link font-semibold text-base cursor-pointer">
+                                STRAPS
+                            </h6>
+                        </div>
+                        <div
+                            class="w-full flex justify-center hover:text-white rounded-md hover:bg-yellow-500 transition ease-in-out duration-500">
+                            <h6 class="nav-link font-semibold text-base cursor-pointer">
+                                STORES
+                            </h6>
+                        </div>
+                        <div
+                            class="w-full flex justify-center hover:text-white rounded-md hover:bg-yellow-500 transition ease-in-out duration-500">
+                            <h6 class="nav-link font-semibold text-base cursor-pointer">
+                                SERVICE
+                            </h6>
+                        </div>
+                        <div
+                            class="w-full flex justify-center hover:text-white rounded-md hover:bg-yellow-500 transition ease-in-out duration-500">
+                            <h6 class="nav-link font-semibold text-base cursor-pointer">
+                                NFT
+                            </h6>
+                        </div>
+                        <div
+                            class="w-full flex justify-center hover:text-white rounded-md hover:bg-yellow-500 transition ease-in-out duration-500">
+                            <h6 class="nav-link font-semibold text-base cursor-pointer">
+                                SUSTAINABILITY
+                            </h6>
+                        </div>
+                        <div
+                            class="w-full flex justify-center hover:text-white rounded-md hover:bg-yellow-500 transition ease-in-out duration-500">
+                            <h6 class="nav-link font-semibold text-base cursor-pointer">
+                                ABOUT
+                            </h6>
+                        </div>
+                        <div class="flex w-full justify-evenly">
+                            <div class="icon w-1/5 flex justify-center items-center">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="icon w-1/5 flex justify-center items-center">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <div class="icon w-1/5 flex justify-center items-center">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                            </div>
+                        </div>
+                    </section>
                 </div>
-                <div class="w-1/7">
-                  <h6
-                    class="nav-link font-semibold text-base show transition ease-in-out delay-150 bg-transparent hover:-translate-y-1 hover:scale-110 rounded duration-300 cursor-pointer"
-                  >
-                    STRAPS
-                  </h6>
-                </div>
-                <div class="w-1/7">
-                  <h6
-                    class="nav-link font-semibold text-base show transition ease-in-out delay-150 bg-transparent hover:-translate-y-1 hover:scale-110 rounded duration-300 cursor-pointer"
-                  >
-                    STORES
-                  </h6>
-                </div>
-                <div class="w-1/7">
-                  <h6
-                    class="nav-link font-semibold text-base show transition ease-in-out delay-150 bg-transparent hover:-translate-y-1 hover:scale-110 rounded duration-300 cursor-pointer"
-                  >
-                    SERVICE
-                  </h6>
-                </div>
-                <div class="w-1/7">
-                  <h6
-                    class="nav-link font-semibold text-base show transition ease-in-out delay-150 bg-transparent hover:-translate-y-1 hover:scale-110 rounded duration-300 cursor-pointer"
-                  >
-                    NFT
-                  </h6>
-                </div>
-                <div class="w-1/7">
-                  <h6
-                    class="nav-link font-semibold text-base show transition ease-in-out delay-150 bg-transparent hover:-translate-y-1 hover:scale-110 rounded duration-300 cursor-pointer"
-                  >
-                    SUSTAINABILITY
-                  </h6>
-                </div>
-                <div class="w-1/7">
-                  <h6
-                    class="nav-link font-semibold text-base show transition ease-in-out delay-150 bg-transparent hover:-translate-y-1 hover:scale-110 rounded duration-300 cursor-pointer"
-                  >
-                    ABOUT
-                  </h6>
-                </div>
-              </div>
-            </div>
-            <div id="nav-icons" class="w-full flex justify-end text-white">
-              <div class="w-fit flex items-center gap-5">
-                <div class="icon w-1/5 displayable-icons">
-                  <i
-                    class="fa-solid hover:text-white transition ease-in-out duration-200 fa-magnifying-glass"
-                  ></i>
-                </div>
-                <div class="icon w-1/5 max-[1000px]:hidden">
-                  <i
-                    class="fa-solid hover:text-white transition ease-in-out duration-200 fa-phone"
-                  ></i>
-                </div>
-                <div class="icon w-1/5 max-[1000px]:hidden">
-                  <i
-                    class="fa-solid hover:text-white transition ease-in-out duration-200 fa-heart"
-                  ></i>
-                </div>
-                <div class="icon w-1/5 displayable-icons">
-                  <i
-                    class="fa-solid hover:text-white transition ease-in-out duration-200 fa-user"
-                  ></i>
-                </div>
-                <div class="icon w-1/5 max-[1000px]:hidden">
-                  <i
-                    class="fa-solid hover:text-white transition ease-in-out duration-200 fa-bag-shopping"
-                  ></i>
-                </div>
-                <div
-                  class="icon w-1/5 min-[1001px]:hidden displayable-icons"
-                  id="toggle-icon-start"
-                >
-                  <i
-                    class="fa-solid hover:text-white transition ease-in-out duration-200 fa-bars"
-                  ></i>
-                </div>
-              </div>
-            </div>
-          </nav>
-          <div class="flex justify-end min-[1001px]:hidden">
-            <section
-              id="chicken_bar-section"
-              class="absolute top-2 right-2 h-64 w-44 max-[350px]:w-40 max-[320px]:w-36 bg-white bg-opacity-95 rounded-lg text-yellow-500 flex flex-col justify-evenly translate-x-52 ease-in-out duration-500"
-            >
-              <div class="flex w-full justify-evenly">
-                <div class="icon w-1/5 flex justify-center items-center">
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-                <div class="icon w-1/5 flex justify-center items-center">
-                  <i class="fa-solid fa-phone"></i>
-                </div>
-                <div
-                  class="icon w-1/5 flex justify-center items-center"
-                  id="toggle-icon-end"
-                >
-                  <i class="fa-solid fa-xmark text-2xl"></i>
-                </div>
-              </div>
-              <div
-                class="w-full flex justify-center hover:text-white rounded-md hover:bg-yellow-500 transition ease-in-out duration-500"
-              >
-                <h6 class="nav-link font-semibold text-base cursor-pointer">
-                  WATCHES
-                </h6>
-              </div>
-              <div
-                class="w-full flex justify-center hover:text-white rounded-md hover:bg-yellow-500 transition ease-in-out duration-500"
-              >
-                <h6 class="nav-link font-semibold text-base cursor-pointer">
-                  STRAPS
-                </h6>
-              </div>
-              <div
-                class="w-full flex justify-center hover:text-white rounded-md hover:bg-yellow-500 transition ease-in-out duration-500"
-              >
-                <h6 class="nav-link font-semibold text-base cursor-pointer">
-                  STORES
-                </h6>
-              </div>
-              <div
-                class="w-full flex justify-center hover:text-white rounded-md hover:bg-yellow-500 transition ease-in-out duration-500"
-              >
-                <h6 class="nav-link font-semibold text-base cursor-pointer">
-                  SERVICE
-                </h6>
-              </div>
-              <div
-                class="w-full flex justify-center hover:text-white rounded-md hover:bg-yellow-500 transition ease-in-out duration-500"
-              >
-                <h6 class="nav-link font-semibold text-base cursor-pointer">
-                  NFT
-                </h6>
-              </div>
-              <div
-                class="w-full flex justify-center hover:text-white rounded-md hover:bg-yellow-500 transition ease-in-out duration-500"
-              >
-                <h6 class="nav-link font-semibold text-base cursor-pointer">
-                  SUSTAINABILITY
-                </h6>
-              </div>
-              <div
-                class="w-full flex justify-center hover:text-white rounded-md hover:bg-yellow-500 transition ease-in-out duration-500"
-              >
-                <h6 class="nav-link font-semibold text-base cursor-pointer">
-                  ABOUT
-                </h6>
-              </div>
-              <div class="flex w-full justify-evenly">
-                <div class="icon w-1/5 flex justify-center items-center">
-                  <i class="fa-solid fa-phone"></i>
-                </div>
-                <div class="icon w-1/5 flex justify-center items-center">
-                  <i class="fa-solid fa-heart"></i>
-                </div>
-                <div class="icon w-1/5 flex justify-center items-center">
-                  <i class="fa-solid fa-bag-shopping"></i>
-                </div>
-              </div>
-            </section>
-          </div>
-        </header>
-      </section>
+            </header>
+        </section>
 
         <section id="top-saller" class="w-full mt-[10em]">
             <div class="prd flex justify-center items-center gap-10">
@@ -251,7 +205,8 @@
                     </div>
                     <div class="text mt-8 flex items-center justify-center">
                         <h2 class="p">NORTH AMERICAN LIMITED EDITION<br>
-                           <span class="text-yellow-500">SUPEROCEAN AUTOMATIC 36</span></h2>
+                            <span class="text-yellow-500">SUPEROCEAN AUTOMATIC 36</span>
+                        </h2>
                     </div>
                     <div class="btn mt-8 flex items-center justify-center">
                         <button class="bg-yellow-500 rounded-full px-4 py-4">Buy Now</button>
@@ -277,7 +232,8 @@
                     </div>
                     <div class="text mt-8 flex items-center justify-center">
                         <h2 class="p">BREITLING X<br>
-                        <span class="text-yellow-500">VICTORIA BECKHAM</span></h2>
+                            <span class="text-yellow-500">VICTORIA BECKHAM</span>
+                        </h2>
                     </div>
                     <div class="btn mt-8 flex items-center justify-center">
                         <button class="bg-yellow-500 rounded-full px-4 py-4">Buy Now</button>
@@ -286,130 +242,1576 @@
             </div>
         </section>
         <div class="h-full w-full flex flex-col">
-          <div id="scrollTrigger_animation" class="invisible mx-auto h-[40vh] w-[85%] sm:h-[45vh] flex">
-            <div
-              class="h-[40vh] w-[55vw] sm:h-[45vh] sm:w-[70vw] md:w-[75vw] flex flex-col justify-center items-start"
-            >
-              <div
-                class="sm:text-xl text-lg max-[520px]:text-base max-[450px]:text-sm max-[400px]:text-xs max-[350px]:flex-col font-bold flex items-center justify-center h-fit"
-              >
-                <p class="text-black mr-1">THE NEW</p>
-                <p class="text-yellow-500">NAVITIMER 41</p>
-              </div>
-              <div class="h-fit w-[90%] flex flex-col items-start">
-                <p class="text-black">
-                  watch the journey of our newest member of the nevitimer squad:
-                </p>
-                <p class="text-yellow-500 font-bold">Erling Haaland.</p>
-              </div>
+            <div id="scrollTrigger_animation" class="invisible mx-auto h-[40vh] w-[85%] sm:h-[45vh] flex">
+                <div
+                    class="h-[40vh] w-[55vw] sm:h-[45vh] sm:w-[70vw] md:w-[75vw] flex flex-col justify-center items-start">
+                    <div
+                        class="sm:text-xl text-lg max-[520px]:text-base max-[450px]:text-sm max-[400px]:text-xs max-[350px]:flex-col font-bold flex items-center justify-center h-fit">
+                        <p class="text-black mr-1">THE NEW</p>
+                        <p class="text-yellow-500">NAVITIMER 41</p>
+                    </div>
+                    <div class="h-fit w-[90%] flex flex-col items-start">
+                        <p class="text-black">
+                            watch the journey of our newest member of the nevitimer squad:
+                        </p>
+                        <p class="text-yellow-500 font-bold">Erling Haaland.</p>
+                    </div>
+                </div>
+                <div class="flex justify-end object-contain">
+                    <img src="./assets/chronomat-di-2.webp" alt=""
+                        class="h-[40vh] w-[55vw] sm:h-[45vh] sm:w-[34.8vw] md:w-[28.8vw]" />
+                </div>
             </div>
-            <div class="flex justify-end object-contain">
-              <img
-                src="https://www.breitling.com/media/image/4/single_entry_double_image_435/asset-version-e35907865d/erling-double-image-1-v3.webp"
-                alt=""
-                class="h-[40vh] w-[55vw] sm:h-[45vh] sm:w-[34.8vw] md:w-[28.8vw]"
-              />
+            <div id="scrollTrigger_animation"
+                class="invisible mx-auto h-[40vh] w-[85%] sm:h-[45vh] flex justify-around">
+                <div class="flex justify-end object-contain">
+                    <img src="./assets/chronomat-di-2.webp" alt=""
+                        class="h-[40vh] w-[55vw] sm:h-[45vh] sm:w-[34.8vw] md:w-[28.8vw]" />
+                </div>
+                <div
+                    class="h-[40vh] w-[55vw] sm:h-[45vh] sm:w-[70vw] md:w-[75vw] flex flex-col justify-center items-end">
+                    <div
+                        class="sm:text-xl text-lg max-[520px]:text-base max-[450px]:text-sm max-[400px]:text-xs max-[350px]:flex-col font-bold flex items-center justify-center h-fit">
+                        <p class="text-black mr-1">THE NEW</p>
+                        <p class="text-yellow-500">NAVITIMER 41</p>
+                    </div>
+                    <div class="h-fit w-[90%] flex flex-col items-end">
+                        <p class="text-black">
+                            watch the journey of our newest member of the nevitimer squad:
+                        </p>
+                        <p class="text-yellow-500 font-bold">Erling Haaland.</p>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div
-          id="scrollTrigger_animation"
-            class="invisible mx-auto h-[40vh] w-[85%] sm:h-[45vh] flex justify-around"
-          >
-            <div class="flex justify-end object-contain">
-              <img
-                src="https://www.breitling.com/media/image/4/single_entry_double_image_435/asset-version-e35907865d/erling-double-image-1-v3.webp"
-                alt=""
-                class="h-[40vh] w-[55vw] sm:h-[45vh] sm:w-[34.8vw] md:w-[28.8vw]"
-              />
+            <div id="scrollTrigger_animation" class="invisible mx-auto h-[40vh] w-[85%] sm:h-[45vh] flex">
+                <div
+                    class="h-[40vh] w-[55vw] sm:h-[45vh] sm:w-[70vw] md:w-[75vw] flex flex-col justify-center items-start">
+                    <div
+                        class="sm:text-xl text-lg max-[520px]:text-base max-[450px]:text-sm max-[400px]:text-xs max-[350px]:flex-col font-bold flex items-center justify-center h-fit">
+                        <p class="text-black mr-1">THE NEW</p>
+                        <p class="text-yellow-500">NAVITIMER 41</p>
+                    </div>
+                    <div class="h-fit w-[90%] flex flex-col items-start">
+                        <p class="text-black">
+                            watch the journey of our newest member of the nevitimer squad:
+                        </p>
+                        <p class="text-yellow-500 font-bold">Erling Haaland.</p>
+                    </div>
+                </div>
+                <div class="flex justify-end object-contain">
+                    <img src="./assets/chronomat-di-2.webp" alt=""
+                        class="h-[40vh] w-[55vw] sm:h-[45vh] sm:w-[34.8vw] md:w-[28.8vw]" />
+                </div>
             </div>
-            <div
-              class="h-[40vh] w-[55vw] sm:h-[45vh] sm:w-[70vw] md:w-[75vw] flex flex-col justify-center items-end"
-            >
-              <div
-                class="sm:text-xl text-lg max-[520px]:text-base max-[450px]:text-sm max-[400px]:text-xs max-[350px]:flex-col font-bold flex items-center justify-center h-fit"
-              >
-                <p class="text-black mr-1">THE NEW</p>
-                <p class="text-yellow-500">NAVITIMER 41</p>
-              </div>
-              <div class="h-fit w-[90%] flex flex-col items-end">
-                <p class="text-black">
-                  watch the journey of our newest member of the nevitimer squad:
-                </p>
-                <p class="text-yellow-500 font-bold">Erling Haaland.</p>
-              </div>
-            </div>
-          </div>
-          <div id="scrollTrigger_animation" class="invisible mx-auto h-[40vh] w-[85%] sm:h-[45vh] flex">
-            <div
-              class="h-[40vh] w-[55vw] sm:h-[45vh] sm:w-[70vw] md:w-[75vw] flex flex-col justify-center items-start"
-            >
-              <div
-                class="sm:text-xl text-lg max-[520px]:text-base max-[450px]:text-sm max-[400px]:text-xs max-[350px]:flex-col font-bold flex items-center justify-center h-fit"
-              >
-                <p class="text-black mr-1">THE NEW</p>
-                <p class="text-yellow-500">NAVITIMER 41</p>
-              </div>
-              <div class="h-fit w-[90%] flex flex-col items-start">
-                <p class="text-black">
-                  watch the journey of our newest member of the nevitimer squad:
-                </p>
-                <p class="text-yellow-500 font-bold">Erling Haaland.</p>
-              </div>
-            </div>
-            <div class="flex justify-end object-contain">
-              <img
-                src="https://www.breitling.com/media/image/4/single_entry_double_image_435/asset-version-e35907865d/erling-double-image-1-v3.webp"
-                alt=""
-                class="h-[40vh] w-[55vw] sm:h-[45vh] sm:w-[34.8vw] md:w-[28.8vw]"
-              />
-            </div>
-          </div>
-        <script>
-            // Initialize GSAP and ScrollTrigger
-  gsap.registerPlugin(ScrollTrigger);
+            <script>
+                // Initialize GSAP and ScrollTrigger
+                gsap.registerPlugin(ScrollTrigger);
 
-// Animation for each div
-document.querySelectorAll(".mx-auto").forEach((container) => {
-  const img = container.querySelector("img");
-  const textContainer = container.querySelector(".flex.flex-col");
-  // console.log(img)
+                // Animation for each div
+                document.querySelectorAll(".mx-auto").forEach((container) => {
+                    const img = container.querySelector("img");
+                    const textContainer = container.querySelector(".flex.flex-col");
+                    // console.log(img)
 
-  // Animation timeline
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: container,
-      start: "top 60%",
-      end: "bottom 15%",
-      // markers: true,
-      toggleActions: "play reverse play reverse",
-    },
-  });
+                    // Animation timeline
+                    const tl = gsap.timeline({
+                        scrollTrigger: {
+                            trigger: container,
+                            start: "top 60%",
+                            end: "bottom 15%",
+                            // markers: true,
+                            toggleActions: "play reverse play reverse",
+                        },
+                    });
 
-  // Set initial state
-  tl.set(img, { visibility: "visible", opacity: 0 });
-  tl.set(textContainer, { visibility: "visible", opacity: 0, width: 0 });
+                    // Set initial state
+                    tl.set(img, { visibility: "visible", opacity: 0 });
+                    tl.set(textContainer, { visibility: "visible", opacity: 0, width: 0 });
 
-  // Animation
-  if (container.classList.contains("invisible")) {
-    // For div where image is on the left side
-    tl.to(img, {
-      clipPath: "polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%)",
-      opacity: 1,
-      duration: 2,
-      ease: "power2.inOut",
-    }).to(
-      textContainer,
-      { opacity: 1, width: "90%", duration: 0.5, ease: "power2.inOut" },
-      "-=0.5"
-    );
-  }
-});
-        </script>
+                    // Animation
+                    if (container.classList.contains("invisible")) {
+                        // For div where image is on the left side
+                        tl.to(img, {
+                            clipPath: "polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%)",
+                            opacity: 1,
+                            duration: 2,
+                            ease: "power2.inOut",
+                        }).to(
+                            textContainer,
+                            { opacity: 1, width: "90%", duration: 0.5, ease: "power2.inOut" },
+                            "-=0.5"
+                        );
+                    }
+                });
+            </script>
         </div>
-        
+
+        <section class="flex w-full mt-10">
+            <div class="h-[100vh] w-1/2 flex justify-start items-center">
+                <!-- <div id="container" class=" h-96 w-96 flex shrink rounded-full border-black border-2 relative"> -->
+                <div
+                    class="relative flex shrink -left-[15rem] h-[25rem] w-[25rem] rounded-full border-2 border-gray-200 flex justify-center items-center">
+                    <div
+                        class="clock-image-1 flex shrink right-0 -translate-x-[20%] -translate-y-[105%] h-[10rem] w-[10rem] absolute flex justify-center items-center">
+                        <img class="clock-image cursor-pointer flex shrink hover:scale-110 transform ease-in-out duration-300 object-contain h-fit w-fit relative"
+                            src="https://www.breitling.com/media/image/4/cfg_site_hd/asset-version-5f20dd91fd/u17329f41g1u1-navitimer-automatic-41-soldier.webp"
+                            alt="Image 1" onclick="addClass(this)" />
+                    </div>
+                    <div
+                        class="clock-image-2 flex shrink right-0 translate-x-[35%] -translate-y-[45%] h-[10rem] w-[10rem] absolute flex justify-center items-center">
+                        <img class="clock-image cursor-pointer flex shrink hover:scale-110 transform ease-in-out duration-300 object-contain h-fit w-fit relative"
+                            src="https://www.breitling.com/media/image/4/cfg_site_hd/asset-version-235e440ac3/a32310211g1p1-navitimer-automatic-gmt-41-soldier.webp"
+                            alt="Image 1" onclick="addClass(this)" />
+                    </div>
+                    <div
+                        class="clock-image-3 flex shrink right-0 translate-x-[35%] translate-y-[55%] h-[10rem] w-[10rem] absolute flex justify-center items-center">
+                        <img class="clock-image cursor-pointer flex shrink hover:scale-110 transform ease-in-out duration-300 object-contain h-fit w-fit relative"
+                            src="https://www.breitling.com/media/image/4/cfg_site_hd/asset-version-235e440ac3/a32310211g1p1-navitimer-automatic-gmt-41-soldier.webp"
+                            alt="Image 1" onclick="addClass(this)" />
+                    </div>
+                    <div
+                        class="clock-image-4 flex shrink right-0 -translate-x-[20%] translate-y-[105%] h-[10rem] w-[10rem] absolute flex justify-center items-center">
+                        <img class="clock-image cursor-pointer flex shrink hover:scale-110 transform ease-in-out duration-300 object-contain h-fit w-fit relative"
+                            src="https://www.breitling.com/media/image/4/cfg_site_hd/asset-version-a8cbbb653f/u173771a1a1s1-superocean-automatic-36-soldier.webp"
+                            alt="Image 1" onclick="addClass(this)" />
+                    </div>
+                </div>
+            </div>
+            <div class="h-[100vh] w-1/2 flex flex-col mr-3">
+                <div class="h-[7vw] w-full flex" id="first-section">
+                    <div class="h-full w-[55vw] flex justify-center items-center text-2xl font-bold">
+                        <p>NAVITIMER AUTOMATIC 41</p>
+                    </div>
+                    <div id="nav-image" class="flex justify-center items-center gap-3 w-[18.9vw] max-[1000px]:w-[15vw]">
+                        <div id="logo-1" class="">
+                            <img class="" src="./assets/Artwork_8Logo-Yellow-1.png" alt="" />
+                        </div>
+                        <div id="logo-2" class="">
+                            <img class="" src="./assets/Rectangle 25367logo-Yellow-2.png" alt="" />
+                        </div>
+                        <div id="logo-3" class="">
+                            <img class="" src="./assets/Path 5876logo-Yellow-3.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="second-section h-[32vw] flex flex-col items-center">
+                    <p class="h-[4vw] text-xl w-full flex justify-center items-center">
+                        Description
+                    </p>
+                    <p class="h-[28vw] text-2xl w-full text-justify flex items-center">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. A inventore
+                        tempore amet reiciendis magnam similique, mollitia adipisci cum animi
+                        itaque, dolorem esse, blanditiis maiores ratione non debitis nemo.
+                        Nobis, vel! Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Ipsum similique perferendis eos amet dolorum inventore optio.
+                        Molestias, quia numquam! Animi sapiente repudiandae provident totam
+                        hic excepturi asperiores earum sint cupiditate.
+                    </p>
+                </div>
+                <div class="h-[6.2vw] flex items-center" id="third-section">
+                    <div class="w-[50%] flex justify-center items-center">
+                        <button class="h-[4vw] w-[12vw] bg-yellow-400 text-xl rounded-xl border-2 border-black">
+                            2,00,589
+                        </button>
+                    </div>
+                    <div class="w-[50%] flex justify-center items-center">
+                        <button class="h-[4vw] w-[15vw] bg-yellow-400 text-xl rounded-lg border-2 border-black">
+                            Add To Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <style>
+                .active {
+                    scale: 125%;
+                }
+            </style>
+        </section>
+
+        <script>
+            const images = document.querySelectorAll(".clock-image");
+            function addClass(clickedImage) {
+                images.forEach((image) => {
+                    image.classList.remove("active"); //first remove active from all images then add it at the end for clicked image
+                    image.classList.add("z-10");
+                });
+                clickedImage.classList.add("active");
+                clickedImage.classList.add("-z-50");
+                console.log("class added");
+            }
+        </script>
+
+        <!-- 4th section -->
+
+        <div class="mx-auto max-w-7xl text-black text-base font-normal leading-6">
+            <section class="p-8">
+                <div class="flex wrap -m-2 relative">
+                    <a aria-label="A star on and off the court" class="block h-full left-0 absolute top-0 w-full z-10"
+                        href="/zz-zz/campaigns/chronomat-giannis-antetokounmpo/" title="A star on and off the court">
+                    </a>
+
+                    <div class="flex items-center p-2 text-center w-[30%]">
+                        <div class="overflow-hidden relative w-full">
+                            <img src="https://www.breitling.com/media/image/4/single_entry_double_image_435/asset-version-0c66bacd46/chronomat-di-1.webp"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class=" flex items-center p-2 text-center w-[30%]">
+                        <div class="overflow-hidden relative w-full">
+                            <img src="https://www.breitling.com/media/image/4/single_entry_double_image_435/asset-version-b731f6f618/chronomat-di-2.webp"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="single-entry-double-image__content flex items-center p-2 text-center w-[30%] z-2">
+                        <div class=" w-full text-center">
+                            <h2 class=" text-black text-4xl font-bold uppercase ">
+                                <a class="pointer hover:text-black"
+                                    href="/zz-zz/campaigns/chronomat-giannis-antetokounmpo/">
+                                    <span class="text-yellow-400">
+                                        A star
+                                    </span> on and off the court
+                                </a>
+                            </h2>
+                            <div class="text-center">Meet the new limited-edition Giannis Antetokounmpo signature
+                                Chronomat—co-designed by the basketball legend.</div>
+                            <div class="mt-4 w-full text-center">
+                                <a class="inline-block leading-snug pointer-events-auto bg-yellow-400 border-none rounded-none text-black cursor-pointer font-sans font-bold h-auto max-w-none outline-none px-4 py-2 text-center uppercase transition-all duration-300 ease-in-out w-full"
+                                    href="/zz-zz/campaigns/chronomat-giannis-antetokounmpo/">Discover more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- 5th section -->
+        <div class="mx-auto max-w-7xl text-black text-base font-normal leading-6">
+            <section class=" lg:pt-6 lg:px-8 lg:pb-0">
+                <div class="mb-5 lg:mb-7.5">
+                    <div class="text-center">
+                        <h2 class="text-4xl lg:text-5xl text-[#111820] font-bold font-sans">
+                            <span class="text-yellow-400">Exclusive</span>
+                            Breitling E-Boutique
+                            services
+                        </h2>
+                    </div>
+                </div>
+                <div class="card_container">
+                    <div class="card">
+                      <div class="wrapper">
+                        <div class="cover-image">
+                            <img src="./assets/icon-free-shipping-return.svg"/>
+                        </div>
+                      </div>
+                      <p class="title">FREE SHIPPING & RETURNS</p>
+                      <img src="./assets/box1.webp" class="character" />
+                    </div>
+                    
+                      <div class="card">
+                        <div class="wrapper">
+                          <div class="cover-image">
+                            <img src="./assets/icon-gifting-service.svg"/>
+                          </div>
+                        </div>
+                        <p class="title">GIVE A GIFT</p>
+                        <img src="./assets/give_gift.webp" class="character" />
+                      </div>
+                  
+                      <div class="card">
+                        <div class="wrapper">
+                          <div class="cover-image">
+                            <img src="./assets/icon-exclusive-benefit.svg" />
+                          </div>
+                        </div>
+                        <p class="title">EXCLUSIVE BENEFITS</p>
+                        <img src="./assets/give_gift.webp" class="character" />
+                      </div>
+                    </div>
+                    <style>
+                      :root {
+                    --card-height: 300px;
+                    --card-width: calc(var(--card-height) / 1.5);
+                  }
+                  /* * {
+                    box-sizing: border-box;
+                  } */
+                  .card_container {
+                    /* width: 100vw; */
+                    height: max-content; 
+                    margin: 0;
+                    display: flex;
+                    flex-wrap:wrap ;
+                    /* gap: 20px; */
+                    justify-content: center;
+                    align-items: center;
+                    /* background: #191c29; */
+                  }
+                  .card {
+                    width: var(--card-width);
+                    height: var(--card-height);
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    padding: 0 36px;
+                    perspective: 2500px;
+                    margin: 0 50px;
+                  }
+                  .cover-image img{
+                    width: 75%;
+                    height: 75%;
+                    opacity: 1;
+                    transition-delay: 0.1s;
+                  }
+                  .cover-image {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    /* align-items:first baseline; */
+                    background: rgba(207, 203, 203, 0.5);
+                  }
+                  
+                  .wrapper {
+                    transition: all 0.5s;
+                    position: absolute;
+                    width: 100%;
+                    z-index: -1;
+                    height: 250px;
+                  }
+                  
+                  .card:hover .wrapper {
+                    transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+                    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+                    -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+                    -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+                  }
+                  
+                  .wrapper::before,
+                  .wrapper::after {
+                    content: "";
+                    opacity: 0;
+                    width: 100%;
+                    height: 135px;
+                    transition: all 0.5s;
+                    position: absolute;
+                    left: 0;
+                  }
+                  .wrapper::before {
+                    top: 0;
+                    height: 100%;
+                    background-image: linear-gradient(
+                      to top,
+                      transparent 46%,
+                      rgba(240, 210, 13, 0.826) 68%,
+                      rgba(240, 210, 13, 0.968) 97%
+                    );
+                  }
+                  .wrapper::after {
+                    bottom: 0;
+                    opacity: 1;
+                    background-image: linear-gradient(
+                      to bottom,
+                      transparent 46%,
+                      rgba(240, 210, 13, 0.826) 68%,
+                      rgba(240, 210, 13, 0.968) 97%
+                    );
+                  }
+                  .card:hover .cover-image img{
+                    opacity: 0;
+                    
+                  }
+                  
+                  .card:hover .wrapper::before,
+                  .wrapper::after {
+                    opacity: 1;
+                  }
+                  
+                  .card:hover .wrapper::after {
+                    height: 120px;
+                  }
+                  .title {
+                    /* width: 100%; */
+                    height: 50px;
+                    /* border: 1px solid seagreen; */
+                    transition: transform 0.5s;
+                    font-size: large;
+                    font-weight:600 ;
+                    display: flex;
+                    align-items:center;
+                    text-align: center;
+                  }
+                  .card:hover .title {
+                    transform: translate3d(0%, -35px, 100px);
+                  }
+                  
+                  .character {
+                    width: 100%;
+                    opacity: 0;
+                    transition: all 0.5s;
+                    position: absolute;
+                    z-index: -1;
+                  }
+                  
+                  .card:hover .character {
+                    opacity: 1;
+                    transform: translate3d(0%, -55%, 300px);
+                  }
+                    </style>
+                <!-- <div class="flex wrap m-auto max-w-5xl lg:mx-auto lg:-m-2">
+                    <div class="flex-grow w-1/2 hover:text-yellow-400 lg:w-1/4 lg:p-2 p-1.25">
+                        <a class="text-center lg:p-30 lg:px-20 p-15 bg-[#fafafa] block"
+                            href="/us-en/store/services/free-shipping/">
+                            <div class="block">
+                                <img alt="Free Shipping Returns" class="block m-auto" height="47" loading="lazy"
+                                    src="./assets/icon-free-shipping-return.svg" type="image/svg+xml" width="47">
+                            </div>
+                            <div class="w-full">
+                                Free Shipping &amp; Returns </div>
+                        </a>
+                    </div>
+                    <div class="flex-grow w-1/2 hover:text-yellow-400 lg:w-1/4 lg:p-2 p-1.25">
+                        <a class="text-center lg:p-30 lg:px-20 p-15 bg-[#fafafa] block"
+                            href="/us-en/store/services/gift-wrapping/">
+                            <div class="block">
+                                <img alt="Gifting Service" class="block m-auto" height="47" loading="lazy"
+                                    src="./assets/icon-gifting-service.svg" type="image/svg+xml" width="47">
+                            </div>
+                            <div class="w-full">
+                                Give a gift </div>
+                        </a>
+                    </div>
+                    <div class="flex-grow w-1/2 hover:text-yellow-400 lg:w-1/4 lg:p-2 p-1.25">
+                        <a class="lg:p-30 lg:px-20 p-15 bg-[#fafafa] text-center"
+                            href="/store/services/exclusive-benefits/">
+                            <div class="block">
+                                <img alt="Exclusive Benefits" class="block m-auto" height="47" loading="lazy"
+                                    src="./assets/icon-exclusive-benefit.svg" type="image/svg+xml" width="44">
+                            </div>
+                            <div class="w-full">
+                                Exclusive Benefits </div>
+                        </a>
+                    </div>
+                </div> -->
+            </section>
+        </div>
+
+        <!-- 6th section -->
+        <div class="mx-auto max-w-7xl text-black text-base font-normal leading-6">
+            <section class="section-single-cta">
+                <div class="section-single-cta__wrapper mb-4 lg:mb-8 relative">
+                    <a class="block-big-link  block h-full left-0 absolute top-0 w-full z-10 text-black no-underline transition-all duration-200 ease-in-out"
+                        href="/us-en/blockchain/"></a>
+                    <div class="section-single-cta__image relative w-full h-80 flex items-center justify-center">
+                        <img class="absolute inset-0 h-full w-full object-cover object-center"
+                            src="./assets/blockchain3.webp" alt="">
+                    </div>
+                    <div
+                        class="section-single-cta__content  absolute inset-0 p-12 pt-[50px] pb-[30px] px-[22px] text-center text-white pointer-events-none z-20">
+                        <div
+                            class="content__wrapper start-md  box-border flex flex-col items-center h-full text-center md:text-left md:justify-start lg:justify-start lg:text-left">
+                            <h2
+                                class="content__title font-heading h-fit text-white font-bold uppercase leading-tight text-3xl">
+                                <!-- <a href="/us-en/blockchain/"> YOU DON’T HAVE YOUR
+                                    <span class="text-yellow-400">BREITLING NFT</span> YET? </a> -->
+                                    <span>YOU</span> 
+                                    <span>DON’T</span>
+                                    <span>HAVE</span>
+                                    <span>YOUR</span>
+                                    <span class="text-yellow-400">BREITLING</span>
+                                    <span class="text-yellow-400">NFT</span>
+                                    <span>YET?</span>
+                                    
+                            </h2>
+                            <!-- <div class="content__text h-6 text-white flex-grow text-center lg:flex-grow-inherit lg:max-w-[750px]"> -->
+                            <div class="content__text h-fit">
+                                <span>Made</span>
+                                            <span>Secure</span>
+                                            <span>your</span>
+                                            <span>ownership</span>
+                                            <span>and</span>
+                                            <span>access</span>
+                                            <span>unique</span>
+                                            <span>services.</span>
+                                            <span>Scan</span>
+                                            <span>the</span>
+                                            <span>QR</span>
+                                            <span>code</span>
+                                            <span>on</span>
+                                            <span>your</span>
+                                            <span>warranty</span>
+                                            <span>card</span>
+                                            <span>to</span>
+                                            <span>get</span>
+                                            <span>started</span>
+                            </div>
+                            <!-- <div class="w-full h-fit mt-2 flex items-center justify-center"><a
+                                    class=" bg-[#ffc62d] border-none rounded-none text-black cursor-pointer font-sans font-bold h-auto max-w-none py-4 px-12 text-center  duration-300 ease-in-out w-full lg:w-auto no-underline transition-all duration-200 ease-in-out"
+                                    href="/us-en/blockchain/"> Discover </a> </div> -->
+                                    <a class="backToHomeButton1 cssbuttons-io-button btn inline-block pointer-events-auto mt-auto lg:my-3 lg:w-auto block border-none flex justify-center rounded-none text-black cursor-pointer font-open-sans font-bold h-auto max-w-none outline-none text-center uppercase transition-all duration-300 ease-in-out w-full no-underline transition-colors duration-200 ease-in-out">
+                                        <div class="icon">
+                                          <svg
+                                            height="24"
+                                            width="24"
+                                            viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                          >
+                                            <path d="M0 0h24v24H0z" fill="none"></path>
+                                            <path
+                                              d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                              fill="currentColor"
+                                            ></path>
+                                          </svg>
+                                        </div>
+                                        Discover
+                                    </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- 7th section -->
+
+        <div class="mx-auto max-w-[1400px] text-black text-base font-normal leading-6">
+            <section class="section-cta p-0 lg:px-8 lg:pb-8 lg:pt-0">
+                <div class="cols-wrapper flex flex-wrap -m-4 lg:-m-2">
+                    <div class="col p-4 w-full min-[610px]:p-2 min-[610px]:w-1/2 ">
+                        <div class="col__wrapper relative">
+                            <div class="col__background relative">
+                                <img src="./assets/home-straps.webp" alt="">
+                            </div>
+                            <div
+                                class="col__front h-full left-0 pointer-events-none absolute right-0 top-0 z-30 min-[992px]:h-auto">
+                                <div
+                                    class="front__content text-white flex flex-col h-full text-center p-[50px_22px_30px] min-[992px]:block min-[992px]:pt-12 min-[992px]:px-[22px] min-[992px]:pb-0">
+                                    <h2
+                                        class="content__title font-heading  text-white text-2xl font-bold text-center uppercase min-[992px]:text-4xl">
+                                        <!-- <a href="/us-en/straps/all/"> Straps </a> -->
+                                        <span>S</span><span>t</span><span>r</span><span>a</span><span>p</span><span>s</span>
+                                    </h2>
+                                    <div class="content__text m-auto max-w-sm">
+                                            <span>Made</span>
+                                            <span>from</span>
+                                            <span>leather,</span>
+                                            <span>rubber,</span>
+                                            <span>or</span>
+                                            <span>ECONYL™</span>
+                                            <span>fabric,</span>
+                                            <span>the</span>
+                                            <span>Breitling</span>
+                                            <span>straps</span>
+                                            <span>will</span>
+                                            <span>nicely</span>
+                                            <span>complement</span>
+                                            <span>your</span>
+                                            <span>Breitling</span>
+                                            <span>watch</span>
+                                            <span>and</span>
+                                            <span>give</span>
+                                            <span>it</span>
+                                            <span>a</span>
+                                            <span>fresh</span>
+                                            <span>new</span>
+                                            <span>look.</span>
+                                        </div>
+                                    
+                                        <a class="backToHomeButton1 cssbuttons-io-button btn inline-block pointer-events-auto mt-auto lg:my-4 lg:w-auto block border-none flex justify-center rounded-none text-black cursor-pointer font-open-sans font-bold h-auto max-w-none outline-none py-4 px-12 text-center uppercase transition-all duration-300 ease-in-out w-full no-underline transition-colors duration-200 ease-in-out">
+                                            <div class="icon">
+                                              <svg
+                                                height="24"
+                                                width="24"
+                                                viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                              >
+                                                <path d="M0 0h24v24H0z" fill="none"></path>
+                                                <path
+                                                  d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                                  fill="currentColor"
+                                                ></path>
+                                              </svg>
+                                            </div>
+                                            Buy Now
+                                        </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col p-4 w-full min-[610px]:p-2 min-[610px]:w-1/2">
+                        <div class="col__wrapper relative">
+                            <div class="col__background relative">
+                                <img src="./assets/_mg_9785.webp" alt="">
+                            </div>
+                            <div
+                                class="col__front h-full left-0 pointer-events-none absolute right-0 top-0 z-30 min-[992px]:h-auto">
+                                <div
+                                    class="front__content text-white flex flex-col h-full text-center p-[50px_22px_30px] min-[992px]:block min-[992px]:pt-12 min-[992px]:px-[22px] min-[992px]:pb-0">
+                                    <h2
+                                        class="content__title font-heading  text-white text-2xl font-bold text-center uppercase min-[992px]:text-4xl">
+                                        <!-- <a href="/us-en/service/"> Services </a> -->
+                                        <span>S</span><span>e</span><span>r</span><span>v</span><span>i</span><span>c</span><span>e</span><span>s</span>
+                                    </h2>
+                                    <div class="content__text m-auto max-w-sm"><span>Explore</span>
+                                        <span>our</span>
+                                        <span>comprenhensive</span>
+                                        <span>set</span>
+                                        <span>of</span>
+                                        <span>services</span>
+                                        <span>and</span>
+                                        <span>assistance</span>
+                                        <span>designed</span>
+                                        <span>for</span>
+                                        <span>you</span>
+                                        <span>and</span>
+                                        <span>your</span>
+                                        <span>Breitling.</span>
+                                        </div> 
+                                        <a id='backToHomeButton2' class="cssbuttons-io-button btn inline-block pointer-events-auto mt-auto lg:my-4 lg:w-auto block border-none flex justify-center rounded-none text-black cursor-pointer font-open-sans font-bold h-auto max-w-none outline-none text-center uppercase transition-all duration-300 ease-in-out w-full no-underline transition-colors duration-200 ease-in-out">
+                                            <div class="icon">
+                                              <svg
+                                                height="24"
+                                                width="24"
+                                                viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                              >
+                                                <path d="M0 0h24v24H0z" fill="none"></path>
+                                                <path
+                                                  d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                                  fill="currentColor"
+                                                ></path>
+                                              </svg>
+                                            </div>
+                                            Discover Now
+                                        </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <style>
+
+            .backToHomeButton1{
+                width: 170px;
+            }
+
+            #backToHomeButton2{
+                width: 210px;
+            }
+
+.cssbuttons-io-button {
+    background: #ffc62d;
+    color: black;
+    font-family: inherit;
+    padding: 0.35em;
+    margin-inline:auto ;
+    padding-left: 1.2em;
+    font-size:medium;
+    font-weight: 700;
+    border-radius: 0.5em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em #ffc62d;
+    overflow: hidden;
+    position: relative;
+    min-height: 2.8em;
+    padding-right: 3.3em;
+    cursor: pointer;
+}
+
+.cssbuttons-io-button .icon {
+    background: white;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.3em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #ffc62d;
+    right: 0.3em;
+    transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+    width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+    width: 1.1em;
+    transition: transform 0.3s;
+    color: black;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+    transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+    transform: scale(0.95);
+}
 
 
+.content__btn {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 2.5s ease, transform 2.5s ease;
+}
 
+.content__btn.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Animation keyframes for typing effect */
+@keyframes typingEffect1 {
+    0% {
+        opacity: 0;
+        transform: translateX(150px); /* Move letters from right to left */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Apply animation to each span inside .content__title */
+.content__title span{
+    display: inline-block;
+    opacity: 0;
+    animation: typingEffect1 4s forwards; /* Adjust timing as needed */
+}
+
+/* Delay each span animation progressively */
+.content__title span:nth-child(1){
+    animation-delay: calc(1s * var(--i)); /* Adjust delay increment */
+}
+
+@keyframes typingEffect2 {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px); /* Move letters from right to left */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.content__text span{
+    display: inline-block;
+    opacity: 0;
+    animation: typingEffect2 4s forwards; /* Adjust timing as needed */
+}
+
+.content__text span:nth-child(1){
+    animation-delay: calc(1s * var(--i)); /* Adjust delay increment */
+}
+
+/* JavaScript will set custom property --i for each span */
+        </style>
+        <script>
+        //     document.addEventListener('DOMContentLoaded', () => {
+        //     console.log("Loaded")
+        //     const options = {
+        //         threshold: 0.1
+        //     };
+
+        //     const observer = new IntersectionObserver((entries) => {
+        //         entries.forEach((entry) => {
+        //             if (entry.isIntersecting) {
+        //                 entry.target.classList.add('show');
+        //             } else {
+        //                 entry.target.classList.remove('show');
+        //             }
+        //         });
+        //     }, options);
+
+        //     // const sections = document.querySelectorAll('.col__background');
+        //     const title = document.querySelectorAll(".content__title");
+        //     // const para = document.querySelectorAll(".content__text");
+
+            
+        //     // sections.forEach((section) => {
+        //     //     observer.observe(section);
+        //     // });
+
+        //     title.forEach((Para) => {
+        //         observer.observe(Para)
+        //     })
+
+        //     // para.forEach((Para) => {
+        //     //     observer.observe(Para)
+        //     // })
+        // });
+
+        // document.addEventListener('DOMContentLoaded', function () {
+        //     const title = document.querySelector('.content__title');
+        //     const text1 = title.textContent.trim();
+        //     const letters1 = text1.split('');
+
+        //     // Replace text content with span-wrapped letters
+        //     title.innerHTML = '';
+        //     letters1.forEach((letter, index) => {
+        //         const span = document.createElement('span');
+        //         span.textContent = letter;
+        //         span.style.setProperty('--i', index + 1); // Set --i starting from 1
+        //         title.appendChild(span);
+        //     });
+
+        //     // Add 'show' class to start animation
+        //     title.classList.add('show');
+
+        //     const para = document.querySelectorAll(".content__text");
+        //     const text2 = para.textContent.trim();
+        //     const letters2 = text2.split('');
+
+        //     // Replace text content with span-wrapped letters
+        //     para.innerHTML = '';
+        //     letters2.forEach((letter, index) => {
+        //         const span = document.createElement('span');
+        //         span.textContent = letter;
+        //         span.style.setProperty('--i', index + 1); // Set --i starting from 1
+        //         para.appendChild(span);
+        //     });
+
+        //     // Add 'show' class to start animation
+        //     para.classList.add('show');
+        // });
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+      console.log("Loaded");
+      const options = {
+        threshold: 0.1
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animateText(entry.target);
+          } else {
+            entry.target.classList.remove('show');
+          }
+        });
+      }, options);
+
+      const title = document.querySelectorAll(".content__title");
+      const para = document.querySelectorAll(".content__text");
+
+      observer.observe(title);
+      observer.observe(para);
+
+      function animateText(element) {
+        const text = element.textContent.trim();
+        const letters = text.split('');
+
+        // Replace text content with span-wrapped letters
+        element.innerHTML = '';
+        letters.forEach((letter, index) => {
+          const span = document.createElement('span');
+          span.textContent = letter;
+          span.style.setProperty('--i', index + 1); // Set --i starting from 1
+          element.appendChild(span);
+        });
+
+        // Add 'show' class to start animation
+        element.classList.add('show');
+      }
+    });
+
+        </script>
+
+
+<!-- 8th Section -->
+<div class="br-11-20 mx-auto max-w-[1400px] text-black text-base font-normal leading-6">
+    <section class="single-entry single-entry-full-width pt-0 px-4 pb-7 min-[992px]:px-8">
+        <div class="entry__wrapper w-full">
+            <div class="entry__content">
+                <div class="content__wrapper text-center">
+                    <h2
+                        class="content__title content__title--bigger font-heading font-bold text-2xl leading-tight uppercase min-[992px]:text-4xl">
+                        <span class="text-yellow-400">Find
+                            your </span> nearest Breitling Boutique
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- 9th Section -->
+<style>
+    /* Custom styles for properties not directly supported by Tailwind */
+    .slider-css {
+        -ms-overflow-style: none;
+        /* Hide scrollbar for IE */
+        scrollbar-width: none;
+        /* Hide scrollbar for Firefox */
+    }
+
+    .slider-css::-webkit-scrollbar {
+        display: none;
+        /* Hide scrollbar for WebKit browsers */
+    }
+</style>
+<div class="br-11-20 mx-auto max-w-[1400px] text-black text-base font-normal leading-6">
+    <div class="limited-width m-auto max-w-[1400px]">
+        <section class="block px-4 md:px-[30px] relative ml-[-8px] mr-[-8px] " id="block-store-desktop">
+            <div
+                class="slider-css flex relative mr-[-15px] overflow-x-scroll overflow-y-hidden scroll-smooth snap-x snap-mandatory md:ml-[10px] md:mr-[10px] md:px-[10px]">
+                <div id="block-store-desktop-2016069"
+                    class="store__wrapper snap-start md:max-w-[33.333333%] md:min-w-[33.333333%] min-w-[76.923077%] pointer px-2 cursor-pointer">
+                    <div class="store-content flex bg-yellow-400 h-full">
+                        <div
+                            class="store__informations self-center flex h-full flex-col justify-between w-full p-5">
+                            <div class="">
+                                <h2 class="store__title text-xl text-center font-semibold ">
+                                    <a href="/us-en/stores/breitling-boutiques/us/breitling-boutique-miami-design-district/"
+                                        class="hover-black">
+                                        BREITLING BOUTIQUE MIAMI DESIGN DISTRICT
+                                    </a>
+                                </h2>
+                                <div class="text-center">
+                                    <div
+                                        class="store__subtitle relative h-fit min[992px]:text-base min-[992px]:font-normal min-[992px]:mt-0">
+                                        <svg class="min-[992px]:hidden blockicon icon-map mr-10"
+                                            aria-label="location">
+                                            <use
+                                                xlink:href="/build/images/asset-version-c657f0bced/icons.svg#icon-map">
+                                            </use>
+                                        </svg>
+                                        <div class="w-full">
+                                            Suite 108 NORTHEAST 41ST STREET 112, MIAMI, FL 33137
+                                        </div>
+
+                                    </div>
+                                    <div
+                                        class="store__subtitle mt-2.5 min[992px]:text-base min-[992px]:font-normal min-[992px]:mt-0">
+                                        <svg class="min-[992px]:hidden icon icon-phone mr-10"
+                                            aria-label="Phone">
+                                            <use
+                                                xlink:href="/build/images/asset-version-c657f0bced/icons.svg#icon-phone">
+                                            </use>
+                                        </svg>
+                                        <div class="phone w-full">
+                                            <span class="hidden-mobile-tablet hidden min-[992px]:block">
+                                                Phone
+                                                <a href="tel:+1 305-918-1884">
+                                                    +1 305-918-1884
+                                                </a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="opening-hours mt-[15px] text-center">
+                                    <div
+                                        class="store__label font-bold min-[992px]:text-base mt-10 min-[992px]:mt-0 font-heading mt-15 hidden-mobile-tablet hidden min-[992px]:block">
+                                        Opening hours
+                                    </div>
+                                    <div class="store__content text-center">
+                                        <div class="content__table flex justify-center items-center">
+
+                                            <table class="text-left">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            Wednesday:
+                                                        </td>
+                                                        <td class="tet-right">
+                                                            11:00-19:00
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Thursday:
+                                                        </td>
+                                                        <td class="tet-right">
+                                                            11:00-19:00
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Friday:
+                                                        </td>
+                                                        <td class="tet-right">
+                                                            11:00-19:00
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Saturday:
+                                                        </td>
+                                                        <td class="tet-right">
+                                                            11:00-19:00
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Sunday:
+                                                        </td>
+                                                        <td class="tet-right">
+                                                            12:00-18:00
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Monday:
+                                                        </td>
+                                                        <td class="tet-right">
+                                                            11:00-19:00
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Tuesday:
+                                                        </td>
+                                                        <td class="tet-right">
+                                                            11:00-19:00
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col gap-5">
+                                <div class="store__links flex mt-4 justify-center items-center">
+                                    <a class="link text-gray-900 font-bold text-xs md:text-sm mx-2 underline transition ease-out duration-300 hover:text-gray-700"
+                                        href="mailto:Miami.Design@Breitling.com">
+                                        E-mail
+                                        <i class="fa-solid fa-chevron-right ml-[5px]"></i>
+                                    </a>
+                                    <a class="link text-gray-900 font-bold text-xs md:text-sm mx-2 underline transition ease-out duration-300 hover:text-gray-700 flex items-center"
+                                        href="/us-en/stores/breitling-boutiques/us/breitling-boutique-miami-design-district/#retailers-map">
+                                        Get directions
+                                        <i class="fa-solid fa-chevron-right ml-[5px]"></i>
+                                    </a>
+                                </div>
+                                <a href="/us-en/stores/appointment/us/fl/miami/2016069/breitling-boutique-miami-design-district/ "
+                                    class="store__button btn text-black bg-white text-center hover:text-yellow-400 font-bold uppercase py-4 px-10 min-[992px]:px-10 transition duration-300 ease-in-out min-[992px]:w-auto"
+                                    data-gtm-event="{&quot;event&quot;:&quot;intention_book_appt&quot;}">
+                                    Book an appointment
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="block-store-desktop-2016069"
+                    class="store__wrapper snap-start md:max-w-[33.333333%] md:min-w-[33.333333%] min-w-[76.923077%] pointer px-2 cursor-pointer">
+                    <div class="store-content flex bg-yellow-400 h-full">
+                        <div
+                            class="store__informations self-center flex h-full flex-col justify-between w-full p-5">
+                            <div class="">
+                                <h2 class="store__title text-xl text-center font-semibold ">
+                                    <a href="/us-en/stores/breitling-boutiques/us/breitling-boutique-miami-design-district/"
+                                        class="hover-black">
+                                        BREITLING BOUTIQUE MIAMI DESIGN DISTRICT
+                                    </a>
+                                </h2>
+                                <div class="text-center">
+                                    <div
+                                        class="store__subtitle relative h-fit min[992px]:text-base min-[992px]:font-normal min-[992px]:mt-0">
+                                        <svg class="min-[992px]:hidden blockicon icon-map mr-10"
+                                            aria-label="location">
+                                            <use
+                                                xlink:href="/build/images/asset-version-c657f0bced/icons.svg#icon-map">
+                                            </use>
+                                        </svg>
+                                        <div class="w-full">
+                                            Suite 108 NORTHEAST 41ST STREET 112, MIAMI, FL 33137
+                                        </div>
+
+                                    </div>
+                                    <div
+                                        class="store__subtitle mt-2.5 min[992px]:text-base min-[992px]:font-normal min-[992px]:mt-0">
+                                        <svg class="min-[992px]:hidden icon icon-phone mr-10"
+                                            aria-label="Phone">
+                                            <use
+                                                xlink:href="/build/images/asset-version-c657f0bced/icons.svg#icon-phone">
+                                            </use>
+                                        </svg>
+                                        <div class="phone w-full">
+                                            <span class="hidden-mobile-tablet hidden min-[992px]:block">
+                                                Phone
+                                                <a href="tel:+1 305-918-1884">
+                                                    +1 305-918-1884
+                                                </a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="opening-hours mt-[15px] text-center">
+                                    <div
+                                        class="store__label font-bold min-[992px]:text-base mt-10 min-[992px]:mt-0 font-heading mt-15 hidden-mobile-tablet hidden min-[992px]:block">
+                                        Opening hours
+                                    </div>
+                                    <div class="store__content text-center">
+                                        <div class="content__table flex justify-center items-center">
+
+                                            <table class="text-left">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            Wednesday:
+                                                        </td>
+                                                        <td class="tet-right">
+                                                            11:00-19:00
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Thursday:
+                                                        </td>
+                                                        <td class="tet-right">
+                                                            11:00-19:00
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Friday:
+                                                        </td>
+                                                        <td class="tet-right">
+                                                            11:00-19:00
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Saturday:
+                                                        </td>
+                                                        <td class="tet-right">
+                                                            11:00-19:00
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Sunday:
+                                                        </td>
+                                                        <td class="tet-right">
+                                                            12:00-18:00
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Monday:
+                                                        </td>
+                                                        <td class="tet-right">
+                                                            11:00-19:00
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Tuesday:
+                                                        </td>
+                                                        <td class="tet-right">
+                                                            11:00-19:00
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col gap-5">
+                                <div class="store__links flex mt-4 justify-center items-center">
+                                    <a class="link text-gray-900 font-bold text-xs md:text-sm mx-2 underline transition ease-out duration-300 hover:text-gray-700"
+                                        href="mailto:Miami.Design@Breitling.com">
+                                        E-mail
+                                        <i class="fa-solid fa-chevron-right ml-[5px]"></i>
+                                    </a>
+                                    <a class="link text-gray-900 font-bold text-xs md:text-sm mx-2 underline transition ease-out duration-300 hover:text-gray-700 flex items-center"
+                                        href="/us-en/stores/breitling-boutiques/us/breitling-boutique-miami-design-district/#retailers-map">
+                                        Get directions
+                                        <i class="fa-solid fa-chevron-right ml-[5px]"></i>
+                                    </a>
+                                </div>
+                                <a href="/us-en/stores/appointment/us/fl/miami/2016069/breitling-boutique-miami-design-district/ "
+                                    class="store__button btn text-black bg-white text-center hover:text-yellow-400 font-bold uppercase py-4 px-10 min-[992px]:px-10 transition duration-300 ease-in-out min-[992px]:w-auto"
+                                    data-gtm-event="{&quot;event&quot;:&quot;intention_book_appt&quot;}">
+                                    Book an appointment
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="block-store-desktop-2016069"
+                    class="store__wrapper snap-start md:max-w-[33.333333%] md:min-w-[33.333333%] min-w-[76.923077%] pointer px-2 cursor-pointer">
+                    <div class="store-content flex bg-yellow-400 h-full">
+                        <div
+                            class="store__informations self-center flex h-full flex-col justify-between w-full p-5">
+                            <div class="">
+                                <h2 class="store__title text-xl text-center font-semibold ">
+                                    <a href="/us-en/stores/breitling-boutiques/us/breitling-boutique-miami-design-district/"
+                                        class="hover-black">
+                                        BREITLING BOUTIQUE MIAMI DESIGN DISTRICT
+                                    </a>
+                                </h2>
+                                <div class="text-center">
+                                    <div
+                                        class="store__subtitle relative h-fit min[992px]:text-base min-[992px]:font-normal min-[992px]:mt-0">
+                                        <svg class="min-[992px]:hidden blockicon icon-map mr-10"
+                                            aria-label="location">
+                                            <use
+                                                xlink:href="/build/images/asset-version-c657f0bced/icons.svg#icon-map">
+                                            </use>
+                                        </svg>
+                                        <div class="w-full">
+                                            Suite 108 NORTHEAST 41ST STREET 112, MIAMI, FL 33137
+                                        </div>
+
+                                    </div>
+                                    <div
+                                        class="store__subtitle mt-2.5 min[992px]:text-base min-[992px]:font-normal min-[992px]:mt-0">
+                                        <svg class="min-[992px]:hidden icon icon-phone mr-10"
+                                            aria-label="Phone">
+                                            <use
+                                                xlink:href="/build/images/asset-version-c657f0bced/icons.svg#icon-phone">
+                                            </use>
+                                        </svg>
+                                        <div class="phone w-full">
+                                            <span class="hidden-mobile-tablet hidden min-[992px]:block">
+                                                Phone
+                                                <a href="tel:+1 305-918-1884">
+                                                    +1 305-918-1884
+                                                </a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="opening-hours mt-[15px] text-center">
+                                    <div
+                                        class="store__label font-bold min-[992px]:text-base mt-10 min-[992px]:mt-0 font-heading mt-15 hidden-mobile-tablet hidden min-[992px]:block">
+                                        Opening hours
+                                    </div>
+                                    <div class="store__content text-center">
+                                        <div class="content__table flex justify-center items-center">
+
+                                            <table class="text-left">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            Wednesday:
+                                                        </td>
+                                                        <td class="tet-right">
+                                                            11:00-19:00
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Thursday:
+                                                        </td>
+                                                        <td class="tet-right">
+                                                            11:00-19:00
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Friday:
+                                                        </td>
+                                                        <td class="tet-right">
+                                                            11:00-19:00
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Saturday:
+                                                        </td>
+                                                        <td class="tet-right">
+                                                            11:00-19:00
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Sunday:
+                                                        </td>
+                                                        <td class="tet-right">
+                                                            12:00-18:00
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Monday:
+                                                        </td>
+                                                        <td class="tet-right">
+                                                            11:00-19:00
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Tuesday:
+                                                        </td>
+                                                        <td class="tet-right">
+                                                            11:00-19:00
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col gap-5">
+                                <div class="store__links flex mt-4 justify-center items-center">
+                                    <a class="link text-gray-900 font-bold text-xs md:text-sm mx-2 underline transition ease-out duration-300 hover:text-gray-700"
+                                        href="mailto:Miami.Design@Breitling.com">
+                                        E-mail
+                                        <i class="fa-solid fa-chevron-right ml-[5px]"></i>
+                                    </a>
+                                    <a class="link text-gray-900 font-bold text-xs md:text-sm mx-2 underline transition ease-out duration-300 hover:text-gray-700 flex items-center"
+                                        href="/us-en/stores/breitling-boutiques/us/breitling-boutique-miami-design-district/#retailers-map">
+                                        Get directions
+                                        <i class="fa-solid fa-chevron-right ml-[5px]"></i>
+                                    </a>
+                                </div>
+                                <a href="/us-en/stores/appointment/us/fl/miami/2016069/breitling-boutique-miami-design-district/ "
+                                    class="store__button btn text-black bg-white text-center hover:text-yellow-400 font-bold uppercase py-4 px-10 min-[992px]:px-10 transition duration-300 ease-in-out min-[992px]:w-auto"
+                                    data-gtm-event="{&quot;event&quot;:&quot;intention_book_appt&quot;}">
+                                    Book an appointment
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+</div>
+
+<div class="br-11-20 mx-auto max-w-[1400px] text-black text-base font-normal leading-6">
+    <footer class="footer text-sm bg-transparent relative z-1">
+        <div class="top-wrapper bg-black text-white min-[992px]:pt-[60px]">
+            <div class="container px-[30px] w-full max-w-[1400px]">
+                <div class="footer-contact-center min-[992px]:pb-3.5 uppercase">
+                    <div class="font-heading text-center ">
+                        <div class="inline mx-2.5 pl-2 ">
+                            <a class="phone" href="tel:+1 203-456-2458">
+                                <i class="fa-solid fa-phone"></i> +1 203-456-2458 </a>
+                        </div>
+                        <div class="inline mx-[10px] pl-[7px] "><a href="/us-en/store/services/contact/"
+                                itemprop="url"> MON-FRI
+                                09:00-18:00, SAT-SUN: CLOSED </a> </li>
+                        </div>
+                        <div class="inline mx-[10px] pl-[7px] "><a href="mailto:info.us@breitling.com">
+                                info.us@breitling.com </a>
+                        </div>
+                    </div>
+                    <div class="wrapper-header flex flex-wrap items-center min-[992px]:flex-nowrap">
+                        <nav
+                            class="font-heading nav min-[992px]:ml-10 overflow-hidden basis-full min-[992px]:basis-auto">
+                            <ul class="border-t border-gray-800 flex flex-wrap justify-center mt-6 pt-5 min-[992px]:border-t-0 min-[992px]:justify-start min-[992px]:m-0 min-[992px]:p-0"
+                                itemscope="" itemtype="https://schema.org/SiteNavigationElement">
+                                <li
+                                    class="name pl-2 mb-7 relative text-center min-[992px]:text-left min-[992px]:mb-0">
+                                    <a href="/us-en/watches/" itemprop="url">
+                                        watches
+                                    </a>
+                                </li>
+                                <li
+                                    class="name pl-2 mb-7 relative text-center min-[992px]:text-left min-[992px]:mb-0">
+                                    <a href="/us-en/straps/" itemprop="url">
+                                        Straps </a>
+                                </li>
+                                <li
+                                    class="name pl-2 mb-7 relative text-center min-[992px]:text-left min-[992px]:mb-0">
+                                    <a href="/us-en/service/" itemprop="url">
+                                        Service
+                                    </a>
+                                </li>
+                                <li
+                                    class="name pl-2 mb-7 relative text-center min-[992px]:text-left min-[992px]:mb-0">
+                                    <a href="/us-en/stores/us/" itemprop="url">
+                                        Stores
+                                    </a>
+                                </li>
+                                <li
+                                    class="name pl-2 mb-7 relative text-center min-[992px]:text-left min-[992px]:mb-0">
+                                    <a href="/us-en/about/" itemprop="url">
+                                        About </a>
+                                </li>
+                                <li
+                                    class="name pl-2 mb-7 relative text-center min-[992px]:text-left min-[992px]:mb-0">
+                                    <a href="/us-en/my-account/" itemprop="url">
+                                        My
+                                        account
+                                    </a>
+                                </li>
+                                <li
+                                    class="name pl-2 mb-7 relative text-center min-[992px]:text-left min-[992px]:mb-0">
+                                    <a href="/us-en/service/faq/" itemprop="url"> FAQS
+                                    </a>
+                                </li>
+                                <li
+                                    class="name pl-2 mb-7 relative text-center min-[992px]:text-left min-[992px]:mb-0">
+                                    <a class="newsletter-popup-link" data-dyn-disable="1"
+                                        data-newsletter-popup-options="{&quot;formUrl&quot;:&quot;\/us-en\/newsletter\/subscribe\/popup\/&quot;,&quot;openingSource&quot;:&quot;footer&quot;}"
+                                        data-popin-id="newsletter" data-popin-title="Newsletter"
+                                        href="/us-en/newsletter/subscribe/" itemprop="url"> Newsletter </a>
+                                </li>
+                                <li
+                                    class="name pl-2 mb-7 relative text-center min-[992px]:text-left min-[992px]:mb-0">
+                                    <a class="chronolog-popup-link gtm-event-track-click-active"
+                                        data-chronolog-popup-options="{&quot;formUrl&quot;:&quot;\/us-en\/chronolog\/order-ajax\/&quot;}"
+                                        data-dyn-disable=""
+                                        data-gtm-event="{&quot;event&quot;:&quot;chronologDownload&quot;}"
+                                        data-popin-id="download_catalog" data-popin-title="Download the catalog"
+                                        href="#" itemprop="url"> Download the catalog </a>
+                                </li>
+                                <li
+                                    class="name pl-2 mb-7 relative text-center min-[992px]:text-left min-[992px]:mb-0">
+                                    <a href="/us-en/store/order-status/" itemprop="url">
+                                        Check
+                                        your
+                                        order </a>
+                                </li>
+                            </ul>
+                        </nav> <a
+                            class="button-st justify-center block cursor-pointer border-2 border-white font-open-sans text-[14px] font-bold ml-auto py-3 px-2.5 text-center uppercase whitespace-nowrap transition-none"
+                            href="/choose-country-region/">
+                            <i class="fa-solid fa-globe"></i>
+                            UNITED STATES - ENGLISH </a>
+                    </div>
+                    <div class="socials mt-7 flex items-center justify-center">
+                        <ul class="flex justify-between items-center w-80">
+                            <li class="name pl-2 ">
+                                <a aria-label="instagram" class="gtm-event-track-click-active"
+                                    data-gtm-event="{&quot;event&quot;:&quot;socialFollow&quot;,&quot;socialNetwork&quot;:&quot;instagram&quot;,&quot;siteLocation&quot;:&quot;footer&quot;}"
+                                    href="https://instagram.com/breitling" itemprop="sameAs" rel="noopener"
+                                    target="_blank" title="Instagram Breitling page">
+                                    <i class="fa-brands fa-2xl h-10 fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li class="name pl-2 "><a aria-label="facebook" class="gtm-event-track-click-active"
+                                    data-gtm-event="{&quot;event&quot;:&quot;socialFollow&quot;,&quot;socialNetwork&quot;:&quot;facebook&quot;,&quot;siteLocation&quot;:&quot;footer&quot;}"
+                                    href="https://www.facebook.com/Breitling" itemprop="sameAs" rel="noopener"
+                                    target="_blank" title="Facebook Breitling page">
+                                    <i class="fa-brands fa-2xl h-10 fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li class="name pl-2 "><a aria-label="youtube" class="gtm-event-track-click-active"
+                                    data-gtm-event="{&quot;event&quot;:&quot;socialFollow&quot;,&quot;socialNetwork&quot;:&quot;youtube&quot;,&quot;siteLocation&quot;:&quot;footer&quot;}"
+                                    href="https://www.youtube.com/breitling" itemprop="sameAs" rel="noopener"
+                                    target="_blank" title="Youtube Breitling page">
+                                    <i class="fa-brands fa-2xl h-10 fa-youtube"></i>
+                                </a> </li>
+                            <li class="name pl-2 "><a aria-label="tiktok" class="gtm-event-track-click-active"
+                                    data-gtm-event="{&quot;event&quot;:&quot;socialFollow&quot;,&quot;socialNetwork&quot;:&quot;tiktok&quot;,&quot;siteLocation&quot;:&quot;footer&quot;}"
+                                    href="https://www.tiktok.com/@breitling" itemprop="sameAs" rel="noopener"
+                                    target="_blank" title="TikTok Breitling page">
+                                    <i class="fa-brands fa-2xl h-10 fa-tiktok"></i>
+                                </a>
+                            </li>
+                            <li class="name pl-2 "><a aria-label="twitter" class="gtm-event-track-click-active"
+                                    data-gtm-event="{&quot;event&quot;:&quot;socialFollow&quot;,&quot;socialNetwork&quot;:&quot;twitter&quot;,&quot;siteLocation&quot;:&quot;footer&quot;}"
+                                    href="https://twitter.com/breitling" itemprop="sameAs" rel="noopener"
+                                    target="_blank" title="Twitter Breitling page">
+                                    <i class="fa-brands fa-2xl h-10 fa-tiktok"></i>
+                                </a>
+                            </li>
+                            <li class="name pl-2 "><a aria-label="pinterest"
+                                    class="gtm-event-track-click-active"
+                                    data-gtm-event="{&quot;event&quot;:&quot;socialFollow&quot;,&quot;socialNetwork&quot;:&quot;pinterest&quot;,&quot;siteLocation&quot;:&quot;footer&quot;}"
+                                    href="https://www.pinterest.com/breitling/" itemprop="sameAs" rel="noopener"
+                                    target="_blank" title="Pinterest Breitling page">
+                                    <i class="fa-brands fa-2xl h-10 fa-pinterest"></i>
+                                </a>
+                            </li>
+                            <li class="name pl-2 "><a aria-label="strava" class="gtm-event-track-click-active"
+                                    data-gtm-event="{&quot;event&quot;:&quot;socialFollow&quot;,&quot;socialNetwork&quot;:&quot;strava&quot;,&quot;siteLocation&quot;:&quot;footer&quot;}"
+                                    href="https://www.strava.com/clubs/breitling1884" itemprop="sameAs"
+                                    rel="noopener" target="_blank" title="Strava Breitling page">
+                                    <i class="fa-brands fa-2xl fa-strava h-10 "></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="menuas flex mt-6 justify-center">
+                        <ul class="flex justify-center items-center flex-wrap">
+                            <li class="my-1.5 mx-2.5 min-[992px]:mx-2 "><a
+                                    class="text-white opacity-85 no-underline" href="/us-en/terms-of-use/">Terms
+                                    of
+                                    use</a> </li>
+                            <li class="my-1.5 mx-2.5 min-[992px]:mx-2 "><a
+                                    class="text-white opacity-85 no-underline" href="/us-en/press-lounge/"
+                                    rel="noopener">Press
+                                    lounge</a> </li>
+                            <li class="my-1.5 mx-2.5 min-[992px]:mx-2 "><a
+                                    class="text-white opacity-85 no-underline" href="/us-en/career/">Career</a>
+                            </li>
+                            <li class="my-1.5 mx-2.5 min-[992px]:mx-2 ">
+                                <a href="/media/document/2/asset-version-19853d0e34/breitling-human-rights-commitment.pdf"
+                                    target="_blank">Human Rights statement</a>
+                            </li>
+                            <li class="my-1.5 mx-2.5 min-[992px]:mx-2 "><a
+                                    class="text-white opacity-85 no-underline"
+                                    href="/us-en/privacy-policy/">Privacy
+                                    policy</a> </li>
+                            <li class="my-1.5 mx-2.5 min-[992px]:mx-2 "><a
+                                    href="/us-en/terms-and-conditions/">Terms &amp;
+                                    conditions</a> </li>
+                            <li class="my-1.5 mx-2.5 min-[992px]:mx-2 "><a
+                                    class="text-white opacity-85 no-underline"
+                                    href="/us-en/store/services/contact/">Contact</a> </li>
+                            <li class="my-1.5 mx-2.5 min-[992px]:mx-2 "><a
+                                    class="text-white opacity-85 no-underline"
+                                    href="/us-en/impressum/">Impressum</a>
+                            </li>
+                            <li class="my-1.5 mx-2.5 min-[992px]:mx-2 "><a
+                                    class="text-white opacity-85 no-underline"
+                                    href="/us-en/sitemap/">Sitemap</a>
+                            </li>
+                            <li class="my-1.5 mx-2.5 min-[992px]:mx-2 "><a
+                                    class="text-white opacity-85 no-underline"
+                                    href="/us-en/accessibility/">Accessibility</a> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-wrapper pt-3 pb-5 px-0 bg-white text-black min-[992px]:py-6">
+                <div class="container w-auto px-5">
+                    <div class="logo flex justify-center gap-5">
+                        <div id="logo-1" class="color-white">
+                            <img class="" src="./assets/Artwork_8Logo-Yellow-1.png" alt="" />
+                        </div>
+                        <div id="logo-2" class="">
+                            <img class="" src="./assets/Rectangle 25367logo-Yellow-2.png" alt="" />
+                        </div>
+                        <div id="logo-3" class="">
+                            <img class="" src="./assets/Path 5876logo-Yellow-3.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="accessibilty flex justify-center mt-3"><a class="BreitlingWidgetTrigger"
+                            href="#" rel="nofollow noreferrer noopener"> Accessibility features </a> </div>
+                    <div class="copyright flex justify-center opacity-40 mt-1"> © 2024 Breitling, All rights
+                        reserved. </div>
+                </div>
+            </div>
+            <a aria-label="Top" class="scroll-to-top text-center bg-gray-100 pt-2.5 pb-3 px-4 block text-black"
+                data-linktype="anchor" data-scrollspeed="800" href="#main">
+                <i class="fa-solid fa-angle-up fa-2xl"></i>
+            </a>
+    </footer>
+</div>
 </body>
 
 </html>
