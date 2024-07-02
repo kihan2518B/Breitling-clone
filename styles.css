@@ -1,49 +1,5 @@
 @import url("https://files.edx.org/fonts/edx-fonts/open-sans/open-sans.css");
 
-
-
-.show {
-    position: relative;
-    /* This allows us to position the underline below the text */
-    color: inherit;
-    /* Inherit the text color from the parent element */
-}
-
-/* #nav-options {
-    background-color: rgba(255, 255, 255, 0.214)
-} */
-
-/* .show:hover {
-    color: rgb(250 204 21);
-    background-color: rgba(0, 0, 0);
-    transition: all 500ms ease-in-out;
-    Change color to black on hover (adjust as needed)
-} */
-.show:hover {
-    color: yellow;
-    transition: 500ms ease-in-out;
-    /* Change color to black on hover (adjust as needed) */
-}
-
-.show:after {
-    content: "";
-    position: absolute;
-    width: 0;
-    /* Initially set width to 0 for left-to-right animation */
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: rgb(250 204 21);
-    /* Set underline color (adjust as needed) */
-    transition: width 0.3s ease-in-out;
-    /* Smooth width change over 0.3 seconds */
-}
-
-.show:hover:after {
-    width: 100%;
-    /* Show the underline on hover */
-}
-
 video {
     opacity: 1.5;
 }
@@ -51,6 +7,7 @@ video {
 #nav-options:hover> :not(:hover) {
     opacity: 0.4;
 }
-h2{
+
+h2 {
     align-items: center;
 }

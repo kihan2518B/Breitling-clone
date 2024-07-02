@@ -1,28 +1,4 @@
-// gsap.registerPlugin()
 
-// gsap.fromTo(".fade-element",
-//     {
-//         opacity: 100,
-//     },
-//     {
-//         opacity: 0,
-//         duration: 4,
-//     })
-
-// const text = new Typed("#dots", {
-//     strings: ["..."],
-//     typeSpeed: 400, // Adjust typing speed (milliseconds)
-//     backSpeed: 80, // Adjust backspace speed (milliseconds)
-//     loop: true, // Loop the animation
-//     cursorChar: "",
-// });
-// const loader = document.querySelector(".fade-element")
-// setTimeout(() => {
-//     loader.classList.remove("flex");
-//     loader.classList.add("hidden");
-// }, 4000)
-
-// Main
 
 gsap.fromTo("#logo-1",
     {
@@ -52,32 +28,79 @@ gsap.fromTo("#logo-3",
 
     })
 
-// gsap.fromTo(".nav-link",
-//     {
-//         scale: 0, // start from scale of 0 (fully hidden)
-//     },
-//     {
-//         scale: 1, // end at scale of 1 (normal size)
-//         duration: 1, // animation duration (in seconds)
-//         // delay: 0.5, // delay before the animation starts (in seconds)
-//         ease: "power2.out" // easing function for smoother transition
-//     })
 
-// gsap.fromTo("#Text",
-//     {
-//         opacity: 0,
-//         duration: 3,
-//         delay: 2
-//     },
-//     {
-//         opacity: 1,
-//         duration: 3,
-//         delay: 3
-//     })
+gsap.registerPlugin(ScrollTrigger);
+
+// Loader animation
+gsap.fromTo(".loader-wrapper",
+    { opacity: 1 },
+    {
+        opacity: 1,
+        duration: 3
+    }
+);
+
+gsap.to(".loader-wrapper",
+    {
+        opacity: 0,
+        duration: 0.5,
+        delay: 5,
+        onComplete: function () {
+            gsap.set(".loader-wrapper", { display: 'none' });
+        }
+    }
+);
+
+// Animation for each div
+document.querySelectorAll(".second-section-container").forEach((container) => {
+    const img = container.querySelector("img");
+    const textContainer = container.querySelector(".flex.flex-col");
+    console.log(container)
+
+    // Animation timeline
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: container,
+            start: "top 85%",
+            end: "bottom 10%",
+            // markers: true,
+            // scrub: 0.5,
+            toggleActions: "play reverse play reverse",
+        },
+    });
+
+    // Set initial state
+    tl.set(img, { visibility: "visible", opacity: 0 });
+    tl.set(textContainer, { visibility: "visible", opacity: 0, x: 100 });
+
+    // Animation
+    tl.to(img, {
+        clipPath: "polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%)",
+        opacity: 1,
+        duration: 1,
+        ease: "power2.inOut",
+    }).to(
+        textContainer,
+        { opacity: 1, x: 0, duration: 0.5, ease: "power2.inOut" },
+        "-=0.5"
+    );
+});
+
+
+
+// Get the element by its ID
+let element = document.getElementById('main');
+
+// Remove the entire inline style attribute
+// Assuming you want to delay removing the display property after 5 seconds
+setTimeout(function () {
+    element.classList.remove('hidden')
+}, 5000); // 5000 milliseconds = 5 seconds
+
+
 
 
 const buttons = document.querySelectorAll('.nav-link');
-console.log("buttons", buttons.length)
 buttons.forEach(button => {
     button.addEventListener('mouseover', () => {
         // console.log("in")
@@ -95,6 +118,16 @@ buttons.forEach(button => {
         });
     });
 });
+
+const bar_button = document.querySelector(".bar-icon");
+const chickebar_section = document.querySelector("#chicken_bar-section");
+bar_button.addEventListener('click', () => {
+    chickebar_section.classList.remove("translate-x-52");
+})
+const cross_button = document.querySelector(".cross");
+cross_button.addEventListener('click', () => {
+    chickebar_section.classList.add("translate-x-52");
+})
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log("Loaded")
@@ -115,6 +148,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const fourthsection = document.querySelectorAll('section');
     fourthsection.forEach((section) => {
         observer.observe(section);
+    });
+
+    const storeInformations = document.querySelectorAll(".animate-wrapper, .opening-hours");
+
+    storeInformations.forEach(info => {
+        // info.classList.add('.show');
+        observer.observe(info);
     });
 
     // const section = document.querySelectorAll('section');
