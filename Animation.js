@@ -5,12 +5,12 @@ gsap.fromTo("#logo-1",
     opacity: 0,
     duration: 2,
     x: -40,
-    delay: 4,
+    delay: 5,
   }, {
   opacity: 10,
   duration: 2,
   x: 0,
-  delay: 4,
+  delay: 5,
 })
 
 gsap.fromTo("#logo-3",
