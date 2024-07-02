@@ -30,6 +30,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
         integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="./ScrollingAnimation.js"></script>
     <!-- <link rel="stylesheet" href="./styles.css"> -->
 </head>
 
@@ -1692,165 +1693,158 @@ table {
                             <ul class="border-t border-gray-800 flex flex-wrap justify-center mt-6 pt-5 min-[992px]:border-t-0 min-[992px]:justify-start min-[992px]:m-0 min-[992px]:p-0"
                                 itemscope="" itemtype="https://schema.org/SiteNavigationElement">
                                 <li
-                                    class="name pl-2 mb-7 relative text-center min-[992px]:text-left min-[992px]:mb-0">
-                                    <a href="/us-en/watches/" itemprop="url">
+                                    class="name pl-5 hover:text-yellow-400 relative text-center min-[992px]:text-left min-[992px]:mb-0">
+                                    <a href="/us-en/watches/" class="flex justify-center items-center" itemprop="url"><p class="text-yellow-400 pr-4 text-xl">.</p>
                                         watches
                                     </a>
                                 </li>
                                 <li
-                                    class="name pl-2 mb-7 relative text-center min-[992px]:text-left min-[992px]:mb-0">
-                                    <a href="/us-en/straps/" itemprop="url">
+                                    class="name pl-5 hover:text-yellow-400 relative text-center min-[992px]:text-left min-[992px]:mb-0">
+                                    <a href="/us-en/straps/" class="flex justify-center items-center" itemprop="url"><p class="text-yellow-400 pr-4 text-xl">.</p>
                                         Straps </a>
                                 </li>
                                 <li
-                                    class="name pl-2 mb-7 relative text-center min-[992px]:text-left min-[992px]:mb-0">
-                                    <a href="/us-en/service/" itemprop="url">
+                                    class="name pl-5 hover:text-yellow-400 relative text-center min-[992px]:text-left min-[992px]:mb-0">
+                                    <a href="/us-en/service/" class="flex justify-center items-center" itemprop="url"><p class="text-yellow-400 pr-4 text-xl">.</p>
                                         Service
                                     </a>
                                 </li>
                                 <li
-                                    class="name pl-2 mb-7 relative text-center min-[992px]:text-left min-[992px]:mb-0">
-                                    <a href="/us-en/stores/us/" itemprop="url">
+                                    class="name pl-5 hover:text-yellow-400 relative text-center min-[992px]:text-left min-[992px]:mb-0">
+                                    <a href="/us-en/stores/us/" class="flex justify-center items-center" itemprop="url"><p class="text-yellow-400 pr-4 text-xl">.</p>
                                         Stores
                                     </a>
                                 </li>
                                 <li
-                                    class="name pl-2 mb-7 relative text-center min-[992px]:text-left min-[992px]:mb-0">
-                                    <a href="/us-en/about/" itemprop="url">
+                                    class="name pl-5 hover:text-yellow-400 relative text-center min-[992px]:text-left min-[992px]:mb-0">
+                                    <a href="/us-en/about/" class="flex justify-center items-center" itemprop="url"><p class="text-yellow-400 pr-4 text-xl">.</p>
                                         About </a>
                                 </li>
                                 <li
-                                    class="name pl-2 mb-7 relative text-center min-[992px]:text-left min-[992px]:mb-0">
-                                    <a href="/us-en/my-account/" itemprop="url">
+                                    class="name pl-5 hover:text-yellow-400 relative text-center min-[992px]:text-left min-[992px]:mb-0">
+                                    <a href="/us-en/my-account/" class="flex justify-center items-center" itemprop="url"><p class="text-yellow-400 pr-4 text-xl">.</p>
                                         My
                                         account
                                     </a>
                                 </li>
                                 <li
-                                    class="name pl-2 mb-7 relative text-center min-[992px]:text-left min-[992px]:mb-0">
-                                    <a href="/us-en/service/faq/" itemprop="url"> FAQS
+                                    class="name pl-5 hover:text-yellow-400 relative text-center min-[992px]:text-left min-[992px]:mb-0">
+                                    <a href="/us-en/service/faq/" class="flex justify-center items-center" itemprop="url"><p class="text-yellow-400 pr-4 text-xl">.</p> FAQS
                                     </a>
                                 </li>
                                 <li
-                                    class="name pl-2 mb-7 relative text-center min-[992px]:text-left min-[992px]:mb-0">
-                                    <a class="newsletter-popup-link" data-dyn-disable="1"
+                                    class="name pl-5 hover:text-yellow-400 relative text-center min-[992px]:text-left min-[992px]:mb-0">
+                                    <a class="newsletter-popup-link flex justify-center items-center" data-dyn-disable="1"
                                         data-newsletter-popup-options="{&quot;formUrl&quot;:&quot;\/us-en\/newsletter\/subscribe\/popup\/&quot;,&quot;openingSource&quot;:&quot;footer&quot;}"
                                         data-popin-id="newsletter" data-popin-title="Newsletter"
-                                        href="/us-en/newsletter/subscribe/" itemprop="url"> Newsletter </a>
+                                        href="/us-en/newsletter/subscribe/" itemprop="url"><p class="text-yellow-400 pr-4 text-xl">.</p>Newsletter </a>
                                 </li>
                                 <li
-                                    class="name pl-2 mb-7 relative text-center min-[992px]:text-left min-[992px]:mb-0">
-                                    <a class="chronolog-popup-link gtm-event-track-click-active"
+                                    class="name pl-5 hover:text-yellow-400 relative text-center min-[992px]:text-left min-[992px]:mb-0">
+                                    <a class="chronolog-popup-link flex justify-center items-center gtm-event-track-click-active"
                                         data-chronolog-popup-options="{&quot;formUrl&quot;:&quot;\/us-en\/chronolog\/order-ajax\/&quot;}"
                                         data-dyn-disable=""
                                         data-gtm-event="{&quot;event&quot;:&quot;chronologDownload&quot;}"
                                         data-popin-id="download_catalog" data-popin-title="Download the catalog"
-                                        href="#" itemprop="url"> Download the catalog </a>
+                                        href="#" itemprop="url"><p class="text-yellow-400 pr-4 text-xl">.</p>Download the catalog</a>
                                 </li>
                             </ul>
                         </nav> <a
-                            class="button-st justify-center cursor-pointer border-2 border-white font-open-sans text-[14px] font-bold ml-auto py-3 px-2.5 text-center uppercase whitespace-nowrap transition-none"
+                            class="button-st justify-center cursor-pointer border-2 hover:bg-yellow-400 hover:text-black border-white font-open-sans text-[14px] font-bold ml-auto py-3 px-2.5 text-center uppercase whitespace-nowrap transition-none"
                             href="/choose-country-region/">
                             <i class="fa-solid fa-globe"></i>
                             INDIA - ENGLISH </a>
                     </div>
                     <div class="socials mt-7 flex items-center justify-center">
-                        <ul class="flex justify-between items-center w-80">
-                            <li class="name pl-2 ">
-                                <!-- <a aria-label="instagram" class="gtm-event-track-click-active"
-                                    data-gtm-event="{&quot;event&quot;:&quot;socialFollow&quot;,&quot;socialNetwork&quot;:&quot;instagram&quot;,&quot;siteLocation&quot;:&quot;footer&quot;}"
-                                    href="https://instagram.com/breitling" itemprop="sameAs" rel="noopener"
-                                    target="_blank" title="Instagram Breitling page">
-                                    <i class="fa-brands fa-2xl h-10 fa-instagram"></i>
-                                </a> -->
+                        <ul class="flex justify-center items-center w-80">
+                            <li class="name pl-6">
                                 <button class="Btn">
                                     <span class="svgContainer">
-                                      <svg fill="white" class="svgIcon" viewBox="0 0 448 512" height="1.5em" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
+                                        <i style="scale: 1.4; color: black;" class="fa-brands fa-instagram"></i>
                                     </span>
                                     <span class="BG"></span>
-                                   </button>
+                                </button>
                             </li>
-                            <li class="name pl-2 "><a aria-label="facebook" class="gtm-event-track-click-active"
-                                    data-gtm-event="{&quot;event&quot;:&quot;socialFollow&quot;,&quot;socialNetwork&quot;:&quot;facebook&quot;,&quot;siteLocation&quot;:&quot;footer&quot;}"
-                                    href="https://www.facebook.com/Breitling" itemprop="sameAs" rel="noopener"
-                                    target="_blank" title="Facebook Breitling page">
-                                    <i class="fa-brands fa-2xl h-10 fa-facebook"></i>
-                                </a>
+                            <li class="name pl-6">
+                                <button class="Btn">
+                                    <span class="svgContainer">
+                                        <i style="scale: 1.4; color: black;" class="fa-brands fa-facebook"></i>
+                                    </span>
+                                    <span class="BG"></span>
+                                </button>
                             </li>
-                            <li class="name pl-2 "><a aria-label="youtube" class="gtm-event-track-click-active"
-                                    data-gtm-event="{&quot;event&quot;:&quot;socialFollow&quot;,&quot;socialNetwork&quot;:&quot;youtube&quot;,&quot;siteLocation&quot;:&quot;footer&quot;}"
-                                    href="https://www.youtube.com/breitling" itemprop="sameAs" rel="noopener"
-                                    target="_blank" title="Youtube Breitling page">
-                                    <i class="fa-brands fa-2xl h-10 fa-youtube"></i>
-                                </a> </li>
-                            <li class="name pl-2 "><a aria-label="tiktok" class="gtm-event-track-click-active"
-                                    data-gtm-event="{&quot;event&quot;:&quot;socialFollow&quot;,&quot;socialNetwork&quot;:&quot;tiktok&quot;,&quot;siteLocation&quot;:&quot;footer&quot;}"
-                                    href="https://www.tiktok.com/@breitling" itemprop="sameAs" rel="noopener"
-                                    target="_blank" title="TikTok Breitling page">
-                                    <i class="fa-brands fa-2xl h-10 fa-tiktok"></i>
-                                </a>
+                            <li class="name pl-6">
+                                <button class="Btn">
+                                    <span class="svgContainer">
+                                        <i style="scale: 1.4; color: black;" class="fa-brands fa-youtube"></i>
+                                    </span>
+                                    <span class="BG"></span>
+                                </button>
                             </li>
-                            <li class="name pl-2 "><a aria-label="twitter" class="gtm-event-track-click-active"
-                                    data-gtm-event="{&quot;event&quot;:&quot;socialFollow&quot;,&quot;socialNetwork&quot;:&quot;twitter&quot;,&quot;siteLocation&quot;:&quot;footer&quot;}"
-                                    href="https://twitter.com/breitling" itemprop="sameAs" rel="noopener"
-                                    target="_blank" title="Twitter Breitling page">
-                                    <i class="fa-brands fa-2xl h-10 fa-twitter"></i>
-                                </a>
+                            <li class="name pl-6">
+                                <button class="Btn">
+                                    <span class="svgContainer">
+                                        <i style="scale: 1.4; color: black;" class="fa-brands fa-tiktok"></i>
+                                    </span>
+                                    <span class="BG"></span>
+                                </button>
                             </li>
-                            <li class="name pl-2 "><a aria-label="pinterest"
-                                    class="gtm-event-track-click-active"
-                                    data-gtm-event="{&quot;event&quot;:&quot;socialFollow&quot;,&quot;socialNetwork&quot;:&quot;pinterest&quot;,&quot;siteLocation&quot;:&quot;footer&quot;}"
-                                    href="https://www.pinterest.com/breitling/" itemprop="sameAs" rel="noopener"
-                                    target="_blank" title="Pinterest Breitling page">
-                                    <i class="fa-brands fa-2xl h-10 fa-pinterest"></i>
-                                </a>
+                            <li class="name pl-6">
+                                <button class="Btn">
+                                    <span class="svgContainer">
+                                        <i style="scale: 1.4; color: black;" class="fa-brands fa-twitter"></i>
+                                    </span>
+                                    <span class="BG"></span>
+                                </button>
                             </li>
-                            <li class="name pl-2 "><a aria-label="strava" class="gtm-event-track-click-active"
-                                    data-gtm-event="{&quot;event&quot;:&quot;socialFollow&quot;,&quot;socialNetwork&quot;:&quot;strava&quot;,&quot;siteLocation&quot;:&quot;footer&quot;}"
-                                    href="https://www.strava.com/clubs/breitling1884" itemprop="sameAs"
-                                    rel="noopener" target="_blank" title="Strava Breitling page">
-                                    <i class="fa-brands fa-2xl fa-strava h-10 "></i>
-                                </a>
+                            <li class="name pl-6">
+                                <button class="Btn">
+                                    <span class="svgContainer">
+                                        <i style="scale: 1.4; color: black;" class="fa-brands fa-pinterest"></i>
+                                    </span>
+                                    <span class="BG"></span>
+                                </button>
+                            </li>
+                            <li class="name pl-6">
+                                <button class="Btn">
+                                    <span class="svgContainer">
+                                        <i style="scale: 1.4; color: black;" class="fa-brands fa-strava"></i>
+                                    </span>
+                                    <span class="BG"></span>
+                                </button>
                             </li>
                         </ul>
                     </div>
                     <div class="menuas flex mt-6 justify-center">
                         <ul class="flex justify-center items-center flex-wrap">
-                            <li class="my-1.5 mx-2.5 min-[992px]:mx-2 "><a
-                                    class="text-white opacity-85 no-underline" href="/us-en/terms-of-use/">Terms
+                            <li class="my-1.5 mx-2.5 min-[992px]:mx-2 ">
+                                <a class="footer-text text-white hover:text-yellow-400 hover:opacity-100 opacity-85 no-underline" href="/us-en/terms-of-use/">Terms
                                     of
                                     use</a> </li>
                             <li class="my-1.5 mx-2.5 min-[992px]:mx-2 "><a
-                                    class="text-white opacity-85 no-underline" href="/us-en/press-lounge/"
+                                    class="text-white hover:text-yellow-400 hover:opacity-100 opacity-85 no-underline" href="/us-en/press-lounge/"
                                     rel="noopener">Press
                                     lounge</a> </li>
                             <li class="my-1.5 mx-2.5 min-[992px]:mx-2 "><a
-                                    class="text-white opacity-85 no-underline" href="/us-en/career/">Career</a>
-                            </li>
-                            <li class="my-1.5 mx-2.5 min-[992px]:mx-2 ">
-                                <a href="/media/document/2/asset-version-19853d0e34/breitling-human-rights-commitment.pdf"
-                                    target="_blank">Human Rights statement</a>
+                                    class="text-white hover:text-yellow-400 hover:opacity-100 opacity-85 no-underline" href="/us-en/career/">Career</a>
                             </li>
                             <li class="my-1.5 mx-2.5 min-[992px]:mx-2 "><a
-                                    class="text-white opacity-85 no-underline"
+                                    class="text-white hover:text-yellow-400 hover:opacity-100 opacity-85 no-underline"
                                     href="/us-en/privacy-policy/">Privacy
                                     policy</a> </li>
                             <li class="my-1.5 mx-2.5 min-[992px]:mx-2 "><a
-                                    href="/us-en/terms-and-conditions/">Terms &amp;
-                                    conditions</a> </li>
-                            <li class="my-1.5 mx-2.5 min-[992px]:mx-2 "><a
-                                    class="text-white opacity-85 no-underline"
+                                    class="text-white hover:text-yellow-400 hover:opacity-100 opacity-85 no-underline"
                                     href="/us-en/store/services/contact/">Contact</a> </li>
                             <li class="my-1.5 mx-2.5 min-[992px]:mx-2 "><a
-                                    class="text-white opacity-85 no-underline"
+                                    class="text-white hover:text-yellow-400 hover:opacity-100 opacity-85 no-underline"
                                     href="/us-en/impressum/">Impressum</a>
                             </li>
                             <li class="my-1.5 mx-2.5 min-[992px]:mx-2 "><a
-                                    class="text-white opacity-85 no-underline"
+                                    class="text-white hover:text-yellow-400 hover:opacity-100 opacity-85 no-underline"
                                     href="/us-en/sitemap/">Sitemap</a>
                             </li>
                             <li class="my-1.5 mx-2.5 min-[992px]:mx-2 "><a
-                                    class="text-white opacity-85 no-underline"
+                                    class="text-white hover:text-yellow-400 hover:opacity-100 opacity-85 no-underline"
                                     href="/us-en/accessibility/">Accessibility</a> </li>
                         </ul>
                     </div>
@@ -1884,8 +1878,8 @@ table {
 
 <style>
     .Btn {
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1897,6 +1891,13 @@ table {
   cursor: pointer;
   z-index: 1;
   transition: all .3s;
+}
+
+.footer-text:hover {
+    /* Rotate around Y axis by 180 degrees */
+    transform: rotateX(360deg);
+    /* Smooth transition for animation */
+    transition: transform 0.5s ease;
 }
 
 .svgContainer {
@@ -1919,9 +1920,9 @@ table {
   width: 100%;
   height: 100%;
   background-color: #ffc62d;
-  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  /* background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
   background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
-  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
   z-index: -1;
   border-radius: 9px;
