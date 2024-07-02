@@ -198,50 +198,237 @@
             </header>
         </section>
 
-        <section id="top-saller" class="w-full mt-[10em]">
-            <div class="prd flex justify-center items-center gap-10">
-                <div class="img1">
-                    <div class="img">
-                        <img src="./assets/watch-1.webp" alt="watch-1" class="w-[25em] h-55">
-                    </div>
-                    <div class="text mt-8 flex items-center justify-center">
-                        <h2 class="p">NORTH AMERICAN LIMITED EDITION<br>
-                            <span class="text-yellow-500">SUPEROCEAN AUTOMATIC 36</span>
-                        </h2>
-                    </div>
-                    <div class="btn mt-8 flex items-center justify-center">
-                        <button class="bg-yellow-500 rounded-full px-4 py-4">Buy Now</button>
+        <section id="top-saller" class="">
+            <div class="nft">
+                <div class='watch-main'>
+                  <img class='tokenImage' src="./assets/three-block-rainbow.webp" alt="NFT" />
+                  <h2 class="watch-name">SUPEROCEAN RAINBOW-DIAL</h2>
+                  <p class='description'>INTRODUCING THE NEW SUPEROCEAN RAINBOW-DIAL EDITIONS</p>
+                  <div id="button-container">
+                    <button class="learn-more">
+                      <span class="circle" aria-hidden="true">
+                        <span class="icon arrow"></span>
+                      </span>
+                      <span class="button-text">Discover</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="nft">
+                <div class='watch-main'>
+                  <img class='tokenImage' src="./assets/chronomat-core-hp-three-column.webp" alt="NFT" />
+                  <h2 class="watch-name">THE CHRONOMAT B01 42</h2>
+                  <p class='description'>
+                    NOW WITH A ROULEAUX-INSPIRED RUBBER STRAP</p>
+                    <div id="button-container">
+                      <button class="learn-more">
+                        <span class="circle" aria-hidden="true">
+                          <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">Discover</span>
+                      </button>
                     </div>
                 </div>
-
-                <div class="img2">
-                    <div class="img">
-                        <img src="./assets/watch-1.webp" alt="watch-2" class="w-[25em] h-55">
-                    </div>
-                    <div class="text mt-6 flex items-center justify-center">
-                        <h2 class="p"><span class="text-yellow-500">SELF-WINDING COSMONAUTE B12</span> <br>
-                            THE FIRST SWISS WRISTWATCH IN SPACE IS BACK,<br> LIMITED TO 250 PIECES</h2>
-                    </div>
-                    <div class="btn mt-4 flex items-center justify-center">
-                        <button class="bg-yellow-500 rounded-full px-4 py-4">Buy Now</button>
-                    </div>
+              </div>
+            
+              <div class="nft">
+                <div class='watch-main'>
+                  <img class='tokenImage' src="./assets/triumph-hp-three-columns-2.webp" alt="NFT" />
+                  <h2 class="watch-name">BREITLING X TRIUMPH</h2>
+                  <p class='description'>
+                  THE NEW BREITLING CHRONOMAT FOR THE OPEN ROAD</p>
+                  <div id="button-container">
+                    <button class="learn-more">
+                      <span class="circle" aria-hidden="true">
+                        <span class="icon arrow"></span>
+                      </span>
+                      <span class="button-text">Discover</span>
+                    </button>
+                  </div>
                 </div>
-
-                <div class="img3">
-                    <div class="img">
-                        <img src="./assets/watch-1.webp" alt="watch-3" class="w-[25em] h-55">
-                    </div>
-                    <div class="text mt-8 flex items-center justify-center">
-                        <h2 class="p">BREITLING X<br>
-                            <span class="text-yellow-500">VICTORIA BECKHAM</span>
-                        </h2>
-                    </div>
-                    <div class="btn mt-8 flex items-center justify-center">
-                        <button class="bg-yellow-500 rounded-full px-4 py-4">Buy Now</button>
-                    </div>
-                </div>
-            </div>
+              </div>
         </section>
+
+        <style>
+            #top-saller {  
+              background-color: rgb(22, 20, 24);
+              background-color: rgb(250, 250, 250);
+              display: flex;
+              justify-content: space-evenly;
+              overflow-x: scroll;
+            }
+
+            @media (max-width: 1300px) {
+                #top-saller {               
+              gap: 40px;
+            }
+            }
+            
+            
+            .nft {
+              width: 350px;
+              height: 420px;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              min-width: 360px;
+              margin: 5rem auto;
+              background: linear-gradient(0deg, rgb(82, 79, 79) 0%, rgba(180, 179, 179, 0.5) 100%);
+              box-shadow: 0 7px 20px 5px #00000088;
+              /* border-radius: .7rem; */
+              backdrop-filter: blur(7px);
+              overflow: hidden;
+              transition: .5s all;
+            }
+            
+            .nft .watch-main {
+              display: flex;
+              flex-direction: column;
+              justify-content:space-evenly;
+              padding: 1rem;
+            }
+            
+            .nft .watch-main .tokenImage {
+              max-width: 100%;
+              height: 260px;
+              object-fit: contain;
+              overflow: hidden;
+              transition: all 1s ease;
+            }
+
+            .tokenImage:hover{
+                scale: 1.05;
+            }
+            
+            .nft .watch-main .description {
+              color: black;
+              text-align: center;
+            }
+            
+            .nft::before {
+              position: fixed;
+              content: "";
+              box-shadow: 0 0 100px 40px #ffffff08;
+              top: -10%;
+              left: -100%;
+              transform: rotate(-45deg);
+              height: 60rem;
+              transition: .7s all;
+            }
+            
+            .nft:hover {
+              border: 1px solid #ffffff44;
+              box-shadow: 0 7px 50px 10px #000000aa;
+            }
+            
+            .nft:hover::before {
+              top: -100%;
+              left: 200%;
+            }
+            
+            .watch-name{
+              font-size: large;
+              color:#ffc62d;
+              display: flex;
+              justify-content: center
+            }
+            
+            @import url('https://fonts.googleapis.com/css?family=Mukta:700');
+            
+            :root {
+              --transition: all 0.45s cubic-bezier(0.65,0,.076,1);
+            }
+            
+            button {
+              position: relative;
+              /* display: inline-block; */
+              cursor: pointer;
+              outline: none;
+              border: 0;
+              vertical-align: middle;
+              text-decoration: none;
+              background: transparent;
+              padding: 0;
+              font-size: inherit;
+              font-family: inherit;
+            }
+            
+            button.learn-more {
+              width: 100%;
+              height: auto;
+            }
+            
+            button.learn-more .circle {
+              transition: var(--transition);
+              display: flex;
+              justify-content: center;
+              margin: 0;
+              width: 3rem;
+              height: 3rem;
+              background: #ffc62d;
+              border-radius: 1.625rem;
+              color: black;
+            }
+            
+            button.learn-more .circle .icon {
+              transition: var(--transition);
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              margin: auto;
+            }
+            
+            button.learn-more .circle .icon.arrow {
+              transition: var(--transition);
+              left: 0.625rem;
+              width: 1.125rem;
+              height: 0.125rem;
+              background: none;
+            }
+            
+            button.learn-more .circle .icon.arrow::before {
+              position: absolute;
+              content: '';
+              top: -0.25rem;
+              right: 0.0625rem;
+              width: 0.625rem;
+              height: 0.625rem;
+              border-top: 0.125rem solid #fff;
+              border-right: 0.125rem solid #fff;
+              transform: rotate(45deg);
+            }
+            
+            button.learn-more .button-text {
+              transition: var(--transition);
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              padding: 0.75rem 0;
+              color: #ffc62d;
+              font-weight: 700;
+              line-height: 1.6;
+              text-align: center;
+              text-transform: uppercase;
+            }
+            
+            button:hover .circle {
+              width: 100%;
+            }
+            
+            button:hover .circle .icon.arrow {
+              background:black;
+              transform: translate(1rem, 0);
+            }
+            
+            button:hover .button-text {
+              color: black;
+            }
+            </style>
+
+
         <div class="h-full w-full flex flex-col">
             <div id="scrollTrigger_animation" class="invisible mx-auto h-[40vh] w-[85%] sm:h-[45vh] flex">
                 <div
@@ -698,83 +885,179 @@
         </div>
 
         <!-- 6th section -->
-        <div class="mx-auto max-w-7xl text-black text-base font-normal leading-6">
+        <div class="section-single-cta-container ">
             <section class="section-single-cta">
-                <div class="section-single-cta__wrapper mb-4 lg:mb-8 relative">
-                    <a class="block-big-link  block h-full left-0 absolute top-0 w-full z-10 text-black no-underline transition-all duration-200 ease-in-out"
-                        href="/us-en/blockchain/"></a>
-                    <div class="section-single-cta__image relative w-full h-80 flex items-center justify-center">
-                        <img class="absolute inset-0 h-full w-full object-cover object-center"
-                            src="./assets/blockchain3.webp" alt="">
+                <div class="section-single-cta__wrapper">
+                    <a class="block-big-link" href="/us-en/blockchain/"></a>
+                    <div class="section-single-cta__image ">
+                        <img class="" src="./assets/blockchain3.webp" alt="">
                     </div>
-                    <div
-                        class="section-single-cta__content  absolute inset-0 p-12 pt-[50px] pb-[30px] px-[22px] text-center text-white pointer-events-none z-20">
-                        <div
-                            class="content__wrapper start-md  box-border flex flex-col items-center h-full text-center md:text-left md:justify-start lg:justify-start lg:text-left">
-                            <h2
-                                class="content__title font-heading h-fit text-white font-bold uppercase leading-tight text-3xl">
+                    <div class="section-single-cta__content">
+                        <div class="content__wrapper">
+                            <h2 class="content__title">
                                 <!-- <a href="/us-en/blockchain/"> YOU DON’T HAVE YOUR
                                     <span class="text-yellow-400">BREITLING NFT</span> YET? </a> -->
-                                    <span>YOU</span> 
-                                    <span>DON’T</span>
-                                    <span>HAVE</span>
-                                    <span>YOUR</span>
-                                    <span class="text-yellow-400">BREITLING</span>
-                                    <span class="text-yellow-400">NFT</span>
-                                    <span>YET?</span>
-                                    
+                                <span>YOU</span>
+                                <span>DON’T</span>
+                                <span>HAVE</span>
+                                <span>YOUR</span>
+                                <span style="color: #ffc62d;">BREITLING</span>
+                                <span style="color: #ffc62d;">NFT</span>
+                                <span>YET?</span>
+
                             </h2>
                             <!-- <div class="content__text h-6 text-white flex-grow text-center lg:flex-grow-inherit lg:max-w-[750px]"> -->
-                            <div class="content__text h-fit">
+                            <div class="content__text">
                                 <span>Made</span>
-                                            <span>Secure</span>
-                                            <span>your</span>
-                                            <span>ownership</span>
-                                            <span>and</span>
-                                            <span>access</span>
-                                            <span>unique</span>
-                                            <span>services.</span>
-                                            <span>Scan</span>
-                                            <span>the</span>
-                                            <span>QR</span>
-                                            <span>code</span>
-                                            <span>on</span>
-                                            <span>your</span>
-                                            <span>warranty</span>
-                                            <span>card</span>
-                                            <span>to</span>
-                                            <span>get</span>
-                                            <span>started</span>
+                                <span>Secure</span>
+                                <span>your</span>
+                                <span>ownership</span>
+                                <span>and</span>
+                                <span>access</span>
+                                <span>unique</span>
+                                <span>services.</span>
+                                <span>Scan</span>
+                                <span>the</span>
+                                <span>QR</span>
+                                <span>code</span>
+                                <span>on</span>
+                                <span>your</span>
+                                <span>warranty</span>
+                                <span>card</span>
+                                <span>to</span>
+                                <span>get</span>
+                                <span>started</span>
                             </div>
                             <!-- <div class="w-full h-fit mt-2 flex items-center justify-center"><a
                                     class=" bg-[#ffc62d] border-none rounded-none text-black cursor-pointer font-sans font-bold h-auto max-w-none py-4 px-12 text-center  duration-300 ease-in-out w-full lg:w-auto no-underline transition-all duration-200 ease-in-out"
                                     href="/us-en/blockchain/"> Discover </a> </div> -->
-                                    <a class="backToHomeButton1 cssbuttons-io-button btn inline-block pointer-events-auto mt-auto lg:my-3 lg:w-auto block border-none flex justify-center rounded-none text-black cursor-pointer font-open-sans font-bold h-auto max-w-none outline-none text-center uppercase transition-all duration-300 ease-in-out w-full no-underline transition-colors duration-200 ease-in-out">
-                                        <div class="icon">
-                                          <svg
-                                            height="24"
-                                            width="24"
-                                            viewBox="0 0 24 24"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                          >
-                                            <path d="M0 0h24v24H0z" fill="none"></path>
-                                            <path
-                                              d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
-                                              fill="currentColor"
-                                            ></path>
-                                          </svg>
-                                        </div>
-                                        Discover
-                                    </a>
+                            <a class="backToHomeButton1 cssbuttons-io-button ">
+                                <div class="arrow-icon">
+                                    <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 0h24v24H0z" fill="none"></path>
+                                        <path
+                                            d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                            fill="currentColor"></path>
+                                    </svg>
+                                </div>
+                                Discover
+                            </a>
                         </div>
                     </div>
                 </div>
             </section>
         </div>
 
+        <style>
+            .section-single-cta-container {
+                margin: 0 auto;
+                margin-top: 1.25rem;
+                max-width: 80rem;
+                color: black;
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.5;
+            }
+
+            .section-single-cta__wrapper {
+                margin-bottom: 1rem;
+                position: relative;
+
+            }
+
+            .block-big-link {
+                display: block;
+                height: 100%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                z-index: 10;
+                color: black;
+                text-decoration: none;
+                transition: all 0.2s ease-in-out;
+            }
+
+            .section-single-cta__content {
+                position: absolute;
+                inset: 0;
+                padding: 12px;
+                padding-top: 50px;
+                padding-bottom: 30px;
+                padding-left: 22px;
+                padding-right: 22px;
+                text-align: center;
+                color: white;
+                pointer-events: none;
+                z-index: 10;
+            }
+
+            .content__wrapper {
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 100%;
+                text-align: center;
+            }
+
+            .content__title {
+                height: fit-content;
+                color: white;
+                font-weight: bold;
+                text-transform: uppercase;
+                line-height: 1.25;
+                font-size: 1.875rem;
+            }
+
+
+            @media (min-width: 768px) {
+                .content__wrapper {
+                    text-align: left;
+                    justify-content: flex-start;
+                }
+            }
+
+            @media (min-width: 1024px) {
+                .section-single-cta__wrapper {
+                    margin-bottom: 2rem;
+                }
+
+                .content__wrapper {
+                    justify-content: flex-start;
+                    text-align: left;
+                }
+            }
+
+            .section-single-cta__image {
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 320px;
+                position: relative;
+            }
+
+            .section-single-cta__image>img {
+                position: absolute;
+                inset: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+                transform: scale(1);
+                transition: all 0.75s ease-in-out;
+            }
+
+            .section-single-cta:hover .section-single-cta__image>img {
+                transform: scale(1.1);
+                transition: all 0.75s ease-in-out;
+            }
+        </style>
+
         <!-- 7th section -->
 
-        <div class="mx-auto max-w-[1400px] text-black text-base font-normal leading-6">
+        <div class="section-cta-container">
             <section class="section-cta p-0 lg:px-8 lg:pb-8 lg:pt-0">
                 <div class="cols-wrapper flex flex-wrap -m-4 lg:-m-2">
                     <div class="col p-4 w-full min-[610px]:p-2 min-[610px]:w-1/2 ">
@@ -783,7 +1066,7 @@
                                 <img src="./assets/home-straps.webp" alt="">
                             </div>
                             <div
-                                class="col__front h-full left-0 pointer-events-none absolute right-0 top-0 z-30 min-[992px]:h-auto">
+                                class="col__front h-full left-0 pointer-events-none absolute right-0  z-30 min-[992px]:h-auto">
                                 <div
                                     class="front__content text-white flex flex-col h-full text-center p-[50px_22px_30px] min-[992px]:block min-[992px]:pt-12 min-[992px]:px-[22px] min-[992px]:pb-0">
                                     <h2
@@ -791,49 +1074,45 @@
                                         <!-- <a href="/us-en/straps/all/"> Straps </a> -->
                                         <span>S</span><span>t</span><span>r</span><span>a</span><span>p</span><span>s</span>
                                     </h2>
-                                    <div class="content__text m-auto max-w-sm">
-                                            <span>Made</span>
-                                            <span>from</span>
-                                            <span>leather,</span>
-                                            <span>rubber,</span>
-                                            <span>or</span>
-                                            <span>ECONYL™</span>
-                                            <span>fabric,</span>
-                                            <span>the</span>
-                                            <span>Breitling</span>
-                                            <span>straps</span>
-                                            <span>will</span>
-                                            <span>nicely</span>
-                                            <span>complement</span>
-                                            <span>your</span>
-                                            <span>Breitling</span>
-                                            <span>watch</span>
-                                            <span>and</span>
-                                            <span>give</span>
-                                            <span>it</span>
-                                            <span>a</span>
-                                            <span>fresh</span>
-                                            <span>new</span>
-                                            <span>look.</span>
-                                        </div>
-                                    
-                                        <a class="backToHomeButton1 cssbuttons-io-button btn inline-block pointer-events-auto mt-auto lg:my-4 lg:w-auto block border-none flex justify-center rounded-none text-black cursor-pointer font-open-sans font-bold h-auto max-w-none outline-none py-4 px-12 text-center uppercase transition-all duration-300 ease-in-out w-full no-underline transition-colors duration-200 ease-in-out">
-                                            <div class="icon">
-                                              <svg
-                                                height="24"
-                                                width="24"
-                                                viewBox="0 0 24 24"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                              >
+                                    <div class="content__text max-w-sm">
+                                        <span>Made</span>
+                                        <span>from</span>
+                                        <span>leather,</span>
+                                        <span>rubber,</span>
+                                        <span>or</span>
+                                        <span>ECONYL™</span>
+                                        <span>fabric,</span>
+                                        <span>the</span>
+                                        <span>Breitling</span>
+                                        <span>straps</span>
+                                        <span>will</span>
+                                        <span>nicely</span>
+                                        <span>complement</span>
+                                        <span>your</span>
+                                        <span>Breitling</span>
+                                        <span>watch</span>
+                                        <span>and</span>
+                                        <span>give</span>
+                                        <span>it</span>
+                                        <span>a</span>
+                                        <span>fresh</span>
+                                        <span>new</span>
+                                        <span>look.</span>
+                                    </div>
+
+                                    <a
+                                        class="backToHomeButton1 cssbuttons-io-button btn inline-block pointer-events-auto mt-auto lg:my-4 lg:w-auto block border-none flex justify-center rounded-none text-black cursor-pointer font-open-sans font-bold h-auto max-w-none outline-none py-4 px-12 text-center uppercase transition-all duration-300 ease-in-out w-full no-underline transition-colors duration-200 ease-in-out">
+                                        <div class="arrow-icon">
+                                            <svg height="24" width="24" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M0 0h24v24H0z" fill="none"></path>
                                                 <path
-                                                  d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
-                                                  fill="currentColor"
-                                                ></path>
-                                              </svg>
-                                            </div>
-                                            Buy Now
-                                        </a>
+                                                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                                    fill="currentColor"></path>
+                                            </svg>
+                                        </div>
+                                        Buy Now
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -844,7 +1123,7 @@
                                 <img src="./assets/_mg_9785.webp" alt="">
                             </div>
                             <div
-                                class="col__front h-full left-0 pointer-events-none absolute right-0 top-0 z-30 min-[992px]:h-auto">
+                                class="col__front h-full left-0 pointer-events-none absolute right-0  z-30 min-[992px]:h-auto">
                                 <div
                                     class="front__content text-white flex flex-col h-full text-center p-[50px_22px_30px] min-[992px]:block min-[992px]:pt-12 min-[992px]:px-[22px] min-[992px]:pb-0">
                                     <h2
@@ -852,7 +1131,7 @@
                                         <!-- <a href="/us-en/service/"> Services </a> -->
                                         <span>S</span><span>e</span><span>r</span><span>v</span><span>i</span><span>c</span><span>e</span><span>s</span>
                                     </h2>
-                                    <div class="content__text m-auto max-w-sm"><span>Explore</span>
+                                    <div class="content__text max-w-sm"><span>Explore</span>
                                         <span>our</span>
                                         <span>comprenhensive</span>
                                         <span>set</span>
@@ -866,24 +1145,20 @@
                                         <span>and</span>
                                         <span>your</span>
                                         <span>Breitling.</span>
-                                        </div> 
-                                        <a id='backToHomeButton2' class="cssbuttons-io-button btn inline-block pointer-events-auto mt-auto lg:my-4 lg:w-auto block border-none flex justify-center rounded-none text-black cursor-pointer font-open-sans font-bold h-auto max-w-none outline-none text-center uppercase transition-all duration-300 ease-in-out w-full no-underline transition-colors duration-200 ease-in-out">
-                                            <div class="icon">
-                                              <svg
-                                                height="24"
-                                                width="24"
-                                                viewBox="0 0 24 24"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                              >
+                                    </div>
+                                    <a id='backToHomeButton2'
+                                        class="cssbuttons-io-button btn inline-block pointer-events-auto mt-auto lg:my-4 lg:w-auto block border-none flex justify-center rounded-none text-black cursor-pointer font-open-sans font-bold h-auto max-w-none outline-none text-center uppercase transition-all duration-300 ease-in-out w-full no-underline transition-colors duration-200 ease-in-out">
+                                        <div class="arrow-icon">
+                                            <svg height="24" width="24" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M0 0h24v24H0z" fill="none"></path>
                                                 <path
-                                                  d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
-                                                  fill="currentColor"
-                                                ></path>
-                                              </svg>
-                                            </div>
-                                            Discover Now
-                                        </a>
+                                                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                                    fill="currentColor"></path>
+                                            </svg>
+                                        </div>
+                                        Discover Now
+                                    </a>
 
                                 </div>
                             </div>
@@ -893,186 +1168,235 @@
             </section>
         </div>
         <style>
-
-            .backToHomeButton1{
-                width: 170px;
+            .backToHomeButton1 {
+                display: inline-block;
+                pointer-events: auto;
+                width: 100%;
+                height: auto;
+                max-width: none;
+                border: none;
+                border-radius: 0;
+                color: black;
+                cursor: pointer;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: bold;
+                text-align: center;
+                text-transform: uppercase;
+                text-decoration: none;
+                outline: none;
+                transition: all 0.3s ease-in-out, color 0.2s ease-in-out;
             }
 
-            #backToHomeButton2{
+            #backToHomeButton2 {
                 width: 210px;
             }
 
-.cssbuttons-io-button {
-    background: #ffc62d;
-    color: black;
-    font-family: inherit;
-    padding: 0.35em;
-    margin-inline:auto ;
-    padding-left: 1.2em;
-    font-size:medium;
-    font-weight: 700;
-    border-radius: 0.5em;
-    border: none;
-    letter-spacing: 0.05em;
-    display: flex;
-    align-items: center;
-    box-shadow: inset 0 0 1.6em -0.6em #ffc62d;
-    overflow: hidden;
-    position: relative;
-    min-height: 2.8em;
-    padding-right: 3.3em;
-    cursor: pointer;
-}
+            .col__background {
+                overflow: hidden;
+            }
 
-.cssbuttons-io-button .icon {
-    background: white;
-    margin-left: 1em;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 2.2em;
-    width: 2.2em;
-    border-radius: 0.3em;
-    box-shadow: 0.1em 0.1em 0.6em 0.2em #ffc62d;
-    right: 0.3em;
-    transition: all 0.3s;
-}
+            .col__background::after {
+                content: "";
+                background-color: #0000003d;
+                position: absolute;
+                top: 0;
+                display: block;
+                height: 100%;
+                width: 100%;
+            }
 
-.cssbuttons-io-button:hover .icon {
-    width: calc(100% - 0.6em);
-}
+            .col:hover .col__background::after {
+                content: "";
+                background-color: #000000a0;
+                position: absolute;
+                top: 0;
+                display: block;
+                height: 100%;
+                width: 100%;
+                transition: all 0.5s ease-in-out;
+            }
 
-.cssbuttons-io-button .icon svg {
-    width: 1.1em;
-    transition: transform 0.3s;
-    color: black;
-}
+            .col__front {
+                bottom: 80px;
+            }
 
-.cssbuttons-io-button:hover .icon svg {
-    transform: translateX(0.1em);
-}
+            .col__background>img {
+                transform: scale(1);
+                transition: all 0.75s ease-in-out;
+            }
 
-.cssbuttons-io-button:active .icon {
-    transform: scale(0.95);
-}
+            .col:hover .col__background>img {
+                transform: scale(1.1);
+                transition: all 0.75s ease-in-out;
+            }
+
+            .cssbuttons-io-button {
+                width: 170px;
+                background: #ffc62d;
+                color: black;
+                font-family: inherit;
+                padding: 0.35em;
+                margin-inline: auto;
+                padding-left: 1.2em;
+                font-size: medium;
+                font-weight: 700;
+                border-radius: 0.5em;
+                border: none;
+                letter-spacing: 0.05em;
+                display: flex;
+                align-items: center;
+                box-shadow: inset 0 0 1.6em -0.6em #ffc62d;
+                overflow: hidden;
+                position: relative;
+                min-height: 2.8em;
+                padding-right: 3.3em;
+                cursor: pointer;
+            }
+
+            .cssbuttons-io-button .arrow-icon {
+                background: white;
+                margin-left: 1em;
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 2.2em;
+                width: 2.2em;
+                border-radius: 0.3em;
+                box-shadow: 0.1em 0.1em 0.6em 0.2em #ffc62d;
+                right: 0.3em;
+                transition: all 0.3s;
+            }
+
+            .cssbuttons-io-button:hover .arrow-icon {
+                width: calc(100% - 0.6em);
+            }
+
+            .cssbuttons-io-button .arrow-icon svg {
+                width: 1.1em;
+                transition: transform 0.3s;
+                color: black;
+            }
+
+            .cssbuttons-io-button:hover .arrow-icon svg {
+                transform: translateX(0.1em);
+            }
+
+            .cssbuttons-io-button:active .arrow-icon {
+                transform: scale(0.95);
+            }
 
 
-.content__btn {
-    opacity: 0;
-    transform: scale(0.8);
-    transition: opacity 2.5s ease, transform 2.5s ease;
-}
+            .content__btn {
+                opacity: 0;
+                transform: scale(0.8);
+                transition: opacity 2.5s ease, transform 2.5s ease;
+            }
 
-.content__btn.show {
-    opacity: 1;
-    transform: scale(1);
-}
+            .content__btn.show {
+                opacity: 1;
+                transform: scale(1);
+            }
 
-/* Animation keyframes for typing effect */
-@keyframes typingEffect1 {
-    0% {
-        opacity: 0;
-        transform: translateX(150px); /* Move letters from right to left */
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
+            /* Animation keyframes for typing effect */
+            @keyframes typingEffect1 {
+                0% {
+                    opacity: 0;
+                    transform: translateX(150px);
+                    /* Move letters from right to left */
+                }
 
-/* Apply animation to each span inside .content__title */
-.content__title span{
-    display: inline-block;
-    opacity: 0;
-    animation: typingEffect1 4s forwards; /* Adjust timing as needed */
-}
+                100% {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
 
-/* Delay each span animation progressively */
-.content__title span:nth-child(1){
-    animation-delay: calc(1s * var(--i)); /* Adjust delay increment */
-}
+            /* Apply animation to each span inside .content__title */
+            .content__title span {
+                z-index: 0;
+                display: inline-block;
+                opacity: 0;
+                animation: typingEffect1 4s forwards;
+                /* Adjust timing as needed */
+            }
 
-@keyframes typingEffect2 {
-    0% {
-        opacity: 0;
-        transform: translateX(-50px); /* Move letters from right to left */
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
+            /* Delay each span animation progressively */
+            .content__title span:nth-child(1) {
+                animation-delay: calc(1s * var(--i));
+                /* Adjust delay increment */
+            }
 
-.content__text span{
-    display: inline-block;
-    opacity: 0;
-    animation: typingEffect2 4s forwards; /* Adjust timing as needed */
-}
+            .section-single-cta.show .content__title span,
+            .section-cta.show .content__title span {
+                animation: typingEffect1 4s forwards;
+            }
 
-.content__text span:nth-child(1){
-    animation-delay: calc(1s * var(--i)); /* Adjust delay increment */
-}
+            @keyframes typingEffect2 {
+                0% {
+                    opacity: 0;
+                    transform: translateX(-50px);
+                    /* Move letters from right to left */
+                }
 
-/* JavaScript will set custom property --i for each span */
+                100% {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+
+            .content__text span {
+                z-index: 0;
+                display: inline-block;
+                /* opacity: 0; */
+                /* Adjust timing as needed */
+            }
+
+            .section-single-cta.show .content__text span,
+            .section-cta.show .content__text span {
+                animation: typingEffect2 4s forwards;
+            }
+
+            .content__text span:nth-child(1) {
+                animation-delay: calc(1s * var(--i));
+                /* Adjust delay increment */
+            }
         </style>
         <script>
-        document.addEventListener('DOMContentLoaded', () => {
-      console.log("Loaded");
-      const options = {
-        threshold: 0.1
-      };
 
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            animateText(entry.target);
-          } else {
-            entry.target.classList.remove('show');
-          }
-        });
-      }, options);
+            function animateText(element) {
+                const text = element.textContent.trim();
+                const letters = text.split('');
 
-      const title = document.querySelectorAll(".content__title");
-      const para = document.querySelectorAll(".content__text");
+                // Replace text content with span-wrapped letters
+                element.innerHTML = '';
+                letters.forEach((letter, index) => {
+                    const span = document.createElement('span');
+                    span.textContent = letter;
+                    span.style.setProperty('--i', index + 1); // Set --i starting from 1
+                    element.appendChild(span);
+                });
 
-      observer.observe(title);
-      observer.observe(para);
-
-      function animateText(element) {
-        const text = element.textContent.trim();
-        const letters = text.split('');
-
-        // Replace text content with span-wrapped letters
-        element.innerHTML = '';
-        letters.forEach((letter, index) => {
-          const span = document.createElement('span');
-          span.textContent = letter;
-          span.style.setProperty('--i', index + 1); // Set --i starting from 1
-          element.appendChild(span);
-        });
-
-        // Add 'show' class to start animation
-        element.classList.add('show');
-      }
-    });
+                // Add 'show' class to start animation
+                element.classList.add('show');
+            }
 
         </script>
 
 <!-- 8th Section -->
-<div class="">
-    <section class="single-entry">
-        <div class="entry-wrapper">
-            <div class="entry-content">
-                <div class="content-wrapper text-center">
-                    <h2 class="content-title">
-                        <span class="highlight">Find your </span> nearest Breitling Boutique
-                    </h2>
+        <div class="">
+            <section class="single-entry">
+                <div class="entry-wrapper">
+                    <div class="entry-content">
+                        <div class="content-wrapper text-center">
+                            <h2 class="content-title">
+                                <span class="highlight">Find your </span> nearest Breitling Boutique
+                            </h2>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </section>
         </div>
-    </section>
-</div>
 
 <!-- 9th Section -->
 
