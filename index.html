@@ -257,6 +257,13 @@
               display: flex;
               justify-content: space-evenly;
               overflow-x: scroll;
+              -ms-overflow-style: none;  /* IE and Edge */
+              scrollbar-width: none;  /* Firefox */
+              /* height: 400px; */
+            }
+
+            #top-saller::-webkit-scrollbar {
+              display: none;  /* Chrome, Safari and Opera */
             }
 
             @media (max-width: 1300px) {
@@ -274,7 +281,7 @@
               justify-content: center;
               min-width: 360px;
               margin: 5rem auto;
-              background: linear-gradient(0deg, rgb(82, 79, 79) 0%, rgba(180, 179, 179, 0.5) 100%);
+              background: linear-gradient(0deg, white 0%, #ffc62d 100%);
               box-shadow: 0 7px 20px 5px #00000088;
               /* border-radius: .7rem; */
               backdrop-filter: blur(7px);
