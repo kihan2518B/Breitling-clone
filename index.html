@@ -259,7 +259,6 @@
               overflow-x: scroll;
               -ms-overflow-style: none;  /* IE and Edge */
               scrollbar-width: none;  /* Firefox */
-              /* height: 400px; */
             }
 
             #top-saller::-webkit-scrollbar {
@@ -280,8 +279,10 @@
               flex-direction: column;
               justify-content: center;
               min-width: 360px;
+              border: 3px solid #ffc62d;
               margin: 5rem auto;
-              background: linear-gradient(0deg, white 0%, #ffc62d 100%);
+              /* background: linear-gradient(0deg, white 0%, #ffc62d 100%); */
+              background: linear-gradient(#ffc62d, #ffc62d30,  white 100%);
               box-shadow: 0 7px 20px 5px #00000088;
               /* border-radius: .7rem; */
               backdrop-filter: blur(7px);
@@ -311,12 +312,14 @@
             .nft .watch-main .description {
               color: black;
               text-align: center;
+              font-variant: small-caps;
+
             }
             
             .nft::before {
               position: fixed;
               content: "";
-              box-shadow: 0 0 100px 40px #ffffff08;
+              border: 10px solid #ffffff44;
               top: -10%;
               left: -100%;
               transform: rotate(-45deg);
@@ -325,8 +328,7 @@
             }
             
             .nft:hover {
-              border: 1px solid #ffffff44;
-              box-shadow: 0 7px 50px 10px #000000aa;
+              border: 3px solid #ffc62d;
             }
             
             .nft:hover::before {
@@ -336,7 +338,9 @@
             
             .watch-name{
               font-size: large;
-              color:#ffc62d;
+              color:black;
+              font-variant: small-caps;
+              font-weight: bold;
               display: flex;
               justify-content: center
             }
