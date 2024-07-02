@@ -549,7 +549,7 @@
 
         <!-- 5th section -->
         <div class="exclusive_section">
-            <section class="">
+            <section class="exclusive_section_container">
                 <div class="exclusive_section_heading">
                     <div class="text-center">
                         <h2 class="">
@@ -746,8 +746,7 @@
                                         <span>your</span>
                                         <span>Breitling.</span>
                                     </div>
-                                    <a id='backToHomeButton2'
-                                        class="cssbuttons-io-button btn inline-block pointer-events-auto mt-auto lg:my-4 lg:w-auto block border-none flex justify-center rounded-none text-black cursor-pointer font-open-sans font-bold h-auto max-w-none outline-none text-center uppercase transition-all duration-300 ease-in-out w-full no-underline transition-colors duration-200 ease-in-out">
+                                    <a class="backToHomeButton1 cssbuttons-io-button btn ">
                                         <div class="arrow-icon">
                                             <svg height="24" width="24" viewBox="0 0 24 24"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -757,7 +756,7 @@
                                                     fill="currentColor"></path>
                                             </svg>
                                         </div>
-                                        Discover Now
+                                        Discover
                                     </a>
 
                                 </div>
@@ -1166,7 +1165,7 @@
         </div>
 
         <!-- footer section -->
-        <div class="footer-container">
+        <section class="footer-container">
             <footer class="footer">
                 <div class="footer-top-wrapper">
                     <div class="footer-container-inner">
@@ -1175,55 +1174,61 @@
                                 <nav class="footer-nav">
                                     <ul class="footer-nav-list" itemscope
                                         itemtype="https://schema.org/SiteNavigationElement">
-                                        <li class="footer-nav-item">
-                                            <a href="/us-en/watches/" class="footer_nav-link" itemprop="url">
-                                                <p class="dot">.</p>watches
-                                            </a>
-                                        </li>
-                                        <li class="footer-nav-item">
-                                            <a href="/us-en/straps/" class="footer_nav-link" itemprop="url">
-                                                <p class="dot">.</p>Straps
-                                            </a>
-                                        </li>
-                                        <li class="footer-nav-item">
-                                            <a href="/us-en/service/" class="footer_nav-link" itemprop="url">
-                                                <p class="dot">.</p>Service
-                                            </a>
-                                        </li>
-                                        <li class="footer-nav-item">
-                                            <a href="/us-en/stores/us/" class="footer_nav-link" itemprop="url">
-                                                <p class="dot">.</p>Stores
-                                            </a>
-                                        </li>
-                                        <li class="footer-nav-item">
-                                            <a href="/us-en/about/" class="footer_nav-link" itemprop="url">
-                                                <p class="dot">.</p>About
-                                            </a>
-                                        </li>
-                                        <li class="footer-nav-item">
-                                            <a href="/us-en/my-account/" class="footer_nav-link" itemprop="url">
-                                                <p class="dot">.</p>My account
-                                            </a>
-                                        </li>
-                                        <li class="footer-nav-item">
-                                            <a href="/us-en/service/faq/" class="footer_nav-link" itemprop="url">
-                                                <p class="dot">.</p>FAQS
-                                            </a>
-                                        </li>
-                                        <li class="footer-nav-item">
-                                            <a class="newsletter-popup-link footer_nav-link"
-                                                href="/us-en/newsletter/subscribe/" itemprop="url">
-                                                <p class="dot">.</p>Newsletter
-                                            </a>
-                                        </li>
-                                        <li class="footer-nav-item">
-                                            <a class="chronolog-popup-link footer_nav-link" href="#" itemprop="url">
-                                                <p class="dot">.</p>Download the catalog
-                                            </a>
-                                        </li>
-                                        <a class="footer-button-st" href="/choose-country-region/">
+
+                                        <div class="footer_col1">
+                                            <li class="footer-nav-item">
+                                                <a href="/us-en/watches/" class="footer_nav-link" itemprop="url">
+                                                    watches
+                                                </a>
+                                            </li>
+                                            <li class="footer-nav-item">
+                                                <a href="/us-en/straps/" class="footer_nav-link" itemprop="url">
+                                                    Straps
+                                                </a>
+                                            </li>
+                                            <li class="footer-nav-item">
+                                                <a href="/us-en/service/" class="footer_nav-link" itemprop="url">
+                                                    Service
+                                                </a>
+                                            </li>
+                                            <li class="footer-nav-item">
+                                                <a href="/us-en/stores/us/" class="footer_nav-link" itemprop="url">
+                                                    Stores
+                                                </a>
+                                            </li>
+                                        </div>
+                                        <div class="footer_col2">
+                                            <li class="footer-nav-item">
+                                                <a href="/us-en/about/" class="footer_nav-link" itemprop="url">
+                                                    About
+                                                </a>
+                                            </li>
+                                            <li class="footer-nav-item">
+                                                <a href="/us-en/my-account/" class="footer_nav-link" itemprop="url">
+                                                    My account
+                                                </a>
+                                            </li>
+                                            <li class="footer-nav-item">
+                                                <a href="/us-en/service/faq/" class="footer_nav-link" itemprop="url">
+                                                    FAQS
+                                                </a>
+                                            </li>
+                                            <li class="footer-nav-item">
+                                                <a class="newsletter-popup-link footer_nav-link"
+                                                    href="/us-en/newsletter/subscribe/" itemprop="url">
+                                                    Newsletter
+                                                </a>
+                                            </li>
+                                            <li class="footer-nav-item">
+                                                <a class="chronolog-popup-link footer_nav-link" href="#" itemprop="url">
+                                                    Download the catalog
+                                                </a>
+                                            </li>
+                                        </div>
+
+                                        <!-- <a class="footer-button-st" href="/choose-country-region/">
                                             <i class="fa-solid fa-globe pr-2"></i>INDIA - ENGLISH
-                                        </a>
+                                        </a> -->
                                     </ul>
                                 </nav>
                             </div>
@@ -1312,13 +1317,13 @@
                 <div class="footer-bottom-wrapper">
                     <div class="footer-container">
                         <div class="logo">
-                            <div id="logo-1">
+                            <div id="logo1">
                                 <img src="./assets/Artwork_8Logo-Yellow-1.png" alt="" />
                             </div>
-                            <div id="logo-2">
+                            <div id="logo2">
                                 <img src="./assets/Rectangle 25367logo-Yellow-2.png" alt="" />
                             </div>
-                            <div id="logo-3">
+                            <div id="logo3">
                                 <img src="./assets/Path 5876logo-Yellow-3.png" alt="" />
                             </div>
                         </div>
@@ -1331,7 +1336,7 @@
                     <i class="fa-solid fa-angle-up fa-2xl"></i>
                 </a>
             </footer>
-        </div>
+        </section>
     </div>
 
     <script src="./Animation.js"></script>

@@ -432,10 +432,16 @@ header {
 .trending-track {
     display: flex;
     overflow-x: auto;
-    gap: 0.75rem;
+    /* gap: 0.75rem; */
     margin-top: 1.25rem;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     padding-left: 1.25rem;
+}
+
+@media (max-width:1060px) {
+    .trending-track {
+        gap: 20px;
+    }
 }
 
 .trending-track {
@@ -455,6 +461,7 @@ header {
     display: grid;
     place-items: center;
     width: 250px;
+    min-width: 260px;
     height: 300px;
     flex: 0 0 auto;
     overflow: hidden;
@@ -512,7 +519,8 @@ header {
 
 .card__background {
     object-fit: cover;
-    max-width: 100%;
+    max-width: 200px;
+    width: 100%;
     height: 100%;
     transition: background-color 1s ease-in-out;
 }
@@ -607,7 +615,7 @@ header {
 
     .card:hover .card__content,
     .card:focus-within .card__content {
-        transform: translateY(-18%);
+        transform: translateY(0%);
         transition: transform 500ms ease-in;
     }
 
@@ -794,8 +802,9 @@ header {
     width: 100%;
 }
 
-section .img {
-    transform: translateX(-20px);
+section ._image_container {
+    opacity: 0.5;
+    transform: translateX(-40px);
     transition: all 0.75s ease-in-out;
 }
 
@@ -804,8 +813,9 @@ section .text {
     transition: all 0.75s ease-in-out;
 }
 
-section.show .img,
+section.show ._image_container,
 section.show .text {
+    opacity: 1;
     transform: translateX(0);
     transition: all 0.5s ease-in-out;
     transition-delay: 0.5s;
@@ -884,7 +894,15 @@ section.show .text {
     align-items: flex-end;
     /* padding: 0 36px; */
     perspective: 2500px;
+    transform: scale(0.5);
+    transition: transform 0.5s ease-in-out;
     /* margin: 0 50px; */
+}
+
+.exclusive_section_container.show .exclusive-card {
+    transform: scale(1);
+    transition: transform 0.5s ease-in-out;
+
 }
 
 .cover-image img {
@@ -1106,13 +1124,14 @@ section.show .text {
 .cols-wrapper {
     display: flex;
     flex-wrap: wrap;
-    margin: -1rem;
+    justify-content: space-evenly;
 }
 
 .sections-cta-col {
     padding: 1rem;
     width: 100%;
     box-sizing: border-box;
+    margin: auto;
 }
 
 .col__wrapper {
@@ -1124,13 +1143,16 @@ section.show .text {
     display: flex;
     flex-direction: column;
     height: 100%;
+    justify-content: center;
     text-align: center;
-    padding: 50px 22px 30px;
+    padding-top: 12px;
+    padding-left: 22px;
+    padding-bottom: 0;
+    /* padding: 50px 22px 30px; */
 }
 
-@media (min-width: 610px) {
+@media (min-width: 650px) {
     .sections-cta-col {
-        padding: 0.5rem;
         width: 50%;
     }
 }
@@ -1143,9 +1165,6 @@ section.show .text {
         padding-top: 0;
     }
 
-    .cols-wrapper {
-        margin: -0.5rem;
-    }
 }
 
 .backToHomeButton1 {
@@ -1212,13 +1231,8 @@ section.show .text {
     z-index: 30;
 }
 
-@media (min-width: 992px) {
-    .front__content {
-        display: block;
-        padding-top: 12px;
-        padding-left: 22px;
-        padding-bottom: 0;
-    }
+@media (max-width: 992px) {
+    .front__content {}
 
     .col__front {
         height: auto;
@@ -1322,8 +1336,6 @@ section.show .text {
     z-index: 0;
     display: inline-block;
     opacity: 0;
-    animation: typingEffect1 4s forwards;
-    /* Adjust timing as needed */
 }
 
 /* Delay each span animation progressively */
@@ -1479,11 +1491,7 @@ section.show .text {
 }
 
 .block-store-desktop {
-    padding-left: 16px;
-    padding-right: 16px;
     position: relative;
-    margin-left: -8px;
-    margin-right: -8px;
 }
 
 @media (min-width: 768px) {
@@ -1707,6 +1715,7 @@ table {
     color: black;
     font-size: 1rem;
     font-family: 'Mukta', sans-serif;
+    overflow: hidden;
 }
 
 .footer {
@@ -1729,7 +1738,7 @@ table {
 }
 
 .footer-contact-center {
-    padding-bottom: 2.5rem;
+    padding-bottom: 0.98rem;
     text-transform: uppercase;
 }
 
@@ -1749,9 +1758,52 @@ table {
 .footer-nav-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     padding-top: 1.25rem;
+}
+
+.footer_col2,
+.footer_col1 {
+    display: flex;
+}
+
+
+/* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 0;
+    margin: 0; */
+@media (max-width:575px) {
+    .footer-nav-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer_col2,
+    .footer_col1 {
+        flex-direction: column;
+        align-items: start;
+    }
+}
+
+.footer-container.show .footer-nav-item,
+.menuas-item {
+    animation: typingEffect2 4s forwards;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+.footer-container.show .menuas-item {
+    animation: typingEffect1 4s forwards;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+.footer-container.show .footer-social-item {
+    animation: typingEffect1 4s forwards;
+
 }
 
 .footer-nav-item {
@@ -1772,15 +1824,15 @@ table {
     color: #fbbf24;
 }
 
-.dot {
+/* .dot {
     color: #fbbf24;
     padding-right: 1rem;
     font-size: 1.25rem;
-}
+} */
 
 .footer-button-st {
     cursor: pointer;
-    border: 2px solid white;
+    /* border: 2px solid white; */
     background: transparent;
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
@@ -1791,10 +1843,11 @@ table {
     transition: all 0.7s ease-in-out;
 }
 
+/* 
 .footer-button-st:hover {
     background: #fbbf24;
     color: black;
-}
+} */
 
 .footer-socials {
     margin-top: 1.75rem;
@@ -1882,7 +1935,7 @@ table {
 
 .footer-container {
     width: auto;
-    padding: 0 1.25rem;
+    /* padding: 0 1.25rem; */
 }
 
 .logo {
@@ -1891,10 +1944,29 @@ table {
     gap: 1.25rem;
 }
 
+#logo1 {
+    transform: translateX(-20px);
+    transition: transform 1s ease-in-out;
+}
+
+#logo3 {
+    transform: translateX(20px);
+    transition: transform 1s ease-in-out;
+}
+
+.footer-bottom-wrapper.show #logo1,
+.footer-bottom-wrapper.show #logo3,
+.footer-bottom-wrapper.show .accessibilty,
+.footer-bottom-wrapper.show .copyright {
+    transform: translateX(0px);
+}
+
 .accessibilty {
     display: flex;
     justify-content: center;
     margin-top: 1.5rem;
+    transform: translateY(40px);
+    transition: transform 1.5s ease-in-out;
 }
 
 .accessibilty a {
@@ -1906,6 +1978,8 @@ table {
     justify-content: center;
     opacity: 0.4;
     margin-top: 0.25rem;
+    transform: translateY(40px);
+    transition: transform 1.5s ease-in-out;
 }
 
 .scroll-to-top {
@@ -1919,8 +1993,6 @@ table {
 .scroll-to-top i {
     font-size: 2rem;
 }
-
-
 
 .footer-Btn {
     width: 40px;
