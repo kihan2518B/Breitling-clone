@@ -29,12 +29,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
         integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- <link rel="stylesheet" href="./styles.css"> -->
+    <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
+
     <!-- Loader -->
-    <div class="loader-wrapper">
+    <!-- <div class="loader-wrapper">
         <svg class="hourglass" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 206" preserveAspectRatio="none">
             <path class="middle"
                 d="M120 0H0v206h120V0zM77.1 133.2C87.5 140.9 92 145 92 152.6V178H28v-25.4c0-7.6 4.5-11.7 14.9-19.4 6-4.5 13-9.6 17.1-17 4.1 7.4 11.1 12.6 17.1 17zM60 89.7c-4.1-7.3-11.1-12.5-17.1-17C32.5 65.1 28 61 28 53.4V28h64v25.4c0 7.6-4.5 11.7-14.9 19.4-6 4.4-13 9.6-17.1 16.9z" />
@@ -44,75 +45,7 @@
 
         <h1 data-text="Breitling...">breitling...</h1>
 
-    </div>
-    <style>
-        .loader-wrapper {
-            position: absolute;
-            top: 0;
-            background-color: #000;
-            height: 100vh;
-            width: 100vw;
-            z-index: 9999;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-
-        .hourglass {
-            display: block;
-            width: 2em;
-            height: 4em;
-            animation: hourglass 1s linear infinite;
-        }
-
-        .outer {
-            fill: yellow;
-        }
-
-        .middle {
-            fill: black;
-        }
-
-        @keyframes hourglass {
-            0% {
-                transform: rotate(0deg);
-                box-shadow: inset yellow 0 -0em 0 0, inset black 0 -2em 0 0, inset yellow 0 -4em 0 0;
-            }
-
-            80% {
-                transform: rotate(0deg);
-                box-shadow: inset yellow 0 -2em 0 0, inset black 0 -2em 0 0, inset yellow 0 -2em 0 0;
-            }
-
-            100% {
-                transform: rotate(180deg);
-                box-shadow: inset yellow 0 -2em 0 0, inset black 0 -2em 0 0, inset yellow 0 -2em 0 0;
-            }
-        }
-
-        .loader-wrapper h1 {
-            position: relative;
-            /* color: white; */
-            font-size: 5em
-        }
-
-        .loader-wrapper h1:before {
-            content: attr(data-text);
-            position: absolute;
-            overflow: hidden;
-            max-width: 7em;
-            white-space: nowrap;
-            color: yellow;
-            animation: loading 8s linear infinite;
-        }
-
-        @keyframes loading {
-            0% {
-                max-width: 0;
-            }
-        }
-    </style>
+    </div> -->
     <div id="main" class="">
         <section id="hero" class="hero-section">
             <video class="" loop autoplay muted>
@@ -172,29 +105,28 @@
                         </div>
                     </div>
                     <div id="nav-icons" class="nav-icons">
-                        <div class="w-fit flex items-center gap-5">
-                            <div class="nav-icon w-1/5 displayable-icons">
+                        <div class="">
+                            <div class="nav-icon">
                                 <i
                                     class="fa-solid hover:text-yellow-500 transition ease-in-out duration-200 fa-magnifying-glass"></i>
                             </div>
-                            <div class="nav-icon w-1/5 max-[1000px]:hidden">
+                            <div class="nav-icon hidden-1000">
                                 <i
                                     class="fa-solid hover:text-yellow-500 transition ease-in-out duration-200 fa-phone"></i>
                             </div>
-                            <div class="nav-icon w-1/5 max-[1000px]:hidden">
+                            <div class="nav-icon hidden-1000">
                                 <i
                                     class="fa-solid hover:text-yellow-500 transition ease-in-out duration-200 fa-heart"></i>
                             </div>
-                            <div class="nav-icon w-1/5 displayable-icons">
+                            <div class="nav-icon">
                                 <i
                                     class="fa-solid hover:text-yellow-500 transition ease-in-out duration-200 fa-user"></i>
                             </div>
-                            <div class="nav-icon w-1/5 max-[1000px]:hidden">
+                            <div class="nav-icon hidden-1000">
                                 <i
                                     class="fa-solid hover:text-yellow-500 transition ease-in-out duration-200 fa-bag-shopping"></i>
                             </div>
-                            <div class="bar-icon nav-icon w-1/5 min-[1001px]:hidden displayable-icons"
-                                id="toggle-icon-start">
+                            <div class="bar-icon nav-icon min-[1001px]:hidden" id="toggle-icon-start">
                                 <i
                                     class="fa-solid hover:text-yellow-500 transition ease-in-out duration-200 fa-bars"></i>
                             </div>
@@ -202,69 +134,61 @@
                     </div>
                 </nav>
                 <div class="flex justify-end min-[1001px]:hidden">
-                    <section id="chicken_bar-section"
-                        class="absolute top-2 right-4 h-64 w-44 max-[350px]:w-40 max-[320px]:w-36 bg-white bg-opacity-95 rounded-lg text-yellow-500 flex flex-col justify-evenly translate-x-52 ease-in-out duration-500">
-                        <div class="flex w-full justify-evenly">
-                            <div class=" w-1/5 flex justify-center items-center">
+                    <section id="chicken_bar-section" class="chicken_bar-section">
+                        <div class="icon-container">
+                            <div class="">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </div>
-                            <div class=" w-1/5 flex justify-center items-center">
+                            <div class="">
                                 <i class="fa-solid fa-phone"></i>
                             </div>
-                            <div class=" w-1/5 flex justify-center items-center" id="toggle-icon-end">
+                            <div class="" id="toggle-icon-end">
                                 <i class="cross fa-solid fa-xmark text-2xl"></i>
                             </div>
                         </div>
-                        <div
-                            class="w-full flex justify-center hover:text-white rounded-md hover:bg-yellow-500 transition ease-in-out duration-500">
-                            <h6 class="nav-link font-semibold text-base cursor-pointer">
+                        <div class="chikenbar-nav-link">
+                            <h6 class=" ">
                                 WATCHES
                             </h6>
                         </div>
-                        <div
-                            class="w-full flex justify-center hover:text-white rounded-md hover:bg-yellow-500 transition ease-in-out duration-500">
-                            <h6 class="nav-link font-semibold text-base cursor-pointer">
+                        <div class="chikenbar-nav-link">
+                            <h6 class=" ">
                                 STRAPS
                             </h6>
                         </div>
-                        <div
-                            class="w-full flex justify-center hover:text-white rounded-md hover:bg-yellow-500 transition ease-in-out duration-500">
-                            <h6 class="nav-link font-semibold text-base cursor-pointer">
+                        <div class="chikenbar-nav-link">
+                            <h6 class=" ">
                                 STORES
                             </h6>
                         </div>
-                        <div
-                            class="w-full flex justify-center hover:text-white rounded-md hover:bg-yellow-500 transition ease-in-out duration-500">
-                            <h6 class="nav-link font-semibold text-base cursor-pointer">
+                        <div class="chikenbar-nav-link">
+                            <h6 class=" ">
                                 SERVICE
                             </h6>
                         </div>
-                        <div
-                            class="w-full flex justify-center hover:text-white rounded-md hover:bg-yellow-500 transition ease-in-out duration-500">
-                            <h6 class="nav-link font-semibold text-base cursor-pointer">
+                        <div class="chikenbar-nav-link">
+                            <h6 class=" ">
                                 NFT
                             </h6>
                         </div>
-                        <div
-                            class="w-full flex justify-center hover:text-white rounded-md hover:bg-yellow-500 transition ease-in-out duration-500">
-                            <h6 class="nav-link font-semibold text-base cursor-pointer">
+                        <div class="chikenbar-nav-link">
+                            <h6 class=" ">
                                 SUSTAINABILITY
                             </h6>
                         </div>
-                        <div
-                            class="w-full flex justify-center hover:text-white rounded-md hover:bg-yellow-500 transition ease-in-out duration-500">
-                            <h6 class="nav-link font-semibold text-base cursor-pointer">
+                        <div class="chikenbar-nav-link">
+                            <h6 class=" ">
                                 ABOUT
                             </h6>
                         </div>
-                        <div class="flex w-full justify-evenly">
-                            <div class="icon w-1/5 flex justify-center items-center">
+                        <div class="chikenbar-bottom ">
+                            <div class="chikenbar-bottom-icon w-1/5 flex justify-center items-center">
                                 <i class="fa-solid fa-phone"></i>
                             </div>
-                            <div class="icon w-1/5 flex justify-center items-center">
+                            <div class="chikenbar-bottom-icon w-1/5 flex justify-center items-center">
                                 <i class="fa-solid fa-heart"></i>
                             </div>
-                            <div class="icon w-1/5 flex justify-center items-center">
+                            <div class="chikenbar-bottom-icon w-1/5 flex justify-center items-center">
                                 <i class="fa-solid fa-bag-shopping"></i>
                             </div>
                         </div>
@@ -272,112 +196,6 @@
                 </div>
             </header>
         </section>
-        <style>
-            #main{
-                width: 0%;
-                height: 0%;
-            }
-            .hero-section {
-                width: 100%;
-                height: auto;
-                position: relative;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .hero-section>video {
-                height: auto;
-                display: flex;
-                flex-shrink: 1;
-                width: 100%;
-                object-fit: contain;
-                z-index: 0;
-            }
-
-            #hero.show header {
-                background-color: rgba(0, 0, 0, 0.5);
-                backdrop-filter: blur(10px);
-                -webkit-backdrop-filter: blur(10px);
-            }
-
-            .Navbar {
-                padding-left: 40px;
-                padding-right: 40px;
-                height: 100%;
-                display: flex;
-                align-items: center;
-            }
-
-            .nav-image {
-                display: flex;
-                gap: 0.75rem;
-                width: 35rem;
-                max-width: 10rem;
-            }
-
-            .nav-options-container {
-                width: 100%;
-                font-weight: lighter;
-                color: black;
-                font-size: 1.125rem;
-                margin-left: 1.25rem;
-                display: flex;
-                color: white;
-            }
-
-            @media (max-width: 1000px) {
-                .nav-options-container {
-                    display: none;
-                }
-            }
-
-            .nav-options {
-                display: flex;
-                width: fit-content;
-                gap: 20px;
-            }
-
-            .nav-link>h6 {
-                font-weight: 600;
-                font-size: 1rem;
-                display: block;
-                transition-property: all;
-                transition-timing-function: ease-in-out;
-                transition-delay: 150ms;
-                transition-duration: 0.3s;
-                background-color: transparent;
-                cursor: pointer;
-                border-radius: 0.25rem;
-
-                &:hover {
-                    transform: translateY(-1px) scale(1.1);
-                    transition: all 150ms ease-in-out;
-                }
-            }
-
-            .nav-link {
-                width: 1/7;
-            }
-
-            header {
-                height: 64px;
-                width: 100%;
-                position: fixed;
-                top: 0;
-                left: 0;
-                z-index: 100;
-                backdrop-filter: blur(70px);
-                background-color: rgba(0, 0, 0, 0.2);
-            }
-
-            .nav-icons {
-                color: white;
-                width: 100%;
-                display: flex;
-                justify-content: end;
-            }
-        </style>
 
         <!-- 2nd section -->
         <div class="second-section ">
@@ -388,7 +206,7 @@
                         <p class="">X</p>
                     </div>
                     <div class="responsive-text-below">
-                        <p class=" text-black">
+                        <p style="color: black;" class="">
                             GIANNIS ANTETOKOUNMPO
                             Joining forces with Breitling brand ambassador.
                         </p>
@@ -435,131 +253,8 @@
                 </div>
             </div>
         </div>
-        <style>
-            .second-section-container {
-                width: 85%;
-                height: 35vw;
-                margin: auto;
-                display: flex;
-                gap: 10px;
-            }
 
-            .second-section {
-                margin-top: 12px;
-                display: flex;
-                flex-direction: column;
-                width: 100%;
-                height: 100%;
-            }
-
-            #scrollTrigger_animation img:hover {
-                transform: translateY(-5px);
-                transition: all 0.5s ease-in-out;
-            }
-
-            .text-content {
-                height: 35vw;
-                width: 55vw;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-            }
-
-            .left {
-                align-items: flex-start;
-            }
-
-            .right {
-                align-items: flex-end;
-            }
-
-            .image-container {
-                display: flex;
-                justify-content: start;
-                width: 50%;
-            }
-
-            .image-container img {
-                object-fit: contain;
-                height: 35vw;
-                width: 100%;
-            }
-
-            .responsive-text-above {
-                font-size: 1.125rem;
-                font-weight: bold;
-                display: flex;
-                text-align: left;
-                height: fit-content;
-                width: 100%;
-                color: rgb(250 204 21);
-            }
-
-            .responsive-text-below {
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                color: #000;
-            }
-
-            .responsive-text-below button {
-                width: 25%;
-                min-width: 100px;
-                background-color: rgb(250 204 21);
-                font-weight: bold;
-                padding-top: 0.5rem;
-                padding-bottom: 0.5rem;
-                padding-left: 0.75rem;
-                padding-right: 0.75rem;
-            }
-
-            @media (max-width:400px) {
-                #scrollTrigger_animation div {
-                    font-size: x-small;
-                }
-            }
-
-            @media (min-width:401px) {
-                #scrollTrigger_animation div {
-                    font-size: small;
-                }
-            }
-
-            @media (min-width:700px) {
-                #scrollTrigger_animation div {
-                    font-size: large;
-                }
-
-                .second-section-container {
-                    height: 25vw;
-                }
-
-                .text-content {
-                    height: 25vw;
-                    width: 75vw;
-                }
-
-                .image-container img {
-                    height: 25vw;
-                }
-            }
-
-            @media (min-width:640px) {
-                .text-content {
-                    width: 70vw;
-                }
-
-                .image-container img {
-                    height: 34.8vw;
-                }
-            }
-        </style>
-        <script>
-            // Initialize GSAP and ScrollTrigger
-
-        </script>
-
+        <!-- Trendning Now Section -->
         <section class="trending-section">
             <div class="trending-section-heading">
                 <h1>
@@ -573,9 +268,9 @@
                         width="1920" height="2193" />
                     <div class="card__content | flow">
                         <div class="card__content--container | flow ">
-                            <h2 class="card__title text-white">NAVITIMER AUTOMATIC GMT 41</h2>
+                            <h2 class="card__title text-white">NAVITIMER AUTOMATIC GMT </h2>
                             <p class="card__description">
-                                INR 525 450
+                                INR 525 450 ₹
                             </p>
                         </div>
                         <button class="card__button">Add to Bag</button>
@@ -588,9 +283,9 @@
                         width="1920" height="2193" />
                     <div class="card__content | flow">
                         <div class="card__content--container | flow ">
-                            <h2 class="card__title text-white">NAVITIMER AUTOMATIC GMT 41</h2>
+                            <h2 class="card__title text-white">NAVITIMER AUTOMATIC GMT </h2>
                             <p class="card__description">
-                                INR 553 350
+                                INR 553 350 ₹
                             </p>
                         </div>
                         <button class="card__button">Add to Bag</button>
@@ -605,7 +300,7 @@
                         <div class="card__content--container | flow ">
                             <h2 class="card__title text-white">NAVITIMER AUTOMATIC 41</h2>
                             <p class="card__description">
-                                INR 483 600
+                                INR 483 600 ₹
                             </p>
                         </div>
                         <button class="card__button">Add to Bag</button>
@@ -620,7 +315,7 @@
                         <div class="card__content--container | flow ">
                             <h2 class="card__title ">NAVITIMER AUTOMATIC 41</h2>
                             <p class="card__description">
-                                INR 883 500
+                                INR 883 500 ₹
                             </p>
                         </div>
                         <button class="card__button ">Add to Bag</button>
@@ -631,293 +326,46 @@
         </section>
 
         <style>
-            .trending-section {
-                width: 100%;
-                margin-top: 40px;
-                display: flex;
-                flex-direction: column;
-            }
 
-            .trending-section-heading {
-                font-variant: small-caps;
-                width: 100%;
-                display: flex;
-                justify-content: space-between;
-                padding-left: 1.25rem;
-                align-items: center;
-                font-size: 4rem;
-                color: rgb(250 204 21);
-            }
-
-            .trending-track {
-                display: flex;
-                overflow-x: auto;
-                gap: 0.75rem;
-                margin-top: 1.25rem;
-                justify-content: flex-start;
-                padding-left: 1.25rem;
-            }
-
-            .flow>*+* {
-                margin-top: var(--flow-space, 1em);
-            }
-
-            .card {
-                display: grid;
-                place-items: center;
-                width: 300px;
-                height: 380px;
-                flex: 0 0 auto;
-                overflow: hidden;
-                box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
-            }
-
-            .card>* {
-                grid-column: 1 / 2;
-                grid-row: 1 / 2;
-            }
-
-            .blue-gradient {
-                background-color: rgba(187, 222, 251, 1);
-            }
-
-            .blue-gradient:hover {
-                background: linear-gradient(to bottom,
-                        rgba(4, 37, 73, 1) 0%,
-                        rgba(4, 37, 73, 0.5) 50%,
-                        rgba(4, 37, 73, 1) 100%);
-            }
-
-            .black-gradient {
-                background-color: #E5E7EB;
-            }
-
-            .black-gradient:hover {
-                background: linear-gradient(to bottom,
-                        rgba(0, 0, 0, 0.85) 0%,
-                        rgba(0, 0, 0, 0.5) 50%,
-                        rgba(0, 0, 0, 0.85) 100%);
-            }
-
-            .green-gradient {
-                background-color: rgba(22, 163, 74, 0.4);
-            }
-
-            .green-gradient:hover {
-                background: linear-gradient(to bottom,
-                        rgb(22, 101, 52, 1) 0%,
-                        rgb(22, 101, 52, 0.5) 50%,
-                        rgb(22, 101, 52, 1) 100%);
-            }
-
-            .stone-gradient {
-                background-color: rgb(168 162 158);
-            }
-
-            .stone-gradient:hover {
-                background: linear-gradient(to bottom,
-                        rgba(120, 113, 108, 1) 0%,
-                        rgba(120, 113, 108, 0.5) 50%,
-                        rgba(120, 113, 108, 1) 100%);
-            }
-
-            .card__background {
-                object-fit: cover;
-                max-width: 100%;
-                height: 100%;
-                transition: background-color 1s ease-in-out;
-            }
-
-            .card__content {
-                --flow-space: 0.9375rem;
-                display: flex;
-                width: 100%;
-                color: white;
-                flex-direction: column;
-                justify-content: space-between;
-                align-self: flex-end;
-                height: 55%;
-                padding: 12% 1.25rem 1.875rem;
-                background: linear-gradient(to bottom,
-                        rgba(0, 0, 0, 0) 0%,
-                        rgba(0, 0, 0, 0.25) 25%,
-                        rgba(0, 0, 0, 0.5) 50%,
-                        rgba(0, 0, 0, 1) 100%);
-                border-top-left-radius: 0.375rem;
-                border-top-right-radius: 0.375rem;
-            }
-
-            .card__content--container {
-                --flow-space: 1.25rem;
-            }
-
-            .card__title {
-                position: relative;
-                width: fit-content;
-            }
-
-            .card__title::after {
-                content: "";
-                position: absolute;
-                height: 0.3125rem;
-                width: calc(100% + 1.25rem);
-                bottom: calc((1.25rem - 0.5rem) * -1);
-                left: -1.25rem;
-                background-color: rgb(250 204 21);
-            }
-
-            .card__button {
-                padding: 0.5em 1.2em;
-                width: fit-content;
-                font-variant: small-caps;
-                font-weight: bold;
-                border-radius: 0.45em;
-                border: none;
-                font-size: 1.125rem;
-                color: black;
-                background-color: rgb(250 204 21);
-            }
-
-            .card__button:focus {
-                outline: 2px solid black;
-                outline-offset: -5px;
-            }
-
-            @media (any-hover: hover) and (any-pointer: fine) {
-                .card__content {
-                    transform: translateY(92%);
-                    transition: transform 500ms ease-out;
-                    transition-delay: 500ms;
-                }
-
-                .card__title::after {
-                    opacity: 0;
-                    transform: scaleX(0);
-                    transition: opacity 1000ms ease-in, transform 500ms ease-out;
-                    transition-delay: 500ms;
-                    transform-origin: right;
-                }
-
-                .card__background {
-                    transition: all 500ms ease-in-out;
-                }
-
-                .card__content--container> :not(.card__title),
-                .card__button {
-                    opacity: 0;
-                    transition: transform 500ms ease-out, opacity 500ms ease-out;
-                }
-
-                .card:hover,
-                .card:focus-within {
-                    transition: transform 500ms ease-in-out;
-                }
-
-                .card:hover .card__content,
-                .card:focus-within .card__content {
-                    transform: translateY(0%);
-                    transition: transform 500ms ease-in;
-                }
-
-                .card:focus-within .card__content {
-                    transition-duration: 0ms;
-                }
-
-                .card:hover .card__background,
-                .card:focus-within .card__background {
-                    transform: scale(2) translateX(20%);
-                }
-
-                .card:hover .card__content--container> :not(.card__title),
-                .card:hover .card__button,
-                .card:focus-within .card__content--container> :not(.card__title),
-                .card:focus-within .card__button {
-                    opacity: 1;
-                    transition: opacity 500ms ease-in-out, background-color 220ms ease-in-out;
-                    transition-delay: 400ms;
-                }
-
-                .card:hover .card__title::after,
-                .card:focus-within .card__title::after {
-                    opacity: 1;
-                    transform: scaleX(1);
-                    transform-origin: left;
-                    transition: opacity 300ms ease-in, transform 300ms ease-in;
-                    transition-delay: 300ms;
-                }
-            }
-
-            @media (max-width: 768px) {
-                .trending-section-heading {
-                    font-size: 2rem;
-                }
-
-                .card {
-                    font-size: 1rem;
-                    width: 40%;
-                    max-width: none;
-                }
-            }
-
-            @media (max-width: 600px) {
-                .card {
-                    width: 50%;
-                }
-            }
-
-            @media (max-width: 500px) {
-                .card {
-                    width: 60%;
-                }
-            }
-
-            @media (max-width: 371px) {
-                .card {
-                    width: 80%;
-                }
-            }
         </style>
 
         <!-- 4th section -->
 
-        <div class="mx-auto max-w-7xl text-black text-base font-normal leading-6">
-            <section class="p-8">
-                <div class="flex max-[800px]:flex-col -m-2 relative">
-                    <a aria-label="A star on and off the court" class="block h-full left-0 absolute top-0 w-full z-10"
+        <div class="fourth_Section">
+            <section class="">
+                <div class="fourth_Section_container">
+                    <a aria-label="A star on and off the court" class=""
                         href="/zz-zz/campaigns/chronomat-giannis-antetokounmpo/" title="A star on and off the court">
                     </a>
-                    <div class="flex w-[70%] items-center justify-center max-[800px]:w-full">
+                    <div class="fourth_Section_image_container">
 
-                        <div class="flex items-center p-2 text-center w-[100%]">
-                            <div class="fourth_section shrink-0 img overflow-hidden relative w-full">
+                        <div class="">
+                            <div class="fourth_section_image">
                                 <img src="https://www.breitling.com/media/image/4/single_entry_double_image_435/asset-version-0c66bacd46/chronomat-di-1.webp"
                                     alt="">
                             </div>
                         </div>
-                        <div class=" flex items-center p-2 text-center w-[100%]">
-                            <div class="fourth_section shrink-0 img overflow-hidden relative w-full">
+                        <div class=" ">
+                            <div class="fourth_section_image">
                                 <img src="https://www.breitling.com/media/image/4/single_entry_double_image_435/asset-version-b731f6f618/chronomat-di-2.webp"
                                     alt="">
                             </div>
                         </div>
                     </div>
 
-                    <div
-                        class="w-[30%] single-entry-double-image__content flex max-[800px]:w-full items-center p-2 text-center w-[30%] z-2">
-                        <div class="fourth_section text w-full text-center">
-                            <h2 class=" text-black text-4xl font-bold uppercase ">
-                                <a class="pointer hover:text-black"
-                                    href="/zz-zz/campaigns/chronomat-giannis-antetokounmpo/">
-                                    <span class="text-yellow-400">
+                    <div class="fourth-section_Text_container">
+                        <div class="text">
+                            <h2 class="">
+                                <a class="" href="/zz-zz/campaigns/chronomat-giannis-antetokounmpo/">
+                                    <span style="color: #ffc62d;">
                                         A star
                                     </span> on and off the court
                                 </a>
                             </h2>
-                            <div class="text-center">Meet the new limited-edition Giannis Antetokounmpo signature
+                            <div class="">Meet the new limited-edition Giannis Antetokounmpo signature
                                 Chronomat—co-designed by the basketball legend.</div>
-                            <div class="mt-4 w-full text-center">
-                                <a class="inline-block leading-snug pointer-events-auto bg-yellow-400 border-none rounded-none text-black cursor-pointer font-sans font-bold h-auto max-w-none outline-none px-4 py-2 text-center uppercase transition-all duration-300 ease-in-out w-full"
-                                    href="/zz-zz/campaigns/chronomat-giannis-antetokounmpo/">Discover more</a>
+                            <div class="fourth-section_Text_container_button">
+                                <a class="" href="/zz-zz/campaigns/chronomat-giannis-antetokounmpo/">Discover more</a>
                             </div>
                         </div>
                     </div>
@@ -925,32 +373,13 @@
             </section>
         </div>
 
-        <style>
-            section .img {
-                transform: translateX(-20px);
-                transition: all 0.75s ease-in-out;
-            }
-
-            section .text {
-                transform: translateX(20px);
-                transition: all 0.75s ease-in-out;
-            }
-
-            section.show .img,
-            section.show .text {
-                transform: translateX(0);
-                transition: all 0.5s ease-in-out;
-                transition-delay: 0.5s;
-            }
-        </style>
-
         <!-- 5th section -->
-        <div class="mx-auto max-w-7xl text-black text-base font-normal leading-6">
-            <section class=" lg:pt-6 lg:px-8 lg:pb-0">
-                <div class="mb-5 lg:mb-7.5">
+        <div class="exclusive_section">
+            <section class="">
+                <div class="exclusive_section_heading">
                     <div class="text-center">
-                        <h2 class="text-4xl lg:text-5xl text-[#111820] font-bold font-sans">
-                            <span class="text-yellow-400">Exclusive</span>
+                        <h2 class="">
+                            <span class="" style="color: #ffc62d;">Exclusive</span>
                             Breitling E-Boutique
                             services
                         </h2>
@@ -987,138 +416,6 @@
                         <img src="./assets/box-311.png" class="character" />
                     </div>
                 </div>
-                <style>
-                    :root {
-                        --card-height: 250px;
-                        --card-width: calc(var(--card-height) / 1.1);
-                    }
-
-                    .exclusive-card_container {
-                        /* width: 100vw; */
-                        height: max-content;
-                        margin-top: 40px;
-                        display: flex;
-                        flex-wrap: wrap;
-                        gap: 50px;
-                        justify-content: center;
-                        align-items: center;
-                    }
-
-                    .exclusive-card {
-                        width: var(--card-width);
-                        height: var(--card-height);
-                        position: relative;
-                        display: flex;
-                        justify-content: center;
-                        align-items: flex-end;
-                        /* padding: 0 36px; */
-                        perspective: 2500px;
-                        /* margin: 0 50px; */
-                    }
-
-                    .cover-image img {
-                        width: 75%;
-                        height: 75%;
-                        opacity: 1;
-                        transition-delay: 0.1s;
-                    }
-
-                    .cover-image {
-                        width: 100%;
-                        height: 100%;
-                        display: flex;
-                        justify-content: center;
-                        /* align-items:first baseline; */
-                        background: rgba(207, 203, 203, 0.5);
-                    }
-
-                    .wrapper {
-                        transition: all 0.5s;
-                        position: absolute;
-                        width: 100%;
-                        z-index: -1;
-                        height: 250px;
-                    }
-
-                    .card:hover .wrapper {
-                        transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
-                        box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-                        -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-                        -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-                    }
-
-                    .wrapper::before,
-                    .wrapper::after {
-                        content: "";
-                        opacity: 0;
-                        width: 100%;
-                        height: 135px;
-                        transition: all 0.5s;
-                        position: absolute;
-                        left: 0;
-                    }
-
-                    .wrapper::before {
-                        top: 0;
-                        height: 100%;
-                        background-image: linear-gradient(to top,
-                                transparent 46%,
-                                rgba(240, 210, 13, 0.826) 68%,
-                                rgba(240, 210, 13, 0.968) 97%);
-                    }
-
-                    .wrapper::after {
-                        bottom: 0;
-                        opacity: 1;
-                        background-image: linear-gradient(to bottom,
-                                transparent 46%,
-                                rgba(240, 210, 13, 0.826) 68%,
-                                rgba(240, 210, 13, 0.968) 97%);
-                    }
-
-                    .exclusive-card:hover .cover-image img {
-                        opacity: 0;
-
-                    }
-
-                    .exclusive-card:hover .wrapper::before,
-                    .wrapper::after {
-                        opacity: 1;
-                    }
-
-                    .exclusive-card:hover .wrapper::after {
-                        height: 120px;
-                    }
-
-                    .title {
-                        /* width: 100%; */
-                        height: 50px;
-                        /* border: 1px solid seagreen; */
-                        transition: transform 0.5s;
-                        font-size: large;
-                        font-weight: 600;
-                        display: flex;
-                        align-items: center;
-                        text-align: center;
-                    }
-
-                    .exclusive-card:hover .title {
-                        transform: translate3d(0%, -20px, 100px);
-                    }
-
-                    .character {
-                        width: 90%;
-                        opacity: 0;
-                        transition: all 0.5s;
-                        position: absolute;
-                        z-index: -1;
-                    }
-
-                    .exclusive-card:hover .character {
-                        opacity: 1;
-                        transform: translate3d(0%, -30%, 300px);
-                    }
-                </style>
             </section>
         </div>
 
@@ -1188,132 +485,26 @@
         </div>
 
         <style>
-            .section-single-cta-container {
-                margin: 0 auto;
-                margin-top: 1.25rem;
-                max-width: 80rem;
-                color: black;
-                font-size: 1rem;
-                font-weight: 400;
-                line-height: 1.5;
-            }
 
-            .section-single-cta__wrapper {
-                margin-bottom: 1rem;
-                position: relative;
-
-            }
-
-            .block-big-link {
-                display: block;
-                height: 100%;
-                left: 0;
-                position: absolute;
-                top: 0;
-                width: 100%;
-                z-index: 10;
-                color: black;
-                text-decoration: none;
-                transition: all 0.2s ease-in-out;
-            }
-
-            .section-single-cta__content {
-                position: absolute;
-                inset: 0;
-                padding: 12px;
-                padding-top: 50px;
-                padding-bottom: 30px;
-                padding-left: 22px;
-                padding-right: 22px;
-                text-align: center;
-                color: white;
-                pointer-events: none;
-                z-index: 10;
-            }
-
-            .content__wrapper {
-                box-sizing: border-box;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                height: 100%;
-                text-align: center;
-            }
-
-            .content__title {
-                height: fit-content;
-                color: white;
-                font-weight: bold;
-                text-transform: uppercase;
-                line-height: 1.25;
-                font-size: 1.875rem;
-            }
-
-
-            @media (min-width: 768px) {
-                .content__wrapper {
-                    text-align: left;
-                    justify-content: flex-start;
-                }
-            }
-
-            @media (min-width: 1024px) {
-                .section-single-cta__wrapper {
-                    margin-bottom: 2rem;
-                }
-
-                .content__wrapper {
-                    justify-content: flex-start;
-                    text-align: left;
-                }
-            }
-
-            .section-single-cta__image {
-                overflow: hidden;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                height: 320px;
-                position: relative;
-            }
-
-            .section-single-cta__image>img {
-                position: absolute;
-                inset: 0;
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-                object-position: center;
-                transform: scale(1);
-                transition: all 0.75s ease-in-out;
-            }
-
-            .section-single-cta:hover .section-single-cta__image>img {
-                transform: scale(1.1);
-                transition: all 0.75s ease-in-out;
-            }
         </style>
 
         <!-- 7th section -->
 
         <div class="section-cta-container">
-            <section class="section-cta p-0 lg:px-8 lg:pb-8 lg:pt-0">
-                <div class="cols-wrapper flex flex-wrap -m-4 lg:-m-2">
-                    <div class="col p-4 w-full min-[610px]:p-2 min-[610px]:w-1/2 ">
-                        <div class="col__wrapper relative">
-                            <div class="col__background relative">
+            <section class="section-cta ">
+                <div class="cols-wrapper">
+                    <div class="sections-cta-col ">
+                        <div class="col__wrapper ">
+                            <div class="col__background">
                                 <img src="./assets/home-straps.webp" alt="">
                             </div>
-                            <div
-                                class="col__front h-full left-0 pointer-events-none absolute right-0  z-30 min-[992px]:h-auto">
-                                <div
-                                    class="front__content text-white flex flex-col h-full text-center p-[50px_22px_30px] min-[992px]:block min-[992px]:pt-12 min-[992px]:px-[22px] min-[992px]:pb-0">
-                                    <h2
-                                        class="content__title font-heading  text-white text-2xl font-bold text-center uppercase min-[992px]:text-4xl">
+                            <div class="col__front">
+                                <div class="front__content">
+                                    <h2 class="content__title ">
                                         <!-- <a href="/us-en/straps/all/"> Straps </a> -->
                                         <span>S</span><span>t</span><span>r</span><span>a</span><span>p</span><span>s</span>
                                     </h2>
-                                    <div class="content__text max-w-sm">
+                                    <div class="content__text ">
                                         <span>Made</span>
                                         <span>from</span>
                                         <span>leather,</span>
@@ -1339,8 +530,7 @@
                                         <span>look.</span>
                                     </div>
 
-                                    <a
-                                        class="backToHomeButton1 cssbuttons-io-button btn inline-block pointer-events-auto mt-auto lg:my-4 lg:w-auto block border-none flex justify-center rounded-none text-black cursor-pointer font-open-sans font-bold h-auto max-w-none outline-none py-4 px-12 text-center uppercase transition-all duration-300 ease-in-out w-full no-underline transition-colors duration-200 ease-in-out">
+                                    <a class="backToHomeButton1 cssbuttons-io-button btn ">
                                         <div class="arrow-icon">
                                             <svg height="24" width="24" viewBox="0 0 24 24"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -1356,21 +546,18 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col p-4 w-full min-[610px]:p-2 min-[610px]:w-1/2">
-                        <div class="col__wrapper relative">
-                            <div class="col__background relative">
+                    <div class="sections-cta-col">
+                        <div class="col__wrapper ">
+                            <div class="col__background">
                                 <img src="./assets/_mg_9785.webp" alt="">
                             </div>
-                            <div
-                                class="col__front h-full left-0 pointer-events-none absolute right-0  z-30 min-[992px]:h-auto">
-                                <div
-                                    class="front__content text-white flex flex-col h-full text-center p-[50px_22px_30px] min-[992px]:block min-[992px]:pt-12 min-[992px]:px-[22px] min-[992px]:pb-0">
-                                    <h2
-                                        class="content__title font-heading  text-white text-2xl font-bold text-center uppercase min-[992px]:text-4xl">
+                            <div class="col__front">
+                                <div class="front__content">
+                                    <h2 class="content__title ">
                                         <!-- <a href="/us-en/service/"> Services </a> -->
                                         <span>S</span><span>e</span><span>r</span><span>v</span><span>i</span><span>c</span><span>e</span><span>s</span>
                                     </h2>
-                                    <div class="content__text max-w-sm"><span>Explore</span>
+                                    <div class="content__text "><span>Explore</span>
                                         <span>our</span>
                                         <span>comprenhensive</span>
                                         <span>set</span>
@@ -1406,201 +593,6 @@
                 </div>
             </section>
         </div>
-        <style>
-            .backToHomeButton1 {
-                display: inline-block;
-                pointer-events: auto;
-                width: 100%;
-                height: auto;
-                max-width: none;
-                border: none;
-                border-radius: 0;
-                color: black;
-                cursor: pointer;
-                font-family: 'Open Sans', sans-serif;
-                font-weight: bold;
-                text-align: center;
-                text-transform: uppercase;
-                text-decoration: none;
-                outline: none;
-                transition: all 0.3s ease-in-out, color 0.2s ease-in-out;
-            }
-
-            #backToHomeButton2 {
-                width: 210px;
-            }
-
-            .col__background {
-                overflow: hidden;
-            }
-
-            .col__background::after {
-                content: "";
-                background-color: #0000003d;
-                position: absolute;
-                top: 0;
-                display: block;
-                height: 100%;
-                width: 100%;
-            }
-
-            .col:hover .col__background::after {
-                content: "";
-                background-color: #000000a0;
-                position: absolute;
-                top: 0;
-                display: block;
-                height: 100%;
-                width: 100%;
-                transition: all 0.5s ease-in-out;
-            }
-
-            .col__front {
-                bottom: 80px;
-            }
-
-            .col__background>img {
-                transform: scale(1);
-                transition: all 0.75s ease-in-out;
-            }
-
-            .col:hover .col__background>img {
-                transform: scale(1.1);
-                transition: all 0.75s ease-in-out;
-            }
-
-            .cssbuttons-io-button {
-                width: 170px;
-                background: #ffc62d;
-                color: black;
-                font-family: inherit;
-                padding: 0.35em;
-                margin-inline: auto;
-                padding-left: 1.2em;
-                font-size: medium;
-                font-weight: 700;
-                border-radius: 0.5em;
-                border: none;
-                letter-spacing: 0.05em;
-                display: flex;
-                align-items: center;
-                box-shadow: inset 0 0 1.6em -0.6em #ffc62d;
-                overflow: hidden;
-                position: relative;
-                min-height: 2.8em;
-                padding-right: 3.3em;
-                cursor: pointer;
-            }
-
-            .cssbuttons-io-button .arrow-icon {
-                background: white;
-                margin-left: 1em;
-                position: absolute;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                height: 2.2em;
-                width: 2.2em;
-                border-radius: 0.3em;
-                box-shadow: 0.1em 0.1em 0.6em 0.2em #ffc62d;
-                right: 0.3em;
-                transition: all 0.3s;
-            }
-
-            .cssbuttons-io-button:hover .arrow-icon {
-                width: calc(100% - 0.6em);
-            }
-
-            .cssbuttons-io-button .arrow-icon svg {
-                width: 1.1em;
-                transition: transform 0.3s;
-                color: black;
-            }
-
-            .cssbuttons-io-button:hover .arrow-icon svg {
-                transform: translateX(0.1em);
-            }
-
-            .cssbuttons-io-button:active .arrow-icon {
-                transform: scale(0.95);
-            }
-
-
-            .content__btn {
-                opacity: 0;
-                transform: scale(0.8);
-                transition: opacity 2.5s ease, transform 2.5s ease;
-            }
-
-            .content__btn.show {
-                opacity: 1;
-                transform: scale(1);
-            }
-
-            /* Animation keyframes for typing effect */
-            @keyframes typingEffect1 {
-                0% {
-                    opacity: 0;
-                    transform: translateX(150px);
-                    /* Move letters from right to left */
-                }
-
-                100% {
-                    opacity: 1;
-                    transform: translateX(0);
-                }
-            }
-
-            /* Apply animation to each span inside .content__title */
-            .content__title span {
-                z-index: 0;
-                display: inline-block;
-                opacity: 0;
-                animation: typingEffect1 4s forwards;
-                /* Adjust timing as needed */
-            }
-
-            /* Delay each span animation progressively */
-            .content__title span:nth-child(1) {
-                animation-delay: calc(1s * var(--i));
-                /* Adjust delay increment */
-            }
-
-            .section-single-cta.show .content__title span,
-            .section-cta.show .content__title span {
-                animation: typingEffect1 4s forwards;
-            }
-
-            @keyframes typingEffect2 {
-                0% {
-                    opacity: 0;
-                    transform: translateX(-50px);
-                    /* Move letters from right to left */
-                }
-
-                100% {
-                    opacity: 1;
-                    transform: translateX(0);
-                }
-            }
-
-            .content__text span {
-                z-index: 0;
-                display: inline-block;
-                opacity: 0;
-                /* Adjust timing as needed */
-            }
-
-            .section-single-cta.show .content__text span,
-            .section-cta.show .content__text span {
-                animation: typingEffect2 4s forwards;
-            }
-
-            .content__text span:nth-child(1) {
-                animation-delay: calc(1s * var(--i));
-                /* Adjust delay increment */
-            }
-        </style>
         <script>
 
             function animateText(element) {
@@ -1623,14 +615,13 @@
         </script>
         <!-- 8th section -->
 
-        <div class="br-11-20 mx-auto max-w-[1400px] text-black text-base font-normal leading-6">
-            <section class="single-entry single-entry-full-width pt-0 px-4 pb-7 min-[992px]:px-8">
-                <div class="entry__wrapper w-full">
+        <div class="single-entry-section">
+            <section class="single-entry">
+                <div class="entry__wrapper">
                     <div class="entry__content">
-                        <div class="content__wrapper text-center">
-                            <h2
-                                class="content__title content__title--bigger font-heading font-bold text-2xl leading-tight uppercase min-[992px]:text-4xl">
-                                <span class="text-yellow-400">Find
+                        <div class="entry_content__wrapper">
+                            <h2 class="content__title--bigger">
+                                <span style="color: #ffc62d;">Find
                                     your </span> nearest Breitling Boutique
                             </h2>
                         </div>
@@ -1639,20 +630,6 @@
             </section>
         </div>
 
-        <style>
-            /* Custom styles for properties not directly supported by Tailwind */
-            .slider-css {
-                -ms-overflow-style: none;
-                /* Hide scrollbar for IE */
-                scrollbar-width: none;
-                /* Hide scrollbar for Firefox */
-            }
-
-            .slider-css::-webkit-scrollbar {
-                display: none;
-                /* Hide scrollbar for WebKit browsers */
-            }
-        </style>
         <!-- 9th Section -->
         <div class="store-informations-container">
             <div class="limited-width">
@@ -2014,517 +991,177 @@
             </div>
         </div>
 
-
-        <style>
-            /* #store-links-1{
-                margin-top: 15px;
-            } */
-
-            .store-informations-container {
-                border-radius: 11px 20px;
-                margin-bottom: 10px;
-                margin-inline: auto;
-                max-width: 1400px;
-                color: black;
-                font-size: larger;
-                font-weight: 400;
-                line-height: 1.5;
-            }
-
-            .single-entry {
-                padding-top: 0;
-                padding-left: 16px;
-                padding-right: 16px;
-                padding-bottom: 28px;
-            }
-
-            .entry-wrapper {
-                width: 100%;
-            }
-
-            .content-wrapper {
-                text-align: center;
-            }
-
-            .content-title {
-                font-family: 'Heading Font', sans-serif;
-                font-weight: bold;
-                font-size: 2.5rem;
-                line-height: 1.25;
-                text-transform: uppercase;
-            }
-
-            @media (min-width: 992px) {
-                .single-entry {
-                    padding-left: 32px;
-                    padding-right: 32px;
-                }
-            }
-
-            .highlight {
-                color: #FFD700;
-                /* Yellow color */
-            }
-
-            .limited-width {
-                margin: auto;
-                max-width: 1400px;
-            }
-
-            .block-store-desktop {
-                padding-left: 16px;
-                padding-right: 16px;
-                position: relative;
-                margin-left: -8px;
-                margin-right: -8px;
-            }
-
-            @media (min-width: 768px) {
-                .block-store-desktop {
-                    padding-left: 30px;
-                    padding-right: 30px;
-                }
-            }
-
-            .store-slider {
-                display: flex;
-                position: relative;
-                margin-right: -15px;
-                overflow-x: scroll;
-                overflow-y: hidden;
-                scroll-behavior: smooth;
-                -ms-overflow-style: none;
-                /* Hide scrollbar for IE and Edge */
-                scrollbar-width: none;
-                /* Hide scrollbar for Firefox */
-            }
-
-            .store-slider::-webkit-scrollbar {
-                display: none;
-                /* Hide scrollbar for Chrome, Safari, and Opera */
-            }
-
-            .store-wrapper {
-                display: flex;
-                max-width: 33.333333%;
-                min-width: 33.333333%;
-                min-width: 76.923077%;
-                cursor: pointer;
-                padding-left: 8px;
-                padding-right: 8px;
-            }
-
-            @media (min-width: 768px) {
-                .store-wrapper {
-                    max-width: 33.333333%;
-                    min-width: 33.333333%;
-                    padding-left: 16px;
-                    padding-right: 16px;
-                }
-            }
-
-            .store-content {
-                display: flex;
-                background-color: white;
-                height: 100%;
-            }
-
-            .store-informations {
-                display: flex;
-                height: 100%;
-                flex-direction: column;
-                justify-content: space-between;
-                width: 100%;
-                padding: 20px;
-                border: 1.5px solid #ffc62d;
-            }
-
-            .store-title {
-                /* font-size: 1.0rem; */
-                text-align: center;
-                color: #ffc62d;
-                margin-bottom: 5px;
-                font-weight: 600;
-            }
-
-            @media (min-width: 768px) {
-                .store-title {
-                    font-size: 1.45rem;
-                }
-            }
-
-            @media (max-width:880px) {
-                .store-slider {
-                    gap: 30px;
-                }
-
-            }
-
-            .store-subtitle {
-                position: relative;
-                min-height: fit-content;
-            }
-
-            @media (max-width: 768px) {
-                .store-subtitle {
-                    font-size: small;
-                }
-
-                .store-title {
-                    font-size: medium;
-                }
-
-            }
-
-            .icon {
-                display: none;
-            }
-
-            @media (min-width: 768px) {
-                .icon {
-                    display: inline-block;
-                    margin-right: 10px;
-                }
-            }
-
-            .phone {
-                width: 100%;
-            }
-
-            .hidden-mobile-tablet {
-                margin-block: 5px;
-            }
-
-            .store-label {
-                font-weight: bold;
-                font-family: 'Heading Font', sans-serif;
-                font-size: 1rem;
-                border-top: 3px solid white;
-                /* padding-top: 7px; */
-                background-color: white;
-                width: 100%;
-                margin-top: 0px;
-            }
-
-            .content-table {
-                display: flex;
-                width: 100%;
-                /* background-color: #ffc62d; */
-                /* border: 1px solid white; */
-                justify-content: center;
-                align-items: center;
-            }
-
-            table {
-                text-align: left;
-            }
-
-            .store-links {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .link {
-                color: #2D3748;
-                font-weight: bold;
-                font-size: 1rem;
-                margin: 0 8px 8px 8px;
-                text-decoration: underline;
-                transition: color 0.3s ease-out;
-            }
-
-            .link:hover {
-                color: #4A5568;
-            }
-
-            .store-button {
-                display: block;
-                color: #ffc62d;
-                border: 3px solid #ffc62d;
-                text-align: center;
-                font-weight: bold;
-                text-transform: uppercase;
-                padding: 16px 40px;
-                transition: color 0.3s ease-in-out;
-            }
-
-            .store-button:hover {
-                /* color: white; */
-                color: black;
-                background-color: #ffc62d;
-            }
-
-            @media (min-width: 768px) {
-                .store-button {
-                    padding: 16px 40px;
-                }
-            }
-
-            /* Initial Styles */
-
-            .store__informations.animate-face1 {
-                transform: translateY(100px);
-                transition: transform 1.5s;
-            }
-
-            .store__informations.animate-face1.show {
-                transform: translateY(0);
-            }
-
-            .opening-hours {
-                display: flex;
-                border-block: 3px solid #ffc62d;
-                padding-top: 3px;
-                padding-bottom: 10px;
-                flex-direction: column;
-                /* background-color: #ffc62d; */
-                text-align: center;
-                align-items: center;
-                transform: translateY(100px);
-                transition: transform 1.5s;
-            }
-
-            .opening-hours.show {
-                transform: translateY(0);
-            }
-
-            .animate-wrapper {
-                display: -webkit-box;
-                -webkit-line-clamp: 5;
-                -webkit-box-orient: vertical;
-                overflow: hidden;
-                transform: translateY(100px);
-                transition: transform 1.5s;
-            }
-
-            .animate-wrapper.show {
-                transform: translateY(0);
-            }
-        </style>
-
-        <div class="br-11-20 mx-auto max-w-[1400px] text-black text-base font-normal leading-6">
-            <footer class="footer text-sm bg-transparent relative z-1">
-                <div class="top-wrapper bg-black text-white min-[992px]:pt-[60px]">
-                    <div class="container px-[30px] w-full max-w-[1400px]">
-                        <div class="footer-contact-center min-[992px]:pb-3.5 uppercase">
-                            <div class="font-heading text-center ">
-                                <div class="inline mx-2.5 pl-2 ">
-                                    <a class="phone" href="tel:+1 203-456-2458">
-                                        <i class="fa-solid fa-phone"></i> +1 203-456-2458 </a>
-                                </div>
-                                <div class="inline mx-[10px] pl-[7px] "><a href="/us-en/store/services/contact/"
-                                        itemprop="url"> MON-FRI
-                                        09:00-18:00, SAT-SUN: CLOSED </a> </li>
-                                </div>
-                                <div class="inline mx-[10px] pl-[7px] "><a href="mailto:info.us@breitling.com">
-                                        info.us@breitling.com </a>
-                                </div>
-                            </div>
-                            <div class="wrapper-header flex flex-wrap items-center min-[992px]:flex-nowrap">
-                                <nav
-                                    class="font-heading nav min-[992px]:ml-10 overflow-hidden basis-full min-[992px]:basis-auto">
-                                    <ul class="border-t border-gray-800 flex flex-wrap justify-center mt-6 pt-5 min-[992px]:border-t-0 min-[992px]:justify-start min-[992px]:m-0 min-[992px]:p-0"
-                                        itemscope="" itemtype="https://schema.org/SiteNavigationElement">
-                                        <li
-                                            class="name pl-2 mb-7 relative text-center min-[992px]:text-left min-[992px]:mb-0">
-                                            <a href="/us-en/watches/" itemprop="url">
-                                                watches
+        <!-- footer section -->
+        <div class="footer-container">
+            <footer class="footer">
+                <div class="footer-top-wrapper">
+                    <div class="footer-container-inner">
+                        <div class="footer-contact-center">
+                            <div class="footer-wrapper-header">
+                                <nav class="footer-nav">
+                                    <ul class="footer-nav-list" itemscope
+                                        itemtype="https://schema.org/SiteNavigationElement">
+                                        <li class="footer-nav-item">
+                                            <a href="/us-en/watches/" class="footer_nav-link" itemprop="url">
+                                                <p class="dot">.</p>watches
                                             </a>
                                         </li>
-                                        <li
-                                            class="name pl-2 mb-7 relative text-center min-[992px]:text-left min-[992px]:mb-0">
-                                            <a href="/us-en/straps/" itemprop="url">
-                                                Straps </a>
-                                        </li>
-                                        <li
-                                            class="name pl-2 mb-7 relative text-center min-[992px]:text-left min-[992px]:mb-0">
-                                            <a href="/us-en/service/" itemprop="url">
-                                                Service
+                                        <li class="footer-nav-item">
+                                            <a href="/us-en/straps/" class="footer_nav-link" itemprop="url">
+                                                <p class="dot">.</p>Straps
                                             </a>
                                         </li>
-                                        <li
-                                            class="name pl-2 mb-7 relative text-center min-[992px]:text-left min-[992px]:mb-0">
-                                            <a href="/us-en/stores/us/" itemprop="url">
-                                                Stores
+                                        <li class="footer-nav-item">
+                                            <a href="/us-en/service/" class="footer_nav-link" itemprop="url">
+                                                <p class="dot">.</p>Service
                                             </a>
                                         </li>
-                                        <li
-                                            class="name pl-2 mb-7 relative text-center min-[992px]:text-left min-[992px]:mb-0">
-                                            <a href="/us-en/about/" itemprop="url">
-                                                About </a>
-                                        </li>
-                                        <li
-                                            class="name pl-2 mb-7 relative text-center min-[992px]:text-left min-[992px]:mb-0">
-                                            <a href="/us-en/my-account/" itemprop="url">
-                                                My
-                                                account
+                                        <li class="footer-nav-item">
+                                            <a href="/us-en/stores/us/" class="footer_nav-link" itemprop="url">
+                                                <p class="dot">.</p>Stores
                                             </a>
                                         </li>
-                                        <li
-                                            class="name pl-2 mb-7 relative text-center min-[992px]:text-left min-[992px]:mb-0">
-                                            <a href="/us-en/service/faq/" itemprop="url"> FAQS
+                                        <li class="footer-nav-item">
+                                            <a href="/us-en/about/" class="footer_nav-link" itemprop="url">
+                                                <p class="dot">.</p>About
                                             </a>
                                         </li>
-                                        <li
-                                            class="name pl-2 mb-7 relative text-center min-[992px]:text-left min-[992px]:mb-0">
-                                            <a class="newsletter-popup-link" data-dyn-disable="1"
-                                                data-newsletter-popup-options="{&quot;formUrl&quot;:&quot;\/us-en\/newsletter\/subscribe\/popup\/&quot;,&quot;openingSource&quot;:&quot;footer&quot;}"
-                                                data-popin-id="newsletter" data-popin-title="Newsletter"
-                                                href="/us-en/newsletter/subscribe/" itemprop="url"> Newsletter </a>
+                                        <li class="footer-nav-item">
+                                            <a href="/us-en/my-account/" class="footer_nav-link" itemprop="url">
+                                                <p class="dot">.</p>My account
+                                            </a>
                                         </li>
-                                        <li
-                                            class="name pl-2 mb-7 relative text-center min-[992px]:text-left min-[992px]:mb-0">
-                                            <a class="chronolog-popup-link gtm-event-track-click-active"
-                                                data-chronolog-popup-options="{&quot;formUrl&quot;:&quot;\/us-en\/chronolog\/order-ajax\/&quot;}"
-                                                data-dyn-disable=""
-                                                data-gtm-event="{&quot;event&quot;:&quot;chronologDownload&quot;}"
-                                                data-popin-id="download_catalog" data-popin-title="Download the catalog"
-                                                href="#" itemprop="url"> Download the catalog </a>
+                                        <li class="footer-nav-item">
+                                            <a href="/us-en/service/faq/" class="footer_nav-link" itemprop="url">
+                                                <p class="dot">.</p>FAQS
+                                            </a>
                                         </li>
-                                        <li
-                                            class="name pl-2 mb-7 relative text-center min-[992px]:text-left min-[992px]:mb-0">
-                                            <a href="/us-en/store/order-status/" itemprop="url">
-                                                Check
-                                                your
-                                                order </a>
+                                        <li class="footer-nav-item">
+                                            <a class="newsletter-popup-link footer_nav-link"
+                                                href="/us-en/newsletter/subscribe/" itemprop="url">
+                                                <p class="dot">.</p>Newsletter
+                                            </a>
                                         </li>
+                                        <li class="footer-nav-item">
+                                            <a class="chronolog-popup-link footer_nav-link" href="#" itemprop="url">
+                                                <p class="dot">.</p>Download the catalog
+                                            </a>
+                                        </li>
+                                        <a class="footer-button-st" href="/choose-country-region/">
+                                            <i class="fa-solid fa-globe pr-2"></i>INDIA - ENGLISH
+                                        </a>
                                     </ul>
-                                </nav> <a
-                                    class="button-st justify-center block cursor-pointer border-2 border-white font-open-sans text-[14px] font-bold ml-auto py-3 px-2.5 text-center uppercase whitespace-nowrap transition-none"
-                                    href="/choose-country-region/">
-                                    <i class="fa-solid fa-globe"></i>
-                                    UNITED STATES - ENGLISH </a>
+                                </nav>
                             </div>
-                            <div class="socials mt-7 flex items-center justify-center">
-                                <ul class="flex justify-between items-center w-80">
-                                    <li class="name pl-2 ">
-                                        <a aria-label="instagram" class="gtm-event-track-click-active"
-                                            data-gtm-event="{&quot;event&quot;:&quot;socialFollow&quot;,&quot;socialNetwork&quot;:&quot;instagram&quot;,&quot;siteLocation&quot;:&quot;footer&quot;}"
-                                            href="https://instagram.com/breitling" itemprop="sameAs" rel="noopener"
-                                            target="_blank" title="Instagram Breitling page">
-                                            <i class="fa-brands fa-2xl h-10 fa-instagram"></i>
-                                        </a>
+                            <div class="footer-socials">
+                                <ul class="footer-socials-list">
+                                    <li class="footer-social-item">
+                                        <button class="footer-Btn">
+                                            <span class="svgContainer">
+                                                <i class="fa-brands fa-instagram"></i>
+                                            </span>
+                                            <span class="footer-BG"></span>
+                                        </button>
                                     </li>
-                                    <li class="name pl-2 "><a aria-label="facebook" class="gtm-event-track-click-active"
-                                            data-gtm-event="{&quot;event&quot;:&quot;socialFollow&quot;,&quot;socialNetwork&quot;:&quot;facebook&quot;,&quot;siteLocation&quot;:&quot;footer&quot;}"
-                                            href="https://www.facebook.com/Breitling" itemprop="sameAs" rel="noopener"
-                                            target="_blank" title="Facebook Breitling page">
-                                            <i class="fa-brands fa-2xl h-10 fa-facebook"></i>
-                                        </a>
+                                    <li class="footer-social-item">
+                                        <button class="footer-Btn">
+                                            <span class="svgContainer">
+                                                <i class="fa-brands fa-facebook"></i>
+                                            </span>
+                                            <span class="footer-BG"></span>
+                                        </button>
                                     </li>
-                                    <li class="name pl-2 "><a aria-label="youtube" class="gtm-event-track-click-active"
-                                            data-gtm-event="{&quot;event&quot;:&quot;socialFollow&quot;,&quot;socialNetwork&quot;:&quot;youtube&quot;,&quot;siteLocation&quot;:&quot;footer&quot;}"
-                                            href="https://www.youtube.com/breitling" itemprop="sameAs" rel="noopener"
-                                            target="_blank" title="Youtube Breitling page">
-                                            <i class="fa-brands fa-2xl h-10 fa-youtube"></i>
-                                        </a> </li>
-                                    <li class="name pl-2 "><a aria-label="tiktok" class="gtm-event-track-click-active"
-                                            data-gtm-event="{&quot;event&quot;:&quot;socialFollow&quot;,&quot;socialNetwork&quot;:&quot;tiktok&quot;,&quot;siteLocation&quot;:&quot;footer&quot;}"
-                                            href="https://www.tiktok.com/@breitling" itemprop="sameAs" rel="noopener"
-                                            target="_blank" title="TikTok Breitling page">
-                                            <i class="fa-brands fa-2xl h-10 fa-tiktok"></i>
-                                        </a>
+                                    <li class="footer-social-item">
+                                        <button class="footer-Btn">
+                                            <span class="svgContainer">
+                                                <i class="fa-brands fa-youtube"></i>
+                                            </span>
+                                            <span class="footer-BG"></span>
+                                        </button>
                                     </li>
-                                    <li class="name pl-2 "><a aria-label="twitter" class="gtm-event-track-click-active"
-                                            data-gtm-event="{&quot;event&quot;:&quot;socialFollow&quot;,&quot;socialNetwork&quot;:&quot;twitter&quot;,&quot;siteLocation&quot;:&quot;footer&quot;}"
-                                            href="https://twitter.com/breitling" itemprop="sameAs" rel="noopener"
-                                            target="_blank" title="Twitter Breitling page">
-                                            <i class="fa-brands fa-2xl h-10 fa-tiktok"></i>
-                                        </a>
+                                    <li class="footer-social-item">
+                                        <button class="footer-Btn">
+                                            <span class="svgContainer">
+                                                <i class="fa-brands fa-tiktok"></i>
+                                            </span>
+                                            <span class="footer-BG"></span>
+                                        </button>
                                     </li>
-                                    <li class="name pl-2 "><a aria-label="pinterest"
-                                            class="gtm-event-track-click-active"
-                                            data-gtm-event="{&quot;event&quot;:&quot;socialFollow&quot;,&quot;socialNetwork&quot;:&quot;pinterest&quot;,&quot;siteLocation&quot;:&quot;footer&quot;}"
-                                            href="https://www.pinterest.com/breitling/" itemprop="sameAs" rel="noopener"
-                                            target="_blank" title="Pinterest Breitling page">
-                                            <i class="fa-brands fa-2xl h-10 fa-pinterest"></i>
-                                        </a>
+                                    <li class="footer-social-item">
+                                        <button class="footer-Btn">
+                                            <span class="svgContainer">
+                                                <i class="fa-brands fa-twitter"></i>
+                                            </span>
+                                            <span class="footer-BG"></span>
+                                        </button>
                                     </li>
-                                    <li class="name pl-2 "><a aria-label="strava" class="gtm-event-track-click-active"
-                                            data-gtm-event="{&quot;event&quot;:&quot;socialFollow&quot;,&quot;socialNetwork&quot;:&quot;strava&quot;,&quot;siteLocation&quot;:&quot;footer&quot;}"
-                                            href="https://www.strava.com/clubs/breitling1884" itemprop="sameAs"
-                                            rel="noopener" target="_blank" title="Strava Breitling page">
-                                            <i class="fa-brands fa-2xl fa-strava h-10 "></i>
-                                        </a>
+                                    <li class="footer-social-item">
+                                        <button class="footer-Btn">
+                                            <span class="svgContainer">
+                                                <i class="fa-brands fa-pinterest"></i>
+                                            </span>
+                                            <span class="footer-BG"></span>
+                                        </button>
+                                    </li>
+                                    <li class="footer-social-item">
+                                        <button class="footer-Btn">
+                                            <span class="svgContainer">
+                                                <i class="fa-brands fa-strava"></i>
+                                            </span>
+                                            <span class="footer-BG"></span>
+                                        </button>
                                     </li>
                                 </ul>
                             </div>
-                            <div class="menuas flex mt-6 justify-center">
-                                <ul class="flex justify-center items-center flex-wrap">
-                                    <li class="my-1.5 mx-2.5 min-[992px]:mx-2 "><a
-                                            class="text-white opacity-85 no-underline" href="/us-en/terms-of-use/">Terms
-                                            of
-                                            use</a> </li>
-                                    <li class="my-1.5 mx-2.5 min-[992px]:mx-2 "><a
-                                            class="text-white opacity-85 no-underline" href="/us-en/press-lounge/"
-                                            rel="noopener">Press
-                                            lounge</a> </li>
-                                    <li class="my-1.5 mx-2.5 min-[992px]:mx-2 "><a
-                                            class="text-white opacity-85 no-underline" href="/us-en/career/">Career</a>
+                            <div class="menuas">
+                                <ul class="menuas-list">
+                                    <li class="menuas-item"><a class="footer-text" href="/us-en/terms-of-use/">Terms of
+                                            use</a></li>
+                                    <li class="menuas-item"><a class="footer-text" href="/us-en/press-lounge/"
+                                            rel="noopener">Press lounge</a></li>
+                                    <li class="menuas-item"><a class="footer-text" href="/us-en/career/">Career</a></li>
+                                    <li class="menuas-item"><a class="footer-text" href="/us-en/privacy-policy/">Privacy
+                                            policy</a></li>
+                                    <li class="menuas-item"><a class="footer-text"
+                                            href="/us-en/store/services/contact/">Contact</a></li>
+                                    <li class="menuas-item"><a class="footer-text"
+                                            href="/us-en/impressum/">Impressum</a></li>
+                                    <li class="menuas-item"><a class="footer-text" href="/us-en/sitemap/">Sitemap</a>
                                     </li>
-                                    <li class="my-1.5 mx-2.5 min-[992px]:mx-2 ">
-                                        <a href="/media/document/2/asset-version-19853d0e34/breitling-human-rights-commitment.pdf"
-                                            target="_blank">Human Rights statement</a>
-                                    </li>
-                                    <li class="my-1.5 mx-2.5 min-[992px]:mx-2 "><a
-                                            class="text-white opacity-85 no-underline"
-                                            href="/us-en/privacy-policy/">Privacy
-                                            policy</a> </li>
-                                    <li class="my-1.5 mx-2.5 min-[992px]:mx-2 "><a
-                                            href="/us-en/terms-and-conditions/">Terms &amp;
-                                            conditions</a> </li>
-                                    <li class="my-1.5 mx-2.5 min-[992px]:mx-2 "><a
-                                            class="text-white opacity-85 no-underline"
-                                            href="/us-en/store/services/contact/">Contact</a> </li>
-                                    <li class="my-1.5 mx-2.5 min-[992px]:mx-2 "><a
-                                            class="text-white opacity-85 no-underline"
-                                            href="/us-en/impressum/">Impressum</a>
-                                    </li>
-                                    <li class="my-1.5 mx-2.5 min-[992px]:mx-2 "><a
-                                            class="text-white opacity-85 no-underline"
-                                            href="/us-en/sitemap/">Sitemap</a>
-                                    </li>
-                                    <li class="my-1.5 mx-2.5 min-[992px]:mx-2 "><a
-                                            class="text-white opacity-85 no-underline"
-                                            href="/us-en/accessibility/">Accessibility</a> </li>
+                                    <li class="menuas-item"><a class="footer-text"
+                                            href="/us-en/accessibility/">Accessibility</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="bottom-wrapper pt-3 pb-5 px-0 bg-white text-black min-[992px]:py-6">
-                        <div class="container w-auto px-5">
-                            <div class="logo flex justify-center gap-5">
-                                <div id="logo-1" class="color-white">
-                                    <img class="" src="./assets/Artwork_8Logo-Yellow-1.png" alt="" />
-                                </div>
-                                <div id="logo-2" class="">
-                                    <img class="" src="./assets/Rectangle 25367logo-Yellow-2.png" alt="" />
-                                </div>
-                                <div id="logo-3" class="">
-                                    <img class="" src="./assets/Path 5876logo-Yellow-3.png" alt="" />
-                                </div>
+                </div>
+                <div class="footer-bottom-wrapper">
+                    <div class="footer-container">
+                        <div class="logo">
+                            <div id="logo-1">
+                                <img src="./assets/Artwork_8Logo-Yellow-1.png" alt="" />
                             </div>
-                            <div class="accessibilty flex justify-center mt-3"><a class="BreitlingWidgetTrigger"
-                                    href="#" rel="nofollow noreferrer noopener"> Accessibility features </a> </div>
-                            <div class="copyright flex justify-center opacity-40 mt-1"> © 2024 Breitling, All rights
-                                reserved. </div>
+                            <div id="logo-2">
+                                <img src="./assets/Rectangle 25367logo-Yellow-2.png" alt="" />
+                            </div>
+                            <div id="logo-3">
+                                <img src="./assets/Path 5876logo-Yellow-3.png" alt="" />
+                            </div>
                         </div>
+                        <div class="accessibilty"><a class="BreitlingWidgetTrigger" href="#"
+                                rel="nofollow noreferrer noopener">Accessibility features</a></div>
+                        <div class="copyright">© 2024 Breitling, All rights reserved.</div>
                     </div>
-                    <a aria-label="Top" class="scroll-to-top text-center bg-gray-100 pt-2.5 pb-3 px-4 block text-black"
-                        data-linktype="anchor" data-scrollspeed="800" href="#main">
-                        <i class="fa-solid fa-angle-up fa-2xl"></i>
-                    </a>
+                </div>
+                <a aria-label="Top" class="scroll-to-top" data-linktype="anchor" data-scrollspeed="800" href="#main">
+                    <i class="fa-solid fa-angle-up fa-2xl"></i>
+                </a>
             </footer>
         </div>
+    </div>
 
-        <style>
-            * {
-                /* font-family: Georgia, 'Times New Roman', Times, serif; */
-                /* font-family: 'Times New Roman', Times, serif; */
-            }
-        </style>
-        <script src="./Animation.js"></script>
+    <script src="./Animation.js"></script>
+
 </body>
 
 </html>

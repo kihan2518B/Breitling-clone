@@ -51,6 +51,12 @@ gsap.to(".loader-wrapper",
     }
 );
 
+// let mainElement = document.getElementById('main');
+// setTimeout(function () {
+//     mainElement.style.display = "block"
+//     console.log(mainElement.style.display)
+// }, 5000); // 5000 milliseconds = 5 seconds
+
 // Animation for each div
 document.querySelectorAll(".second-section-container").forEach((container) => {
     const img = container.querySelector("img");
@@ -86,20 +92,6 @@ document.querySelectorAll(".second-section-container").forEach((container) => {
     );
 });
 
-
-
-// Get the element by its ID
-let element = document.getElementById('main');
-
-// Remove the entire inline style attribute
-// Assuming you want to delay removing the display property after 5 seconds
-setTimeout(function () {
-    element.classList.remove('hidden')
-}, 5000); // 5000 milliseconds = 5 seconds
-
-
-
-
 const buttons = document.querySelectorAll('.nav-link');
 buttons.forEach(button => {
     button.addEventListener('mouseover', () => {
@@ -122,11 +114,11 @@ buttons.forEach(button => {
 const bar_button = document.querySelector(".bar-icon");
 const chickebar_section = document.querySelector("#chicken_bar-section");
 bar_button.addEventListener('click', () => {
-    chickebar_section.classList.remove("translate-x-52");
+    chickebar_section.classList.add("open");
 })
 const cross_button = document.querySelector(".cross");
 cross_button.addEventListener('click', () => {
-    chickebar_section.classList.add("translate-x-52");
+    chickebar_section.classList.remove("open");
 })
 
 document.addEventListener('DOMContentLoaded', () => {
