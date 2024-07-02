@@ -51,11 +51,11 @@ gsap.to(".loader-wrapper",
     }
 );
 
-// let mainElement = document.getElementById('main');
-// setTimeout(function () {
-//     mainElement.style.display = "block"
-//     console.log(mainElement.style.display)
-// }, 5000); // 5000 milliseconds = 5 seconds
+let mainElement = document.getElementById('main');
+setTimeout(function () {
+    mainElement.style.display = "block"
+    console.log(mainElement.style.display)
+}, 5000); // 5000 milliseconds = 5 seconds
 
 // Animation for each div
 document.querySelectorAll(".second-section-container").forEach((container) => {
