@@ -289,6 +289,196 @@ header {
     }
 }
 
+/* First Section */
+#top-saller {
+    background-color: rgb(22, 20, 24);
+    background-color: rgb(250, 250, 250);
+    display: flex;
+    justify-content: space-evenly;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+#top-saller::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari and Opera */
+}
+
+@media (max-width: 1300px) {
+    #top-saller {
+        gap: 40px;
+    }
+}
+
+
+.nft {
+    width: 350px;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 360px;
+    border: 3px solid #ffc62d;
+    margin: 5rem auto;
+    /* background: linear-gradient(0deg, white 0%, #ffc62d 100%); */
+    background: linear-gradient(#ffc62d, #ffc62d30, white 100%);
+    box-shadow: 0 7px 20px 5px #00000088;
+    /* border-radius: .7rem; */
+    backdrop-filter: blur(7px);
+    overflow: hidden;
+    transition: .5s all;
+}
+
+.nft .watch-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+
+.nft .watch-main .tokenImage {
+    max-width: 100%;
+    height: 260px;
+    object-fit: contain;
+    overflow: hidden;
+    transition: all 1s ease;
+}
+
+.tokenImage:hover {
+    scale: 1.05;
+}
+
+.nft .watch-main .description {
+    color: black;
+    text-align: center;
+    font-variant: small-caps;
+
+}
+
+.nft::before {
+    position: fixed;
+    content: "";
+    border: 10px solid #ffffff44;
+    top: -10%;
+    left: -100%;
+    transform: rotate(-45deg);
+    height: 60rem;
+    transition: .7s all;
+}
+
+.nft:hover {
+    border: 3px solid #ffc62d;
+}
+
+.nft:hover::before {
+    top: -100%;
+    left: 200%;
+}
+
+.watch-name {
+    font-size: large;
+    color: black;
+    font-variant: small-caps;
+    font-weight: bold;
+    display: flex;
+    justify-content: center
+}
+
+
+:root {
+    --transition: all 0.45s cubic-bezier(0.65, 0, .076, 1);
+}
+
+button {
+    position: relative;
+    /* display: inline-block; */
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+button.learn-more {
+    width: 100%;
+    height: auto;
+}
+
+button.learn-more .circle {
+    transition: var(--transition);
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #ffc62d;
+    border-radius: 1.625rem;
+    color: black;
+}
+
+button.learn-more .circle .icon {
+    transition: var(--transition);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+button.learn-more .circle .icon.arrow {
+    transition: var(--transition);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+}
+
+button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: '';
+    top: -0.25rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+}
+
+button.learn-more .button-text {
+    transition: var(--transition);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    color: #ffc62d;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+button:hover .circle {
+    width: 100%;
+}
+
+button:hover .circle .icon.arrow {
+    background: black;
+    transform: translate(1rem, 0);
+}
+
+button:hover .button-text {
+    color: black;
+}
+
 /* 2nd section */
 
 .second-section-container {
