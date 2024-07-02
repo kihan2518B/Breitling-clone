@@ -2215,10 +2215,13 @@ table {
 }
 
 .footer-bottom-wrapper.show #logo1,
-.footer-bottom-wrapper.show #logo3,
+.footer-bottom-wrapper.show #logo3 {
+    transform: translateX(0px);
+}
+
 .footer-bottom-wrapper.show .accessibilty,
 .footer-bottom-wrapper.show .copyright {
-    transform: translateX(0px);
+    transform: translateY(0);
 }
 
 .accessibilty {

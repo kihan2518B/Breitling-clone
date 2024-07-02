@@ -18,14 +18,13 @@ gsap.fromTo("#logo-3",
     opacity: 0,
     duration: 2,
     x: 35,
-    delay: 4,
+    delay: 5,
   },
   {
     opacity: 10,
     duration: 2,
     x: 0,
-    delay: 4,
-
+    delay: 5,
   })
 
 
@@ -57,40 +56,6 @@ setTimeout(function () {
   console.log(mainElement.style.display)
 }, 5000); // 5000 milliseconds = 5 seconds
 
-// Animation for each div
-document.querySelectorAll(".second-section-container").forEach((container) => {
-  const img = container.querySelector("img");
-  const textContainer = container.querySelector(".flex.flex-col");
-  console.log(container)
-
-  // Animation timeline
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: container,
-      start: "top 85%",
-      end: "bottom 10%",
-      // markers: true,
-      // scrub: 0.5,
-      toggleActions: "play reverse play reverse",
-    },
-  });
-
-  // Set initial state
-  tl.set(img, { visibility: "visible", opacity: 0 });
-  tl.set(textContainer, { visibility: "visible", opacity: 0, x: 100 });
-
-  // Animation
-  tl.to(img, {
-    clipPath: "polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%)",
-    opacity: 1,
-    duration: 1,
-    ease: "power2.inOut",
-  }).to(
-    textContainer,
-    { opacity: 1, x: 0, duration: 0.5, ease: "power2.inOut" },
-    "-=0.5"
-  );
-});
 
 const buttons = document.querySelectorAll('.nav-link');
 buttons.forEach(button => {
@@ -137,8 +102,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, options);
 
-  const fourthsection = document.querySelectorAll('section');
-  fourthsection.forEach((section) => {
+  const sections = document.querySelectorAll('section');
+  sections.forEach((section) => {
+    observer.observe(section);
+  });
+  const footerBootom = document.querySelectorAll('.footer-bottom-wrapper');
+  footerBootom.forEach((section) => {
     observer.observe(section);
   });
 
@@ -149,8 +118,4 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(info);
   });
 
-  // const section = document.querySelectorAll('section');
-  // section.forEach((section) => {
-  //     observer.observe(section);
-  // });
 });
