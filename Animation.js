@@ -64,6 +64,8 @@ const smallwidth = document.querySelectorAll(".smallwidth");
 bar_button.addEventListener('click', () => {
   smallwidth[0].style.opacity = 0;
   smallwidth[1].style.opacity = 0;
+  chickebar_section.classList.add("open");
+
 })
 const cross_button = document.querySelector(".cross");
 cross_button.addEventListener('click', () => {
