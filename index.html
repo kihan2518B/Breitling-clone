@@ -237,197 +237,6 @@
             </div>
         </section>
 
-        <style>
-            #top-saller {
-                background-color: rgb(22, 20, 24);
-                background-color: rgb(250, 250, 250);
-                display: flex;
-                justify-content: space-evenly;
-                overflow-x: scroll;
-                -ms-overflow-style: none;
-                /* IE and Edge */
-                scrollbar-width: none;
-                /* Firefox */
-            }
-
-            #top-saller::-webkit-scrollbar {
-                display: none;
-                /* Chrome, Safari and Opera */
-            }
-
-            @media (max-width: 1300px) {
-                #top-saller {
-                    gap: 40px;
-                }
-            }
-
-
-            .nft {
-                width: 350px;
-                height: 420px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                min-width: 360px;
-                border: 3px solid #ffc62d;
-                margin: 5rem auto;
-                /* background: linear-gradient(0deg, white 0%, #ffc62d 100%); */
-                background: linear-gradient(#ffc62d, #ffc62d30, white 100%);
-                box-shadow: 0 7px 20px 5px #00000088;
-                /* border-radius: .7rem; */
-                backdrop-filter: blur(7px);
-                overflow: hidden;
-                transition: .5s all;
-            }
-
-            .nft .watch-main {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-                padding: 1rem;
-            }
-
-            .nft .watch-main .tokenImage {
-                max-width: 100%;
-                height: 260px;
-                object-fit: contain;
-                overflow: hidden;
-                transition: all 1s ease;
-            }
-
-            .tokenImage:hover {
-                scale: 1.05;
-            }
-
-            .nft .watch-main .description {
-                color: black;
-                text-align: center;
-                font-variant: small-caps;
-
-            }
-
-            .nft::before {
-                position: fixed;
-                content: "";
-                border: 10px solid #ffffff44;
-                top: -10%;
-                left: -100%;
-                transform: rotate(-45deg);
-                height: 60rem;
-                transition: .7s all;
-            }
-
-            .nft:hover {
-                border: 3px solid #ffc62d;
-            }
-
-            .nft:hover::before {
-                top: -100%;
-                left: 200%;
-            }
-
-            .watch-name {
-                font-size: large;
-                color: black;
-                font-variant: small-caps;
-                font-weight: bold;
-                display: flex;
-                justify-content: center
-            }
-
-
-            :root {
-                --transition: all 0.45s cubic-bezier(0.65, 0, .076, 1);
-            }
-
-            button {
-                position: relative;
-                /* display: inline-block; */
-                cursor: pointer;
-                outline: none;
-                border: 0;
-                vertical-align: middle;
-                text-decoration: none;
-                background: transparent;
-                padding: 0;
-                font-size: inherit;
-                font-family: inherit;
-            }
-
-            button.learn-more {
-                width: 100%;
-                height: auto;
-            }
-
-            button.learn-more .circle {
-                transition: var(--transition);
-                display: flex;
-                justify-content: center;
-                margin: 0;
-                width: 3rem;
-                height: 3rem;
-                background: #ffc62d;
-                border-radius: 1.625rem;
-                color: black;
-            }
-
-            button.learn-more .circle .icon {
-                transition: var(--transition);
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                margin: auto;
-            }
-
-            button.learn-more .circle .icon.arrow {
-                transition: var(--transition);
-                left: 0.625rem;
-                width: 1.125rem;
-                height: 0.125rem;
-                background: none;
-            }
-
-            button.learn-more .circle .icon.arrow::before {
-                position: absolute;
-                content: '';
-                top: -0.25rem;
-                right: 0.0625rem;
-                width: 0.625rem;
-                height: 0.625rem;
-                border-top: 0.125rem solid #fff;
-                border-right: 0.125rem solid #fff;
-                transform: rotate(45deg);
-            }
-
-            button.learn-more .button-text {
-                transition: var(--transition);
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                padding: 0.75rem 0;
-                color: #ffc62d;
-                font-weight: 700;
-                line-height: 1.6;
-                text-align: center;
-                text-transform: uppercase;
-            }
-
-            button:hover .circle {
-                width: 100%;
-            }
-
-            button:hover .circle .icon.arrow {
-                background: black;
-                transform: translate(1rem, 0);
-            }
-
-            button:hover .button-text {
-                color: black;
-            }
-        </style>
-
         <!-- Trendning Now Section -->
         <section class="trending-section">
             <div class="trending-section-heading">
@@ -549,7 +358,7 @@
 
         <!-- 5th section -->
         <div class="exclusive_section">
-            <section class="">
+            <section class="exclusive_section_container">
                 <div class="exclusive_section_heading">
                     <div class="text-center">
                         <h2 class="">
@@ -746,8 +555,7 @@
                                         <span>your</span>
                                         <span>Breitling.</span>
                                     </div>
-                                    <a id='backToHomeButton2'
-                                        class="cssbuttons-io-button btn inline-block pointer-events-auto mt-auto lg:my-4 lg:w-auto block border-none flex justify-center rounded-none text-black cursor-pointer font-open-sans font-bold h-auto max-w-none outline-none text-center uppercase transition-all duration-300 ease-in-out w-full no-underline transition-colors duration-200 ease-in-out">
+                                    <a class="backToHomeButton1 cssbuttons-io-button btn ">
                                         <div class="arrow-icon">
                                             <svg height="24" width="24" viewBox="0 0 24 24"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -757,7 +565,7 @@
                                                     fill="currentColor"></path>
                                             </svg>
                                         </div>
-                                        Discover Now
+                                        Discover
                                     </a>
 
                                 </div>
@@ -1077,71 +885,17 @@
                             <div class="store-content">
                                 <div class="store-informations">
                                     <div class="animate-wrapper">
-                                        <h2 class="store-title">
-                                            <a href="/us-en/stores/breitling-boutiques/us/breitling-boutique-miami-design-district/"
-                                                class="hover-black">
-                                                BREITLING BOUTIQUE CHENNAI
-                                            </a>
-                                        </h2>
                                         <div class="text-center">
                                             <div class="store-subtitle">
                                                 <div>
-                                                    ANNA GARDEN, VELACHERY, UG 13, PALLADIUM MALL, VELACHERY ROAD,
-                                                    VELACHERRY, CHENNAI - 600042, Tamil Nadu
+                                                    Visit us in a Breitling boutique or at official retailers and convince yourself of our high-quality products.
+                                                    Discover new models, get individual advice and find the Breitling watch that suits you best.
                                                 </div>
-                                            </div>
-                                            <div class="store-subtitle">
-                                                <div class="phone">
-                                                    <span class="hidden-mobile-tablet">
-                                                        Phone <a href="tel:+1 305-918-1884">+919841033557</a>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="opening-hours">
-                                        <div class="store-label">
-                                            Opening hours
-                                        </div>
-                                        <div>
-                                            <div class="content-table">
-                                                <table>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>Sunday:</td>
-                                                            <td class="tet-right">11:00-21:00</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Monday:</td>
-                                                            <td class="tet-right">11:00-21:00</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Tuesday:</td>
-                                                            <td class="tet-right">11:00-21:00</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Wednesday:</td>
-                                                            <td class="tet-right">11:00-21:00</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Thursday:</td>
-                                                            <td class="tet-right">11:00-21:00</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Friday:</td>
-                                                            <td class="tet-right">11:00-21:00</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Saturday:</td>
-                                                            <td class="tet-right">11:00-21:00</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="animate-wrapper">
-                                        <div class="store-links">
+                                        <div id="last_store-wrapper" class="store-links opacity-0">
                                             <a class="link" href="mailto:Miami.Design@Breitling.com">
                                                 E-mail
                                                 <i class="fa-solid fa-chevron-right"></i>
@@ -1154,7 +908,7 @@
                                         </div>
                                         <a href="/us-en/stores/appointment/us/fl/miami/2016069/breitling-boutique-miami-design-district/"
                                             class="store-button">
-                                            Book an appointment
+                                            FIND A STORE
                                         </a>
                                     </div>
                                 </div>
@@ -1166,7 +920,7 @@
         </div>
 
         <!-- footer section -->
-        <div class="footer-container">
+        <section class="footer-container">
             <footer class="footer">
                 <div class="footer-top-wrapper">
                     <div class="footer-container-inner">
@@ -1175,55 +929,61 @@
                                 <nav class="footer-nav">
                                     <ul class="footer-nav-list" itemscope
                                         itemtype="https://schema.org/SiteNavigationElement">
-                                        <li class="footer-nav-item">
-                                            <a href="/us-en/watches/" class="footer_nav-link" itemprop="url">
-                                                <p class="dot">.</p>watches
-                                            </a>
-                                        </li>
-                                        <li class="footer-nav-item">
-                                            <a href="/us-en/straps/" class="footer_nav-link" itemprop="url">
-                                                <p class="dot">.</p>Straps
-                                            </a>
-                                        </li>
-                                        <li class="footer-nav-item">
-                                            <a href="/us-en/service/" class="footer_nav-link" itemprop="url">
-                                                <p class="dot">.</p>Service
-                                            </a>
-                                        </li>
-                                        <li class="footer-nav-item">
-                                            <a href="/us-en/stores/us/" class="footer_nav-link" itemprop="url">
-                                                <p class="dot">.</p>Stores
-                                            </a>
-                                        </li>
-                                        <li class="footer-nav-item">
-                                            <a href="/us-en/about/" class="footer_nav-link" itemprop="url">
-                                                <p class="dot">.</p>About
-                                            </a>
-                                        </li>
-                                        <li class="footer-nav-item">
-                                            <a href="/us-en/my-account/" class="footer_nav-link" itemprop="url">
-                                                <p class="dot">.</p>My account
-                                            </a>
-                                        </li>
-                                        <li class="footer-nav-item">
-                                            <a href="/us-en/service/faq/" class="footer_nav-link" itemprop="url">
-                                                <p class="dot">.</p>FAQS
-                                            </a>
-                                        </li>
-                                        <li class="footer-nav-item">
-                                            <a class="newsletter-popup-link footer_nav-link"
-                                                href="/us-en/newsletter/subscribe/" itemprop="url">
-                                                <p class="dot">.</p>Newsletter
-                                            </a>
-                                        </li>
-                                        <li class="footer-nav-item">
-                                            <a class="chronolog-popup-link footer_nav-link" href="#" itemprop="url">
-                                                <p class="dot">.</p>Download the catalog
-                                            </a>
-                                        </li>
-                                        <a class="footer-button-st" href="/choose-country-region/">
+
+                                        <div class="footer_col1">
+                                            <li class="footer-nav-item">
+                                                <a href="/us-en/watches/" class="footer_nav-link" itemprop="url">
+                                                    watches
+                                                </a>
+                                            </li>
+                                            <li class="footer-nav-item">
+                                                <a href="/us-en/straps/" class="footer_nav-link" itemprop="url">
+                                                    Straps
+                                                </a>
+                                            </li>
+                                            <li class="footer-nav-item">
+                                                <a href="/us-en/service/" class="footer_nav-link" itemprop="url">
+                                                    Service
+                                                </a>
+                                            </li>
+                                            <li class="footer-nav-item">
+                                                <a href="/us-en/stores/us/" class="footer_nav-link" itemprop="url">
+                                                    Stores
+                                                </a>
+                                            </li>
+                                        </div>
+                                        <div class="footer_col2">
+                                            <li class="footer-nav-item">
+                                                <a href="/us-en/about/" class="footer_nav-link" itemprop="url">
+                                                    About
+                                                </a>
+                                            </li>
+                                            <li class="footer-nav-item">
+                                                <a href="/us-en/my-account/" class="footer_nav-link" itemprop="url">
+                                                    My account
+                                                </a>
+                                            </li>
+                                            <li class="footer-nav-item">
+                                                <a href="/us-en/service/faq/" class="footer_nav-link" itemprop="url">
+                                                    FAQS
+                                                </a>
+                                            </li>
+                                            <li class="footer-nav-item">
+                                                <a class="newsletter-popup-link footer_nav-link"
+                                                    href="/us-en/newsletter/subscribe/" itemprop="url">
+                                                    Newsletter
+                                                </a>
+                                            </li>
+                                            <li class="footer-nav-item">
+                                                <a class="chronolog-popup-link footer_nav-link" href="#" itemprop="url">
+                                                    Download the catalog
+                                                </a>
+                                            </li>
+                                        </div>
+
+                                        <!-- <a class="footer-button-st" href="/choose-country-region/">
                                             <i class="fa-solid fa-globe pr-2"></i>INDIA - ENGLISH
-                                        </a>
+                                        </a> -->
                                     </ul>
                                 </nav>
                             </div>
@@ -1312,13 +1072,13 @@
                 <div class="footer-bottom-wrapper">
                     <div class="footer-container">
                         <div class="logo">
-                            <div id="logo-1">
+                            <div id="logo1">
                                 <img src="./assets/Artwork_8Logo-Yellow-1.png" alt="" />
                             </div>
-                            <div id="logo-2">
+                            <div id="logo2">
                                 <img src="./assets/Rectangle 25367logo-Yellow-2.png" alt="" />
                             </div>
-                            <div id="logo-3">
+                            <div id="logo3">
                                 <img src="./assets/Path 5876logo-Yellow-3.png" alt="" />
                             </div>
                         </div>
@@ -1331,7 +1091,7 @@
                     <i class="fa-solid fa-angle-up fa-2xl"></i>
                 </a>
             </footer>
-        </div>
+        </section>
     </div>
 
     <script src="./Animation.js"></script>
