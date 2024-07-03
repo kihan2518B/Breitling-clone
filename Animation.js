@@ -5,12 +5,12 @@ gsap.fromTo("#logo-1",
     opacity: 0,
     duration: 2,
     x: -40,
-    delay: 5,
+    delay: 3,
   }, {
   opacity: 10,
   duration: 2,
   x: 0,
-  delay: 5,
+  delay: 3,
 })
 
 gsap.fromTo("#logo-3",
@@ -18,13 +18,13 @@ gsap.fromTo("#logo-3",
     opacity: 0,
     duration: 2,
     x: 35,
-    delay: 5,
+    delay: 3,
   },
   {
     opacity: 10,
     duration: 2,
     x: 0,
-    delay: 5,
+    delay: 3,
   })
 
 
@@ -43,7 +43,7 @@ gsap.to(".loader-wrapper",
   {
     opacity: 0,
     duration: 0.5,
-    delay: 5,
+    delay: 3,
     onComplete: function () {
       gsap.set(".loader-wrapper", { display: 'none' });
     }
@@ -54,36 +54,23 @@ let mainElement = document.getElementById('main');
 setTimeout(function () {
   mainElement.style.display = "block"
   console.log(mainElement.style.display)
-}, 5000); // 5000 milliseconds = 5 seconds
+}, 3000); // 5000 milliseconds = 5 seconds
 
 
-const buttons = document.querySelectorAll('.nav-link');
-buttons.forEach(button => {
-  button.addEventListener('mouseover', () => {
-    // console.log("in")
-    buttons.forEach(otherButton => {
-      if (otherButton !== button) {
-        otherButton.classList.add('opacity-40');
-      }
-    });
-  });
-
-  button.addEventListener('mouseout', () => {
-    // console.log("out")
-    buttons.forEach(otherButton => {
-      otherButton.classList.remove('opacity-40');
-    });
-  });
-});
 
 const bar_button = document.querySelector(".bar-icon");
 const chickebar_section = document.querySelector("#chicken_bar-section");
+const smallwidth = document.querySelectorAll(".smallwidth");
 bar_button.addEventListener('click', () => {
-  chickebar_section.classList.add("open");
+  smallwidth[0].style.opacity = 0;
+  smallwidth[1].style.opacity = 0;
 })
 const cross_button = document.querySelector(".cross");
 cross_button.addEventListener('click', () => {
   chickebar_section.classList.remove("open");
+  smallwidth[0].style.opacity = 1;
+  smallwidth[1].style.opacity = 1;
+
 })
 
 document.addEventListener('DOMContentLoaded', () => {
