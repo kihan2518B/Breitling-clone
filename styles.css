@@ -76,7 +76,7 @@ h2 {
     max-width: 7em;
     white-space: nowrap;
     color: yellow;
-    animation: loading 8s linear infinite;
+    animation: loading 5s linear infinite;
 }
 
 @keyframes loading {
@@ -843,6 +843,7 @@ button:hover .button-text {
     transition: color 0.5s ease-in-out;
 }
 
+
 @media (any-hover: hover) and (any-pointer: fine) {
     .card__content {
         transform: translateY(100%);
@@ -1189,8 +1190,8 @@ section.show .text {
     height: 250px;
 }
 
-.card:hover .wrapper {
-    transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+.exclusive-card:hover .wrapper {
+    transform: perspective(900px) translateY(-2%) rotateX(5deg) translateZ(0);
     box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
@@ -1789,7 +1790,7 @@ section.show .text {
     padding-right: 8px;
 }
 
-#last_store-wrapper{
+#last_store-wrapper {
     opacity: 0;
 }
 
@@ -2054,20 +2055,41 @@ table {
     }
 }
 
+@keyframes Footeranimation1 {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+        /* Move letters from right to left */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes Footeranimation2 {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+        /* Move letters from right to left */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .footer-container.show .footer-nav-item,
 .menuas-item {
-    animation: typingEffect2 4s forwards;
+    animation: Footeranimation2 1s forwards;
     /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
 
 .footer-container.show .menuas-item {
-    animation: typingEffect1 4s forwards;
+    animation: Footeranimation1 1s forwards;
     /* animation: name duration timing-function delay iteration-count direction fill-mode; */
-}
-
-.footer-container.show .footer-social-item {
-    animation: typingEffect1 4s forwards;
-
 }
 
 .footer-nav-item {
